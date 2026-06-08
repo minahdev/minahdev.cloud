@@ -1,0 +1,22 @@
+# Pace monorepo — Cursor 최소 하네스
+
+상세 원칙: `backend/CLAUDE.md` · 워크플로: `backend/CURSOR.md`
+
+## docs/ 필수 (코딩 전)
+
+**구현·수정 전에 반드시** `docs/README.md`를 보고, 작업 영역에 맞는 규칙 문서를 읽는다.
+
+| 경로 | 문서 |
+|------|------|
+| `frontend/` | `docs/DevOps/Frontend/REACT_RULES.md` |
+| `backend/` | `docs/DevOps/Backend/BACKEND_RULES.md` |
+| `backend/apps/titanic/` | `docs/타이타닉개발/james_fastapi_init.md` (참고) |
+
+`docs` 규칙과 하네스가 겹치면 **더 구체적인 `docs` + 사용자 요청**을 따른다.
+
+## 네 원칙 (요약)
+
+1. 구현 전 관련 코드·docs 읽기 — 추측 금지  
+2. 요청을 만족하는 최소 코드  
+3. 요청 범위만 수정, 기존 스타일 유지  
+4. 검증 가능한 완료 기준(테스트·수동 절차)
