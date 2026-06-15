@@ -11,10 +11,14 @@
             "id": "48f704ab34df7056",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "그래프 뷰"
+              "type": "markdown",
+              "state": {
+                "file": "vault/Backend/PACE_ERD.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PACE_ERD"
             }
           }
         ]
@@ -178,17 +182,19 @@
   },
   "active": "48f704ab34df7056",
   "lastOpenFiles": [
-    "minahview/app/api/titanic/smith/chat/route.ts.tmp.20772.7e05b25d86ca",
-    "minahai/apps/titanic/adapter/inbound/api/schemas/crew_smith_captain_schema.py.tmp.20772.aff25da61feb",
-    "minahai/apps/titanic/tests/adapter/outbound/__pycache__/__init__.cpython-313.pyc",
-    "minahai/apps/titanic/tests/adapter/outbound/__pycache__",
-    "minahai/apps/titanic/app/use_cases/crew_smith_captain_interactor.py.tmp.20772.429fd2601073",
-    "minahai/apps/titanic/app/use_cases/crew_smith_captain_interactor.py.tmp.20772.f85689479254",
-    "minahai/apps/titanic/adapter/outbound/pg/crew_smith_captain_pg_repository.py.tmp.20772.2b1a45fee161",
-    "minahai/apps/titanic/app/dtos/crew_smith_captain_dto.py.tmp.20772.ade6ab37b034",
-    "minahview/app/api/titanic/smith/chat/route.ts",
-    "minahview/app/api/titanic/smith/chat/route.ts.tmp.20772.9079e1ff2828",
-    "minahview/app/api/titanic/smith/chat",
+    "vault/Backend/PACE_ERD2.md",
+    "vault/Backend/PACE_ERD.md",
+    "minahai/_claude/CLAUDE.md.tmp.10636.7845baae7117",
+    "minahai/apps/users/adapter/inbound/api/schemas/__pycache__/__init__.cpython-313.pyc",
+    "minahai/apps/users/adapter/inbound/api/schemas/__pycache__/user_schema.cpython-313.pyc",
+    "minahai/apps/users/adapter/inbound/api/schemas/__pycache__/mypage_schema.cpython-313.pyc",
+    "minahai/apps/users/adapter/outbound/pg/__pycache__/user_pg_repository.cpython-313.pyc",
+    "minahai/apps/users/adapter/outbound/pg/__pycache__/__init__.cpython-313.pyc",
+    "minahai/apps/users/adapter/outbound/pg/__pycache__/user_pg_information_repository.cpython-313.pyc",
+    "minahai/apps/users/adapter/outbound/pg/__pycache__/schedule_pg_access_repository.cpython-313.pyc",
+    "minahai/apps/users/adapter/inbound/api/__pycache__/__init__.cpython-313.pyc",
+    "minahai/apps/users/adapter/inbound/api/v1/__init__.py",
+    "minahai/apps/users/_docs/README.md",
     "minahview/CLAUDE.md",
     "minahview/node_modules/js-tokens/README.md",
     "minahview/node_modules/vaul/LICENSE.md",
@@ -207,12 +213,10 @@
     "cursor.md",
     "vault/Backend/clean_architecture.md",
     "CLAUDE.md",
-    "vault/Backend/PACE_ERD.md",
     "minahview/_claude/REACT_RULES.md",
     "minahai/apps/titanic/_docs/TITANIC_ERD.md",
     "minahai/apps/titanic/_docs/james_fastapi_init.md",
     "vault/Frontend/REACT_RULES.md",
-    "vault/Backend/TITANIC_ERD.md",
-    "vault/Backend/PACE_FULL_ERD.md"
+    "vault/Backend/TITANIC_ERD.md"
   ]
 }
