@@ -3,24 +3,37 @@ services:
   backend:
     container_name: minah_backend
     build:
-      context: ./minahai     # minahai 폴더 안에 있는 Dockerfile을 읽어라
+      context: ./minahai
     ports:
-      - "8000:8000"          # 내 컴퓨터의 8000포트와 도커의 8000포트를 연결
+      - "8000:8000"
     env_file:
-      - ./minahai/.env       # 백엔드 환경변수 파일 로드
+      - ./minahai/.env
+    environment:
+      - N8N_EMAIL_WEBHOOK_URL=http://n8n:5678/webhook/send-email
+      - OLLAMA_URL=http://host.docker.internal:11434/api/chat
+      - DATABASE_URL=postgresql+psycopg://minah_user:minah_password@pgvector:5432/minah_db?sslmode=disable
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      - pgvector
+      - redis
+      - neo4j
 
   # --- 프론트엔드 서비스 ---
   frontend:
     container_name: minah_frontend
     build:
-      context: ./minahview   # minahview 폴더 안에 있는 Dockerfile을 읽어라
+      context: ./minahview
     ports:
-      - "3000:3000"          # 내 컴퓨터의 3000포트와 도커의 3000포트를 연결
+      - "3000:3000"
     env_file:
-      - ./minahview/.env.local # 프론트엔드 환경변수 파일 로드
+      - ./minahview/.env.local
+    environment:
+      - BACKEND_URL=http://backend:8000
     depends_on:
       - backend
 
+  # --- n8n ---
   n8n:
     container_name: minah_n8n
     image: n8nio/n8n
@@ -30,6 +43,46 @@ services:
       - n8n_data:/home/node/.n8n
     restart: unless-stopped
 
+  # --- PostgreSQL + pgvector ---
+  pgvector:
+    container_name: minah_pgvector
+    image: pgvector/pgvector:pg17
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: minah_user
+      POSTGRES_PASSWORD: minah_password
+      POSTGRES_DB: minah_db
+    volumes:
+      - pgvector_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  # --- Redis ---
+  redis:
+    container_name: minah_redis
+    image: redis:7
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+  # --- Graph DB ---
+  neo4j:
+    container_name: minah_neo4j
+    image: neo4j:5
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      NEO4J_AUTH: neo4j/minah_password
+    volumes:
+      - neo4j_data:/data
+    restart: unless-stopped
+
 volumes:
   n8n_data:
     external: true
+  pgvector_data:
+  redis_data:
+  neo4j_data:
