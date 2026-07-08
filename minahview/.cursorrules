@@ -1,0 +1,10 @@
+# Frontend (Next.js) — Cursor
+
+Monorepo 공통: 루트 `.cursorrules`, `backend/CURSOR.md`
+
+## 코딩 전 필수
+
+1. `docs/README.md`
+2. **`docs/DevOps/Frontend/REACT_RULES.md`** — React·폼·useState·FormData
+
+`frontend/` 변경 시 위 문서를 읽지 않고 패턴을 새로 만들지 않는다.

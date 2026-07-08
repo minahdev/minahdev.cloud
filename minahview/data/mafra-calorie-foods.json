@@ -1,0 +1,8127 @@
+[
+{
+"id": "mafra-f87090aa5905",
+"name": "가래떡(떡국용)",
+"category": "밥/면/빵",
+"kcalPer100g": 417,
+"defaultServingG": 75,
+"kcalPerServing": 311,
+"servingNutrition": {
+"carbsG": 68.3,
+"proteinG": 5.3,
+"fatG": 1.0
+}
+},
+{
+"id": "mafra-4c3b1bf16a07",
+"name": "가래떡(떡볶이용)",
+"category": "밥/면/빵",
+"kcalPer100g": 320,
+"defaultServingG": 30,
+"kcalPerServing": 96,
+"servingNutrition": {
+"carbsG": 21.0,
+"proteinG": 1.6,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-f59715d619a4",
+"name": "가자미",
+"category": "기타",
+"kcalPer100g": 193,
+"defaultServingG": 30,
+"kcalPerServing": 58,
+"servingNutrition": {
+"carbsG": 0.1,
+"proteinG": 9.9,
+"fatG": 1.7
+}
+},
+{
+"id": "mafra-0e3d10350817",
+"name": "가자미구이",
+"category": "기타",
+"kcalPer100g": 253,
+"defaultServingG": 30,
+"kcalPerServing": 76,
+"servingNutrition": {
+"carbsG": 0.2,
+"proteinG": 11.2,
+"fatG": 3.1
+}
+},
+{
+"id": "mafra-acb5d33fcc34",
+"name": "가자미조림",
+"category": "기타",
+"kcalPer100g": 151,
+"defaultServingG": 30,
+"kcalPerServing": 45,
+"servingNutrition": {
+"carbsG": 2.4,
+"proteinG": 6.6,
+"fatG": 1.2
+}
+},
+{
+"id": "mafra-e8adfac3abf1",
+"name": "가지",
+"category": "기타",
+"kcalPer100g": 6,
+"defaultServingG": 100,
+"kcalPerServing": 6,
+"servingNutrition": {
+"carbsG": 1.6,
+"proteinG": 0.3,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-5cf22f41a338",
+"name": "가지나물",
+"category": "채소",
+"kcalPer100g": 19,
+"defaultServingG": 100,
+"kcalPerServing": 19,
+"servingNutrition": {
+"carbsG": 2.9,
+"proteinG": 0.8,
+"fatG": 0.9
+}
+},
+{
+"id": "mafra-a84c8d70bc02",
+"name": "간장(왜간장)",
+"category": "기타",
+"kcalPer100g": 8,
+"defaultServingG": 100,
+"kcalPerServing": 8,
+"servingNutrition": {
+"carbsG": 0.7,
+"proteinG": 1.2,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-1685a879c630",
+"name": "갈비구이",
+"category": "기타",
+"kcalPer100g": 681,
+"defaultServingG": 86,
+"kcalPerServing": 586,
+"servingNutrition": {
+"carbsG": 14.3,
+"proteinG": 28.1,
+"fatG": 43.7
+}
+},
+{
+"id": "mafra-df79ce154ea1",
+"name": "갈비찜",
+"category": "기타",
+"kcalPer100g": 705,
+"defaultServingG": 37,
+"kcalPerServing": 262,
+"servingNutrition": {
+"carbsG": 3.5,
+"proteinG": 13.7,
+"fatG": 20.0
+}
+},
+{
+"id": "mafra-7db847e9bc9d",
+"name": "갈비탕",
+"category": "기타",
+"kcalPer100g": 609,
+"defaultServingG": 60,
+"kcalPerServing": 362,
+"servingNutrition": {
+"carbsG": 20.7,
+"proteinG": 16.5,
+"fatG": 22.3
+}
+},
+{
+"id": "mafra-0b093d36319f",
+"name": "갈치",
+"category": "기타",
+"kcalPer100g": 200,
+"defaultServingG": 30,
+"kcalPerServing": 60,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 7.4,
+"fatG": 3.0
+}
+},
+{
+"id": "mafra-cfbd9dc5f655",
+"name": "갈치구이",
+"category": "기타",
+"kcalPer100g": 368,
+"defaultServingG": 30,
+"kcalPerServing": 110,
+"servingNutrition": {
+"carbsG": 0.1,
+"proteinG": 11.3,
+"fatG": 6.8
+}
+},
+{
+"id": "mafra-032a4a7244ce",
+"name": "갈치조림",
+"category": "기타",
+"kcalPer100g": 37,
+"defaultServingG": 100,
+"kcalPerServing": 37,
+"servingNutrition": {
+"carbsG": 1.8,
+"proteinG": 4.0,
+"fatG": 1.5
+}
+},
+{
+"id": "mafra-768567d04738",
+"name": "갈치찌개",
+"category": "기타",
+"kcalPer100g": 48,
+"defaultServingG": 100,
+"kcalPerServing": 48,
+"servingNutrition": {
+"carbsG": 1.9,
+"proteinG": 5.4,
+"fatG": 2.1
+}
+},
+{
+"id": "mafra-4f9314bb304a",
+"name": "감(곶감)",
+"category": "기타",
+"kcalPer100g": 348,
+"defaultServingG": 34,
+"kcalPerServing": 119,
+"servingNutrition": {
+"carbsG": 33.0,
+"proteinG": 1.1,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-e0de8b94e6a5",
+"name": "감(단감)",
+"category": "기타",
+"kcalPer100g": 123,
+"defaultServingG": 30,
+"kcalPerServing": 37,
+"servingNutrition": {
+"carbsG": 10.4,
+"proteinG": 0.4,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-0587609c9a31",
+"name": "감자",
+"category": "기타",
+"kcalPer100g": 143,
+"defaultServingG": 30,
+"kcalPerServing": 43,
+"servingNutrition": {
+"carbsG": 9.5,
+"proteinG": 1.8,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-5130f3410016",
+"name": "감자국",
+"category": "기타",
+"kcalPer100g": 184,
+"defaultServingG": 30,
+"kcalPerServing": 55,
+"servingNutrition": {
+"carbsG": 11.4,
+"proteinG": 2.8,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-a4dfc312b4c8",
+"name": "감자볶음",
+"category": "기타",
+"kcalPer100g": 36,
+"defaultServingG": 100,
+"kcalPerServing": 36,
+"servingNutrition": {
+"carbsG": 6.0,
+"proteinG": 1.1,
+"fatG": 1.0
+}
+},
+{
+"id": "mafra-f0f3f03edb8e",
+"name": "감자샐러드",
+"category": "기타",
+"kcalPer100g": 213,
+"defaultServingG": 30,
+"kcalPerServing": 64,
+"servingNutrition": {
+"carbsG": 9.0,
+"proteinG": 1.7,
+"fatG": 2.5
+}
+},
+{
+"id": "mafra-e0d272e77c76",
+"name": "감자조림",
+"category": "기타",
+"kcalPer100g": 39,
+"defaultServingG": 100,
+"kcalPerServing": 39,
+"servingNutrition": {
+"carbsG": 6.8,
+"proteinG": 1.3,
+"fatG": 0.9
+}
+},
+{
+"id": "mafra-bbc117807d6e",
+"name": "감자칩",
+"category": "기타",
+"kcalPer100g": 558,
+"defaultServingG": 43,
+"kcalPerServing": 239,
+"servingNutrition": {
+"carbsG": 23.6,
+"proteinG": 2.5,
+"fatG": 16.7
+}
+},
+{
+"id": "mafra-edf3df3efc9f",
+"name": "강낭콩",
+"category": "기타",
+"kcalPer100g": 11,
+"defaultServingG": 100,
+"kcalPerServing": 11,
+"servingNutrition": {
+"carbsG": 2.0,
+"proteinG": 0.7,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-e8e6b1df314f",
+"name": "개고기",
+"category": "고기/생선/달걀",
+"kcalPer100g": 480,
+"defaultServingG": 30,
+"kcalPerServing": 144,
+"servingNutrition": {
+"carbsG": 0.4,
+"proteinG": 10.5,
+"fatG": 11.1
+}
+},
+{
+"id": "mafra-4d75d5dbe77d",
+"name": "건빵",
+"category": "밥/면/빵",
+"kcalPer100g": 347,
+"defaultServingG": 30,
+"kcalPerServing": 104,
+"servingNutrition": {
+"carbsG": 18.5,
+"proteinG": 2.2,
+"fatG": 2.4
+}
+},
+{
+"id": "mafra-ce2d7eed15ac",
+"name": "검정콩",
+"category": "기타",
+"kcalPer100g": 42,
+"defaultServingG": 100,
+"kcalPerServing": 42,
+"servingNutrition": {
+"carbsG": 3.4,
+"proteinG": 3.9,
+"fatG": 2.0
+}
+},
+{
+"id": "mafra-f5a7faab15ab",
+"name": "겨자",
+"category": "기타",
+"kcalPer100g": 13,
+"defaultServingG": 100,
+"kcalPerServing": 13,
+"servingNutrition": {
+"carbsG": 1.0,
+"proteinG": 0.9,
+"fatG": 0.7
+}
+},
+{
+"id": "mafra-4391bff8fb44",
+"name": "경단",
+"category": "기타",
+"kcalPer100g": 420,
+"defaultServingG": 34,
+"kcalPerServing": 144,
+"servingNutrition": {
+"carbsG": 30.7,
+"proteinG": 2.5,
+"fatG": 1.1
+}
+},
+{
+"id": "mafra-e5dcb9dfad60",
+"name": "고구마",
+"category": "기타",
+"kcalPer100g": 300,
+"defaultServingG": 30,
+"kcalPerServing": 90,
+"servingNutrition": {
+"carbsG": 21.8,
+"proteinG": 1.0,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-de2f18f8ce3a",
+"name": "고구마맛탕",
+"category": "기타",
+"kcalPer100g": 454,
+"defaultServingG": 59,
+"kcalPerServing": 266,
+"servingNutrition": {
+"carbsG": 48.1,
+"proteinG": 2.5,
+"fatG": 8.0
+}
+},
+{
+"id": "mafra-5e3bdd55b76d",
+"name": "고구마줄기",
+"category": "기타",
+"kcalPer100g": 2,
+"defaultServingG": 100,
+"kcalPerServing": 2,
+"servingNutrition": {
+"carbsG": 0.7,
+"proteinG": 0.1,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-5424f759379b",
+"name": "고구마튀김",
+"category": "기타",
+"kcalPer100g": 241,
+"defaultServingG": 30,
+"kcalPerServing": 72,
+"servingNutrition": {
+"carbsG": 11.7,
+"proteinG": 0.7,
+"fatG": 2.8
+}
+},
+{
+"id": "mafra-3a29acc35b18",
+"name": "고기만두",
+"category": "고기/생선/달걀",
+"kcalPer100g": 508,
+"defaultServingG": 68,
+"kcalPerServing": 348,
+"servingNutrition": {
+"carbsG": 35.0,
+"proteinG": 19.2,
+"fatG": 14.3
+}
+},
+{
+"id": "mafra-50cd651d067a",
+"name": "고들빼기",
+"category": "기타",
+"kcalPer100g": 14,
+"defaultServingG": 100,
+"kcalPerServing": 14,
+"servingNutrition": {
+"carbsG": 3.2,
+"proteinG": 1.2,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-e0c599d961d7",
+"name": "고등어",
+"category": "기타",
+"kcalPer100g": 307,
+"defaultServingG": 30,
+"kcalPerServing": 92,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 10.1,
+"fatG": 5.2
+}
+},
+{
+"id": "mafra-1133ff9f9d62",
+"name": "고등어(자반고등어)",
+"category": "기타",
+"kcalPer100g": 317,
+"defaultServingG": 30,
+"kcalPerServing": 95,
+"servingNutrition": {
+"carbsG": 0.1,
+"proteinG": 14.8,
+"fatG": 3.4
+}
+},
+{
+"id": "mafra-f9af78141e54",
+"name": "고등어구이",
+"category": "기타",
+"kcalPer100g": 368,
+"defaultServingG": 30,
+"kcalPerServing": 110,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 10.6,
+"fatG": 7.1
+}
+},
+{
+"id": "mafra-947b2b43b5b9",
+"name": "고등어조림",
+"category": "기타",
+"kcalPer100g": 357,
+"defaultServingG": 30,
+"kcalPerServing": 107,
+"servingNutrition": {
+"carbsG": 3.3,
+"proteinG": 11.1,
+"fatG": 5.4
+}
+},
+{
+"id": "mafra-c159d061708e",
+"name": "고등어찌개",
+"category": "기타",
+"kcalPer100g": 220,
+"defaultServingG": 30,
+"kcalPerServing": 66,
+"servingNutrition": {
+"carbsG": 2.5,
+"proteinG": 6.7,
+"fatG": 3.3
+}
+},
+{
+"id": "mafra-5dc7a9b9a9c4",
+"name": "고등어튀김",
+"category": "기타",
+"kcalPer100g": 558,
+"defaultServingG": 30,
+"kcalPerServing": 167,
+"servingNutrition": {
+"carbsG": 6.4,
+"proteinG": 11.5,
+"fatG": 10.0
+}
+},
+{
+"id": "mafra-9b32729723ff",
+"name": "고사리",
+"category": "기타",
+"kcalPer100g": 8,
+"defaultServingG": 100,
+"kcalPerServing": 8,
+"servingNutrition": {
+"carbsG": 2.0,
+"proteinG": 1.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-f5ea818422b3",
+"name": "고사리(말린것)",
+"category": "기타",
+"kcalPer100g": 227,
+"defaultServingG": 30,
+"kcalPerServing": 68,
+"servingNutrition": {
+"carbsG": 16.3,
+"proteinG": 7.7,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-5993fd9b66cd",
+"name": "고사리나물",
+"category": "채소",
+"kcalPer100g": 26,
+"defaultServingG": 100,
+"kcalPerServing": 26,
+"servingNutrition": {
+"carbsG": 2.6,
+"proteinG": 1.3,
+"fatG": 1.7
+}
+},
+{
+"id": "mafra-ce7df4dbee6b",
+"name": "고추냉이(와사비)",
+"category": "기타",
+"kcalPer100g": 6,
+"defaultServingG": 100,
+"kcalPerServing": 6,
+"servingNutrition": {
+"carbsG": 1.4,
+"proteinG": 0.3,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-57c02453c2ed",
+"name": "고추멸치볶음",
+"category": "기타",
+"kcalPer100g": 30,
+"defaultServingG": 100,
+"kcalPerServing": 30,
+"servingNutrition": {
+"carbsG": 2.3,
+"proteinG": 2.7,
+"fatG": 1.2
+}
+},
+{
+"id": "mafra-6d2bb817acdb",
+"name": "고추볶음",
+"category": "기타",
+"kcalPer100g": 16,
+"defaultServingG": 100,
+"kcalPerServing": 16,
+"servingNutrition": {
+"carbsG": 1.0,
+"proteinG": 0.7,
+"fatG": 1.3
+}
+},
+{
+"id": "mafra-464b2ef8c100",
+"name": "고추장",
+"category": "기타",
+"kcalPer100g": 27,
+"defaultServingG": 100,
+"kcalPerServing": 27,
+"servingNutrition": {
+"carbsG": 7.5,
+"proteinG": 1.0,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-0248d650e945",
+"name": "고추장아찌",
+"category": "기타",
+"kcalPer100g": 6,
+"defaultServingG": 100,
+"kcalPerServing": 6,
+"servingNutrition": {
+"carbsG": 1.7,
+"proteinG": 0.4,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-98016609d910",
+"name": "고추튀김",
+"category": "기타",
+"kcalPer100g": 42,
+"defaultServingG": 100,
+"kcalPerServing": 42,
+"servingNutrition": {
+"carbsG": 2.2,
+"proteinG": 0.5,
+"fatG": 3.7
+}
+},
+{
+"id": "mafra-7304fd35925c",
+"name": "고춧가루",
+"category": "기타",
+"kcalPer100g": 5,
+"defaultServingG": 100,
+"kcalPerServing": 5,
+"servingNutrition": {
+"carbsG": 1.1,
+"proteinG": 0.3,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-80c9216949e0",
+"name": "고춧잎",
+"category": "기타",
+"kcalPer100g": 2,
+"defaultServingG": 100,
+"kcalPerServing": 2,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 0.1,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-c298293fc4b5",
+"name": "골뱅이(통조림)",
+"category": "기타",
+"kcalPer100g": 34,
+"defaultServingG": 100,
+"kcalPerServing": 34,
+"servingNutrition": {
+"carbsG": 1.6,
+"proteinG": 6.0,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-fcec05ae1ea4",
+"name": "골뱅이무침",
+"category": "기타",
+"kcalPer100g": 273,
+"defaultServingG": 30,
+"kcalPerServing": 82,
+"servingNutrition": {
+"carbsG": 10.5,
+"proteinG": 8.3,
+"fatG": 1.1
+}
+},
+{
+"id": "mafra-31c4b17acbdb",
+"name": "곰보빵(소보로빵)",
+"category": "밥/면/빵",
+"kcalPer100g": 478,
+"defaultServingG": 55,
+"kcalPerServing": 263,
+"servingNutrition": {
+"carbsG": 39.6,
+"proteinG": 6.2,
+"fatG": 9.2
+}
+},
+{
+"id": "mafra-3300bfea3382",
+"name": "곰탕(가정식)",
+"category": "기타",
+"kcalPer100g": 397,
+"defaultServingG": 30,
+"kcalPerServing": 119,
+"servingNutrition": {
+"carbsG": 1.8,
+"proteinG": 12.3,
+"fatG": 5.6
+}
+},
+{
+"id": "mafra-be9bf9b1503e",
+"name": "곰탕(외식)",
+"category": "기타",
+"kcalPer100g": 602,
+"defaultServingG": 33,
+"kcalPerServing": 198,
+"servingNutrition": {
+"carbsG": 3.1,
+"proteinG": 20.5,
+"fatG": 9.3
+}
+},
+{
+"id": "mafra-476d48b7685a",
+"name": "곱창전골",
+"category": "기타",
+"kcalPer100g": 425,
+"defaultServingG": 30,
+"kcalPerServing": 128,
+"servingNutrition": {
+"carbsG": 11.9,
+"proteinG": 8.8,
+"fatG": 5.8
+}
+},
+{
+"id": "mafra-cc88f8a13418",
+"name": "과일탄산음료",
+"category": "과일",
+"kcalPer100g": 387,
+"defaultServingG": 32,
+"kcalPerServing": 123,
+"servingNutrition": {
+"carbsG": 31.8,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-e261206e0963",
+"name": "광어매운탕",
+"category": "기타",
+"kcalPer100g": 383,
+"defaultServingG": 30,
+"kcalPerServing": 115,
+"servingNutrition": {
+"carbsG": 5.9,
+"proteinG": 18.1,
+"fatG": 2.8
+}
+},
+{
+"id": "mafra-7cadec328f7e",
+"name": "국밥",
+"category": "밥/면/빵",
+"kcalPer100g": 428,
+"defaultServingG": 80,
+"kcalPerServing": 344,
+"servingNutrition": {
+"carbsG": 66.5,
+"proteinG": 11.2,
+"fatG": 2.6
+}
+},
+{
+"id": "mafra-b47f28c78e8e",
+"name": "군만두",
+"category": "기타",
+"kcalPer100g": 549,
+"defaultServingG": 78,
+"kcalPerServing": 429,
+"servingNutrition": {
+"carbsG": 36.7,
+"proteinG": 19.0,
+"fatG": 22.5
+}
+},
+{
+"id": "mafra-985c800eab64",
+"name": "굴",
+"category": "기타",
+"kcalPer100g": 13,
+"defaultServingG": 100,
+"kcalPerServing": 13,
+"servingNutrition": {
+"carbsG": 0.7,
+"proteinG": 1.8,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-1be50eb26da4",
+"name": "굴무침",
+"category": "기타",
+"kcalPer100g": 23,
+"defaultServingG": 100,
+"kcalPerServing": 23,
+"servingNutrition": {
+"carbsG": 1.7,
+"proteinG": 1.6,
+"fatG": 1.3
+}
+},
+{
+"id": "mafra-1f3d5df0d235",
+"name": "굴비",
+"category": "기타",
+"kcalPer100g": 554,
+"defaultServingG": 48,
+"kcalPerServing": 266,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 35.5,
+"fatG": 12.2
+}
+},
+{
+"id": "mafra-7d7360ccb9e0",
+"name": "귤",
+"category": "과일",
+"kcalPer100g": 127,
+"defaultServingG": 30,
+"kcalPerServing": 38,
+"servingNutrition": {
+"carbsG": 9.9,
+"proteinG": 0.7,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-db88d9a1ef4f",
+"name": "귤쥬스",
+"category": "과일",
+"kcalPer100g": 260,
+"defaultServingG": 30,
+"kcalPerServing": 78,
+"servingNutrition": {
+"carbsG": 20.8,
+"proteinG": 0.4,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-216f029c7344",
+"name": "근대",
+"category": "기타",
+"kcalPer100g": 7,
+"defaultServingG": 100,
+"kcalPerServing": 7,
+"servingNutrition": {
+"carbsG": 1.4,
+"proteinG": 1.0,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-e543fc37f38d",
+"name": "근대된장국",
+"category": "기타",
+"kcalPer100g": 36,
+"defaultServingG": 100,
+"kcalPerServing": 36,
+"servingNutrition": {
+"carbsG": 5.3,
+"proteinG": 3.7,
+"fatG": 0.8
+}
+},
+{
+"id": "mafra-c904d55adc74",
+"name": "금귤",
+"category": "과일",
+"kcalPer100g": 220,
+"defaultServingG": 30,
+"kcalPerServing": 66,
+"servingNutrition": {
+"carbsG": 18.0,
+"proteinG": 0.9,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-0e0446a66d9e",
+"name": "기장",
+"category": "기타",
+"kcalPer100g": 22,
+"defaultServingG": 100,
+"kcalPerServing": 22,
+"servingNutrition": {
+"carbsG": 4.5,
+"proteinG": 0.7,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-a503a7a46056",
+"name": "김",
+"category": "기타",
+"kcalPer100g": 2,
+"defaultServingG": 100,
+"kcalPerServing": 2,
+"servingNutrition": {
+"carbsG": 0.9,
+"proteinG": 0.7,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-63e04940b0a1",
+"name": "김구이",
+"category": "기타",
+"kcalPer100g": 3,
+"defaultServingG": 100,
+"kcalPerServing": 3,
+"servingNutrition": {
+"carbsG": 0.9,
+"proteinG": 0.9,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-e853fc75e44d",
+"name": "김무침",
+"category": "기타",
+"kcalPer100g": 247,
+"defaultServingG": 30,
+"kcalPerServing": 74,
+"servingNutrition": {
+"carbsG": 5.7,
+"proteinG": 5.2,
+"fatG": 6.2
+}
+},
+{
+"id": "mafra-79fb0f7004c8",
+"name": "김밥",
+"category": "밥/면/빵",
+"kcalPer100g": 432,
+"defaultServingG": 71,
+"kcalPerServing": 306,
+"servingNutrition": {
+"carbsG": 57.4,
+"proteinG": 9.2,
+"fatG": 4.2
+}
+},
+{
+"id": "mafra-fe4af3f3f3bb",
+"name": "김치(갓김치)",
+"category": "기타",
+"kcalPer100g": 14,
+"defaultServingG": 100,
+"kcalPerServing": 14,
+"servingNutrition": {
+"carbsG": 3.0,
+"proteinG": 1.4,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-94ef2ce54867",
+"name": "김치(고들빼기김치)",
+"category": "기타",
+"kcalPer100g": 26,
+"defaultServingG": 100,
+"kcalPerServing": 26,
+"servingNutrition": {
+"carbsG": 4.8,
+"proteinG": 1.6,
+"fatG": 1.1
+}
+},
+{
+"id": "mafra-31b66f09ef1c",
+"name": "김치(깍두기)",
+"category": "기타",
+"kcalPer100g": 12,
+"defaultServingG": 100,
+"kcalPerServing": 12,
+"servingNutrition": {
+"carbsG": 2.6,
+"proteinG": 0.6,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-1e9c702e88d3",
+"name": "김치(깻잎김치)",
+"category": "기타",
+"kcalPer100g": 19,
+"defaultServingG": 100,
+"kcalPerServing": 19,
+"servingNutrition": {
+"carbsG": 3.4,
+"proteinG": 1.4,
+"fatG": 0.6
+}
+},
+{
+"id": "mafra-8df93dcc88a5",
+"name": "김치(나박김치)",
+"category": "기타",
+"kcalPer100g": 9,
+"defaultServingG": 100,
+"kcalPerServing": 9,
+"servingNutrition": {
+"carbsG": 2.5,
+"proteinG": 0.8,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-81e58baaa542",
+"name": "김치(동치미)",
+"category": "기타",
+"kcalPer100g": 11,
+"defaultServingG": 100,
+"kcalPerServing": 11,
+"servingNutrition": {
+"carbsG": 3.0,
+"proteinG": 0.7,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-a1065ab1dd27",
+"name": "김치(무청김치)",
+"category": "기타",
+"kcalPer100g": 8,
+"defaultServingG": 100,
+"kcalPerServing": 8,
+"servingNutrition": {
+"carbsG": 0.8,
+"proteinG": 0.9,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-3abea48b1468",
+"name": "김치(배추김치)",
+"category": "과일",
+"kcalPer100g": 7,
+"defaultServingG": 100,
+"kcalPerServing": 7,
+"servingNutrition": {
+"carbsG": 1.6,
+"proteinG": 0.8,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-20007de011e9",
+"name": "김치(백김치)",
+"category": "기타",
+"kcalPer100g": 7,
+"defaultServingG": 100,
+"kcalPerServing": 7,
+"servingNutrition": {
+"carbsG": 1.8,
+"proteinG": 0.6,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-651094d47ce3",
+"name": "김치(부추김치)",
+"category": "기타",
+"kcalPer100g": 21,
+"defaultServingG": 100,
+"kcalPerServing": 21,
+"servingNutrition": {
+"carbsG": 3.3,
+"proteinG": 1.9,
+"fatG": 0.8
+}
+},
+{
+"id": "mafra-f8cd4fa729c1",
+"name": "김치(열무김치)",
+"category": "기타",
+"kcalPer100g": 13,
+"defaultServingG": 100,
+"kcalPerServing": 13,
+"servingNutrition": {
+"carbsG": 3.0,
+"proteinG": 1.1,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-ddd9694404d9",
+"name": "김치(오이김치)",
+"category": "기타",
+"kcalPer100g": 16,
+"defaultServingG": 100,
+"kcalPerServing": 16,
+"servingNutrition": {
+"carbsG": 3.2,
+"proteinG": 1.2,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-f78e594a59b1",
+"name": "김치(오이소박이)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 6,
+"defaultServingG": 100,
+"kcalPerServing": 6,
+"servingNutrition": {
+"carbsG": 1.4,
+"proteinG": 0.6,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-b2e32608db90",
+"name": "김치(총각김치)",
+"category": "기타",
+"kcalPer100g": 15,
+"defaultServingG": 100,
+"kcalPerServing": 15,
+"servingNutrition": {
+"carbsG": 3.0,
+"proteinG": 0.9,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-a0c3ade33db3",
+"name": "김치(파김치)",
+"category": "기타",
+"kcalPer100g": 16,
+"defaultServingG": 100,
+"kcalPerServing": 16,
+"servingNutrition": {
+"carbsG": 3.5,
+"proteinG": 1.0,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-bd4164b10e2f",
+"name": "김치국",
+"category": "기타",
+"kcalPer100g": 21,
+"defaultServingG": 100,
+"kcalPerServing": 21,
+"servingNutrition": {
+"carbsG": 2.2,
+"proteinG": 2.5,
+"fatG": 0.8
+}
+},
+{
+"id": "mafra-39c4c1c3fd1f",
+"name": "김치볶음",
+"category": "기타",
+"kcalPer100g": 19,
+"defaultServingG": 100,
+"kcalPerServing": 19,
+"servingNutrition": {
+"carbsG": 2.0,
+"proteinG": 1.0,
+"fatG": 1.3
+}
+},
+{
+"id": "mafra-fc8338a747c8",
+"name": "김치볶음밥",
+"category": "밥/면/빵",
+"kcalPer100g": 439,
+"defaultServingG": 109,
+"kcalPerServing": 481,
+"servingNutrition": {
+"carbsG": 93.0,
+"proteinG": 9.6,
+"fatG": 6.8
+}
+},
+{
+"id": "mafra-f200b27996c8",
+"name": "김치전",
+"category": "기타",
+"kcalPer100g": 444,
+"defaultServingG": 30,
+"kcalPerServing": 133,
+"servingNutrition": {
+"carbsG": 17.8,
+"proteinG": 4.6,
+"fatG": 4.8
+}
+},
+{
+"id": "mafra-1a24f44e98a7",
+"name": "김치찌개",
+"category": "기타",
+"kcalPer100g": 294,
+"defaultServingG": 30,
+"kcalPerServing": 88,
+"servingNutrition": {
+"carbsG": 4.0,
+"proteinG": 7.2,
+"fatG": 5.7
+}
+},
+{
+"id": "mafra-1ac9abbfafc0",
+"name": "김튀김",
+"category": "기타",
+"kcalPer100g": 464,
+"defaultServingG": 45,
+"kcalPerServing": 208,
+"servingNutrition": {
+"carbsG": 25.8,
+"proteinG": 7.5,
+"fatG": 11.6
+}
+},
+{
+"id": "mafra-198a338b93db",
+"name": "깨(검정깨)",
+"category": "기타",
+"kcalPer100g": 11,
+"defaultServingG": 100,
+"kcalPerServing": 11,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 0.4,
+"fatG": 1.0
+}
+},
+{
+"id": "mafra-8e346c8fa451",
+"name": "깨(흰깨)",
+"category": "기타",
+"kcalPer100g": 12,
+"defaultServingG": 100,
+"kcalPerServing": 12,
+"servingNutrition": {
+"carbsG": 0.4,
+"proteinG": 0.4,
+"fatG": 1.1
+}
+},
+{
+"id": "mafra-6f3e0d627a38",
+"name": "깨소금",
+"category": "고기/생선/달걀",
+"kcalPer100g": 12,
+"defaultServingG": 100,
+"kcalPerServing": 12,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 0.4,
+"fatG": 1.1
+}
+},
+{
+"id": "mafra-677228e0c152",
+"name": "깻잎",
+"category": "기타",
+"kcalPer100g": 5,
+"defaultServingG": 100,
+"kcalPerServing": 5,
+"servingNutrition": {
+"carbsG": 1.2,
+"proteinG": 0.6,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-dea34078e99e",
+"name": "깻잎장아찌",
+"category": "기타",
+"kcalPer100g": 6,
+"defaultServingG": 100,
+"kcalPerServing": 6,
+"servingNutrition": {
+"carbsG": 0.6,
+"proteinG": 0.3,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-703df1fbac91",
+"name": "꼬막",
+"category": "기타",
+"kcalPer100g": 20,
+"defaultServingG": 100,
+"kcalPerServing": 20,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 3.5,
+"fatG": 0.5
+}
+},
+{
+"id": "mafra-0e60caf77240",
+"name": "꼬막찜",
+"category": "기타",
+"kcalPer100g": 34,
+"defaultServingG": 100,
+"kcalPerServing": 34,
+"servingNutrition": {
+"carbsG": 2.0,
+"proteinG": 3.9,
+"fatG": 1.1
+}
+},
+{
+"id": "mafra-5eb0d9457af0",
+"name": "꽁치",
+"category": "기타",
+"kcalPer100g": 247,
+"defaultServingG": 30,
+"kcalPerServing": 74,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 8.8,
+"fatG": 3.9
+}
+},
+{
+"id": "mafra-a30891c00bf8",
+"name": "꽁치구이",
+"category": "기타",
+"kcalPer100g": 327,
+"defaultServingG": 30,
+"kcalPerServing": 98,
+"servingNutrition": {
+"carbsG": 0.1,
+"proteinG": 10.0,
+"fatG": 6.0
+}
+},
+{
+"id": "mafra-68c9e068fcfc",
+"name": "꽁치조림",
+"category": "기타",
+"kcalPer100g": 200,
+"defaultServingG": 30,
+"kcalPerServing": 60,
+"servingNutrition": {
+"carbsG": 1.8,
+"proteinG": 6.6,
+"fatG": 2.8
+}
+},
+{
+"id": "mafra-26265f4423c7",
+"name": "꽃게",
+"category": "기타",
+"kcalPer100g": 33,
+"defaultServingG": 100,
+"kcalPerServing": 33,
+"servingNutrition": {
+"carbsG": 0.9,
+"proteinG": 6.2,
+"fatG": 0.4
+}
+},
+{
+"id": "mafra-d1e37d270132",
+"name": "꽃게장",
+"category": "기타",
+"kcalPer100g": 32,
+"defaultServingG": 100,
+"kcalPerServing": 32,
+"servingNutrition": {
+"carbsG": 2.4,
+"proteinG": 4.8,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-078276f1ec4d",
+"name": "꽃게탕",
+"category": "기타",
+"kcalPer100g": 327,
+"defaultServingG": 30,
+"kcalPerServing": 98,
+"servingNutrition": {
+"carbsG": 7.1,
+"proteinG": 14.4,
+"fatG": 1.5
+}
+},
+{
+"id": "mafra-43b83d8565cb",
+"name": "꿀",
+"category": "기타",
+"kcalPer100g": 197,
+"defaultServingG": 30,
+"kcalPerServing": 59,
+"servingNutrition": {
+"carbsG": 15.9,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-afd85cd1f34c",
+"name": "낙지",
+"category": "기타",
+"kcalPer100g": 33,
+"defaultServingG": 100,
+"kcalPerServing": 33,
+"servingNutrition": {
+"carbsG": 0.1,
+"proteinG": 6.9,
+"fatG": 0.4
+}
+},
+{
+"id": "mafra-6c49f9384edc",
+"name": "낙지볶음",
+"category": "기타",
+"kcalPer100g": 300,
+"defaultServingG": 30,
+"kcalPerServing": 90,
+"servingNutrition": {
+"carbsG": 10.8,
+"proteinG": 6.9,
+"fatG": 3.0
+}
+},
+{
+"id": "mafra-e454edc81e66",
+"name": "냉이",
+"category": "기타",
+"kcalPer100g": 9,
+"defaultServingG": 100,
+"kcalPerServing": 9,
+"servingNutrition": {
+"carbsG": 1.6,
+"proteinG": 1.4,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-c469781acae9",
+"name": "냉이된장국",
+"category": "기타",
+"kcalPer100g": 143,
+"defaultServingG": 30,
+"kcalPerServing": 43,
+"servingNutrition": {
+"carbsG": 5.1,
+"proteinG": 4.6,
+"fatG": 1.1
+}
+},
+{
+"id": "mafra-8b814eef875b",
+"name": "넙치(광어)",
+"category": "기타",
+"kcalPer100g": 173,
+"defaultServingG": 30,
+"kcalPerServing": 52,
+"servingNutrition": {
+"carbsG": 0.2,
+"proteinG": 10.2,
+"fatG": 0.9
+}
+},
+{
+"id": "mafra-26b6038b1fea",
+"name": "녹두",
+"category": "기타",
+"kcalPer100g": 391,
+"defaultServingG": 39,
+"kcalPerServing": 151,
+"servingNutrition": {
+"carbsG": 27.9,
+"proteinG": 10.0,
+"fatG": 0.7
+}
+},
+{
+"id": "mafra-a0f7bdad7bbf",
+"name": "녹두묵",
+"category": "기타",
+"kcalPer100g": 11,
+"defaultServingG": 100,
+"kcalPerServing": 11,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-a71a98ff8e66",
+"name": "녹두빈대떡",
+"category": "밥/면/빵",
+"kcalPer100g": 501,
+"defaultServingG": 40,
+"kcalPerServing": 198,
+"servingNutrition": {
+"carbsG": 21.8,
+"proteinG": 9.0,
+"fatG": 8.8
+}
+},
+{
+"id": "mafra-76835c7819c3",
+"name": "녹차",
+"category": "간식/음료",
+"kcalPer100g": 2,
+"defaultServingG": 100,
+"kcalPerServing": 2,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-796973489f9b",
+"name": "녹차음료",
+"category": "간식/음료",
+"kcalPer100g": 2,
+"defaultServingG": 100,
+"kcalPerServing": 2,
+"servingNutrition": {
+"carbsG": 0.4,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-a579c13b28e9",
+"name": "누룽지",
+"category": "기타",
+"kcalPer100g": 366,
+"defaultServingG": 30,
+"kcalPerServing": 110,
+"servingNutrition": {
+"carbsG": 24.3,
+"proteinG": 1.8,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-2b4d53ec66cd",
+"name": "느타리버섯",
+"category": "기타",
+"kcalPer100g": 6,
+"defaultServingG": 100,
+"kcalPerServing": 6,
+"servingNutrition": {
+"carbsG": 1.5,
+"proteinG": 0.7,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-43c5b9e67487",
+"name": "느타리버섯볶음",
+"category": "기타",
+"kcalPer100g": 24,
+"defaultServingG": 100,
+"kcalPerServing": 24,
+"servingNutrition": {
+"carbsG": 2.7,
+"proteinG": 0.9,
+"fatG": 1.4
+}
+},
+{
+"id": "mafra-9383899ab294",
+"name": "늙은호박",
+"category": "기타",
+"kcalPer100g": 16,
+"defaultServingG": 100,
+"kcalPerServing": 16,
+"servingNutrition": {
+"carbsG": 4.5,
+"proteinG": 0.5,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-8d5cf7af125b",
+"name": "다랑어(냉동)",
+"category": "기타",
+"kcalPer100g": 34,
+"defaultServingG": 100,
+"kcalPerServing": 34,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 7.4,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-e5d411c4db89",
+"name": "다랑어(통조림)",
+"category": "기타",
+"kcalPer100g": 59,
+"defaultServingG": 100,
+"kcalPerServing": 59,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 3.6,
+"fatG": 4.7
+}
+},
+{
+"id": "mafra-f7f9873d5017",
+"name": "다시마",
+"category": "기타",
+"kcalPer100g": 3,
+"defaultServingG": 100,
+"kcalPerServing": 3,
+"servingNutrition": {
+"carbsG": 1.5,
+"proteinG": 0.4,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-c52089130d45",
+"name": "다시마(말린것)",
+"category": "기타",
+"kcalPer100g": 1,
+"defaultServingG": 100,
+"kcalPerServing": 1,
+"servingNutrition": {
+"carbsG": 0.5,
+"proteinG": 0.1,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-2709df80a51e",
+"name": "다시마튀각",
+"category": "기타",
+"kcalPer100g": 227,
+"defaultServingG": 30,
+"kcalPerServing": 68,
+"servingNutrition": {
+"carbsG": 7.2,
+"proteinG": 1.2,
+"fatG": 4.1
+}
+},
+{
+"id": "mafra-3a99ffffc866",
+"name": "단무지",
+"category": "기타",
+"kcalPer100g": 2,
+"defaultServingG": 100,
+"kcalPerServing": 2,
+"servingNutrition": {
+"carbsG": 0.7,
+"proteinG": 0.1,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-e927307014c4",
+"name": "단팥빵",
+"category": "밥/면/빵",
+"kcalPer100g": 442,
+"defaultServingG": 56,
+"kcalPerServing": 249,
+"servingNutrition": {
+"carbsG": 44.6,
+"proteinG": 6.5,
+"fatG": 5.2
+}
+},
+{
+"id": "mafra-771bbdc78b6a",
+"name": "달걀",
+"category": "고기/생선/달걀",
+"kcalPer100g": 55,
+"defaultServingG": 100,
+"kcalPerServing": 55,
+"servingNutrition": {
+"carbsG": 1.1,
+"proteinG": 4.7,
+"fatG": 3.3
+}
+},
+{
+"id": "mafra-0ba99e6c6b78",
+"name": "달걀국",
+"category": "고기/생선/달걀",
+"kcalPer100g": 243,
+"defaultServingG": 30,
+"kcalPerServing": 73,
+"servingNutrition": {
+"carbsG": 3.5,
+"proteinG": 6.1,
+"fatG": 3.7
+}
+},
+{
+"id": "mafra-44dc6a6f74e7",
+"name": "달걀말이",
+"category": "고기/생선/달걀",
+"kcalPer100g": 247,
+"defaultServingG": 30,
+"kcalPerServing": 74,
+"servingNutrition": {
+"carbsG": 2.0,
+"proteinG": 4.9,
+"fatG": 5.0
+}
+},
+{
+"id": "mafra-c919f29b63c4",
+"name": "달걀부침(달걀후라이)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 244,
+"defaultServingG": 30,
+"kcalPerServing": 73,
+"servingNutrition": {
+"carbsG": 1.3,
+"proteinG": 5.3,
+"fatG": 5.0
+}
+},
+{
+"id": "mafra-ec77b059fca4",
+"name": "달걀찜",
+"category": "고기/생선/달걀",
+"kcalPer100g": 50,
+"defaultServingG": 100,
+"kcalPerServing": 50,
+"servingNutrition": {
+"carbsG": 1.2,
+"proteinG": 4.3,
+"fatG": 3.0
+}
+},
+{
+"id": "mafra-8231256fcf44",
+"name": "달래",
+"category": "기타",
+"kcalPer100g": 3,
+"defaultServingG": 100,
+"kcalPerServing": 3,
+"servingNutrition": {
+"carbsG": 0.6,
+"proteinG": 0.3,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-7214482d0fc4",
+"name": "달래된장찌개",
+"category": "기타",
+"kcalPer100g": 30,
+"defaultServingG": 100,
+"kcalPerServing": 30,
+"servingNutrition": {
+"carbsG": 2.9,
+"proteinG": 2.7,
+"fatG": 1.2
+}
+},
+{
+"id": "mafra-027e13b8369e",
+"name": "달래무침",
+"category": "기타",
+"kcalPer100g": 32,
+"defaultServingG": 100,
+"kcalPerServing": 32,
+"servingNutrition": {
+"carbsG": 3.0,
+"proteinG": 1.1,
+"fatG": 2.2
+}
+},
+{
+"id": "mafra-1848977be89d",
+"name": "닭개장",
+"category": "고기/생선/달걀",
+"kcalPer100g": 470,
+"defaultServingG": 30,
+"kcalPerServing": 141,
+"servingNutrition": {
+"carbsG": 5.9,
+"proteinG": 13.1,
+"fatG": 7.8
+}
+},
+{
+"id": "mafra-017a13a420cf",
+"name": "닭고기",
+"category": "고기/생선/달걀",
+"kcalPer100g": 570,
+"defaultServingG": 30,
+"kcalPerServing": 171,
+"servingNutrition": {
+"carbsG": 0.9,
+"proteinG": 18.1,
+"fatG": 10.1
+}
+},
+{
+"id": "mafra-374fefae3651",
+"name": "닭고기(가슴)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 631,
+"defaultServingG": 31,
+"kcalPerServing": 198,
+"servingNutrition": {
+"carbsG": 0.6,
+"proteinG": 17.9,
+"fatG": 12.9
+}
+},
+{
+"id": "mafra-5cc00f66bc3d",
+"name": "닭고기(가슴,껍질제거)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 323,
+"defaultServingG": 30,
+"kcalPerServing": 97,
+"servingNutrition": {
+"carbsG": 1.1,
+"proteinG": 22.1,
+"fatG": 0.4
+}
+},
+{
+"id": "mafra-6897a70ccff1",
+"name": "닭고기(날개)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 660,
+"defaultServingG": 32,
+"kcalPerServing": 210,
+"servingNutrition": {
+"carbsG": 0.8,
+"proteinG": 16.6,
+"fatG": 14.4
+}
+},
+{
+"id": "mafra-4be5d60d8d54",
+"name": "닭고기(다리)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 400,
+"defaultServingG": 30,
+"kcalPerServing": 120,
+"servingNutrition": {
+"carbsG": 0.8,
+"proteinG": 17.3,
+"fatG": 4.1
+}
+},
+{
+"id": "mafra-4fd0acda9c30",
+"name": "닭고기(다리,껍질제거)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 380,
+"defaultServingG": 30,
+"kcalPerServing": 114,
+"servingNutrition": {
+"carbsG": 0.9,
+"proteinG": 19.1,
+"fatG": 3.6
+}
+},
+{
+"id": "mafra-b331a907463a",
+"name": "닭도리탕",
+"category": "고기/생선/달걀",
+"kcalPer100g": 515,
+"defaultServingG": 39,
+"kcalPerServing": 201,
+"servingNutrition": {
+"carbsG": 12.2,
+"proteinG": 17.1,
+"fatG": 9.7
+}
+},
+{
+"id": "mafra-55335dd18a6c",
+"name": "닭볶음(닭갈비)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 530,
+"defaultServingG": 61,
+"kcalPerServing": 323,
+"servingNutrition": {
+"carbsG": 20.7,
+"proteinG": 23.4,
+"fatG": 16.8
+}
+},
+{
+"id": "mafra-9fb694c145cf",
+"name": "닭양념튀김",
+"category": "고기/생선/달걀",
+"kcalPer100g": 553,
+"defaultServingG": 61,
+"kcalPerServing": 335,
+"servingNutrition": {
+"carbsG": 21.4,
+"proteinG": 20.2,
+"fatG": 19.0
+}
+},
+{
+"id": "mafra-4b64a599f3df",
+"name": "닭죽",
+"category": "밥/면/빵",
+"kcalPer100g": 437,
+"defaultServingG": 120,
+"kcalPerServing": 526,
+"servingNutrition": {
+"carbsG": 67.2,
+"proteinG": 45.4,
+"fatG": 7.7
+}
+},
+{
+"id": "mafra-27c6e7040c82",
+"name": "닭찜",
+"category": "고기/생선/달걀",
+"kcalPer100g": 515,
+"defaultServingG": 49,
+"kcalPerServing": 254,
+"servingNutrition": {
+"carbsG": 15.4,
+"proteinG": 22.3,
+"fatG": 11.7
+}
+},
+{
+"id": "mafra-bbf77d7c6dff",
+"name": "닭튀김",
+"category": "고기/생선/달걀",
+"kcalPer100g": 613,
+"defaultServingG": 54,
+"kcalPerServing": 328,
+"servingNutrition": {
+"carbsG": 7.4,
+"proteinG": 24.9,
+"fatG": 21.3
+}
+},
+{
+"id": "mafra-16a8cbbd01e5",
+"name": "당근",
+"category": "기타",
+"kcalPer100g": 3,
+"defaultServingG": 100,
+"kcalPerServing": 3,
+"servingNutrition": {
+"carbsG": 0.7,
+"proteinG": 0.1,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-d5510433e729",
+"name": "당면",
+"category": "밥/면/빵",
+"kcalPer100g": 233,
+"defaultServingG": 30,
+"kcalPerServing": 70,
+"servingNutrition": {
+"carbsG": 17.2,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-8b86c2d37d3d",
+"name": "대구",
+"category": "기타",
+"kcalPer100g": 240,
+"defaultServingG": 30,
+"kcalPerServing": 72,
+"servingNutrition": {
+"carbsG": 0.2,
+"proteinG": 15.8,
+"fatG": 0.5
+}
+},
+{
+"id": "mafra-be0d04bca31d",
+"name": "대구매운탕",
+"category": "기타",
+"kcalPer100g": 397,
+"defaultServingG": 30,
+"kcalPerServing": 119,
+"servingNutrition": {
+"carbsG": 9.1,
+"proteinG": 18.2,
+"fatG": 2.3
+}
+},
+{
+"id": "mafra-48ee8cf56ba0",
+"name": "대두",
+"category": "기타",
+"kcalPer100g": 190,
+"defaultServingG": 30,
+"kcalPerServing": 57,
+"servingNutrition": {
+"carbsG": 4.7,
+"proteinG": 5.3,
+"fatG": 2.7
+}
+},
+{
+"id": "mafra-e22564079394",
+"name": "대추(건과)",
+"category": "기타",
+"kcalPer100g": 12,
+"defaultServingG": 100,
+"kcalPerServing": 12,
+"servingNutrition": {
+"carbsG": 2.9,
+"proteinG": 0.2,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-1b6e85205f47",
+"name": "더덕",
+"category": "기타",
+"kcalPer100g": 11,
+"defaultServingG": 100,
+"kcalPerServing": 11,
+"servingNutrition": {
+"carbsG": 2.5,
+"proteinG": 0.8,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-7524f1e331d2",
+"name": "더덕무침",
+"category": "기타",
+"kcalPer100g": 31,
+"defaultServingG": 100,
+"kcalPerServing": 31,
+"servingNutrition": {
+"carbsG": 6.1,
+"proteinG": 1.4,
+"fatG": 0.7
+}
+},
+{
+"id": "mafra-e9116c721b96",
+"name": "도라지",
+"category": "기타",
+"kcalPer100g": 29,
+"defaultServingG": 100,
+"kcalPerServing": 29,
+"servingNutrition": {
+"carbsG": 7.2,
+"proteinG": 0.7,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-fc06a4c3df4f",
+"name": "도라지나물",
+"category": "채소",
+"kcalPer100g": 207,
+"defaultServingG": 30,
+"kcalPerServing": 62,
+"servingNutrition": {
+"carbsG": 8.8,
+"proteinG": 1.0,
+"fatG": 3.1
+}
+},
+{
+"id": "mafra-785990fc6176",
+"name": "도라지생채",
+"category": "기타",
+"kcalPer100g": 137,
+"defaultServingG": 30,
+"kcalPerServing": 41,
+"servingNutrition": {
+"carbsG": 9.5,
+"proteinG": 1.2,
+"fatG": 0.6
+}
+},
+{
+"id": "mafra-408b8752ebed",
+"name": "도우넛(링)",
+"category": "기타",
+"kcalPer100g": 557,
+"defaultServingG": 56,
+"kcalPerServing": 309,
+"servingNutrition": {
+"carbsG": 30.5,
+"proteinG": 5.5,
+"fatG": 19.5
+}
+},
+{
+"id": "mafra-eb1a935eef20",
+"name": "도우넛(팥)",
+"category": "기타",
+"kcalPer100g": 590,
+"defaultServingG": 74,
+"kcalPerServing": 439,
+"servingNutrition": {
+"carbsG": 50.3,
+"proteinG": 7.3,
+"fatG": 16.8
+}
+},
+{
+"id": "mafra-370720f7861b",
+"name": "도토리묵",
+"category": "기타",
+"kcalPer100g": 30,
+"defaultServingG": 100,
+"kcalPerServing": 30,
+"servingNutrition": {
+"carbsG": 7.1,
+"proteinG": 0.1,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-5a1d3d67db40",
+"name": "도토리묵무침",
+"category": "기타",
+"kcalPer100g": 173,
+"defaultServingG": 30,
+"kcalPerServing": 52,
+"servingNutrition": {
+"carbsG": 8.6,
+"proteinG": 1.1,
+"fatG": 1.7
+}
+},
+{
+"id": "mafra-66a417614f87",
+"name": "돈까스",
+"category": "기타",
+"kcalPer100g": 601,
+"defaultServingG": 48,
+"kcalPerServing": 288,
+"servingNutrition": {
+"carbsG": 15.5,
+"proteinG": 13.8,
+"fatG": 18.5
+}
+},
+{
+"id": "mafra-7b281fa52444",
+"name": "돌나물",
+"category": "채소",
+"kcalPer100g": 4,
+"defaultServingG": 100,
+"kcalPerServing": 4,
+"servingNutrition": {
+"carbsG": 0.8,
+"proteinG": 0.5,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-125d3ae7d56c",
+"name": "돔(옥돔)",
+"category": "기타",
+"kcalPer100g": 183,
+"defaultServingG": 30,
+"kcalPerServing": 55,
+"servingNutrition": {
+"carbsG": 0.1,
+"proteinG": 8.9,
+"fatG": 1.9
+}
+},
+{
+"id": "mafra-4de9beec6e4f",
+"name": "동부",
+"category": "기타",
+"kcalPer100g": 9,
+"defaultServingG": 100,
+"kcalPerServing": 9,
+"servingNutrition": {
+"carbsG": 1.7,
+"proteinG": 0.7,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-20ad45072775",
+"name": "동태국",
+"category": "기타",
+"kcalPer100g": 202,
+"defaultServingG": 30,
+"kcalPerServing": 60,
+"servingNutrition": {
+"carbsG": 3.8,
+"proteinG": 9.8,
+"fatG": 1.0
+}
+},
+{
+"id": "mafra-d47618214017",
+"name": "동태조림",
+"category": "기타",
+"kcalPer100g": 267,
+"defaultServingG": 30,
+"kcalPerServing": 80,
+"servingNutrition": {
+"carbsG": 2.3,
+"proteinG": 15.0,
+"fatG": 1.0
+}
+},
+{
+"id": "mafra-5f184d70e8f1",
+"name": "동태찌개",
+"category": "기타",
+"kcalPer100g": 237,
+"defaultServingG": 30,
+"kcalPerServing": 71,
+"servingNutrition": {
+"carbsG": 4.5,
+"proteinG": 11.0,
+"fatG": 1.4
+}
+},
+{
+"id": "mafra-b0ac6e5d2cde",
+"name": "돼지갈비구이",
+"category": "고기/생선/달걀",
+"kcalPer100g": 569,
+"defaultServingG": 66,
+"kcalPerServing": 375,
+"servingNutrition": {
+"carbsG": 16.4,
+"proteinG": 28.0,
+"fatG": 21.5
+}
+},
+{
+"id": "mafra-fd8479d4b07c",
+"name": "돼지갈비찜",
+"category": "고기/생선/달걀",
+"kcalPer100g": 586,
+"defaultServingG": 55,
+"kcalPerServing": 324,
+"servingNutrition": {
+"carbsG": 9.4,
+"proteinG": 26.0,
+"fatG": 20.0
+}
+},
+{
+"id": "mafra-2b0a7549b20f",
+"name": "돼지고기",
+"category": "고기/생선/달걀",
+"kcalPer100g": 523,
+"defaultServingG": 30,
+"kcalPerServing": 157,
+"servingNutrition": {
+"carbsG": 0.7,
+"proteinG": 11.6,
+"fatG": 11.4
+}
+},
+{
+"id": "mafra-408c3a44cea3",
+"name": "돼지고기(갈비)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 621,
+"defaultServingG": 44,
+"kcalPerServing": 270,
+"servingNutrition": {
+"carbsG": 1.3,
+"proteinG": 24.1,
+"fatG": 18.1
+}
+},
+{
+"id": "mafra-e536dc2d2783",
+"name": "돼지고기(삼겹살)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 713,
+"defaultServingG": 72,
+"kcalPerServing": 513,
+"servingNutrition": {
+"carbsG": 1.2,
+"proteinG": 26.7,
+"fatG": 44.0
+}
+},
+{
+"id": "mafra-1901456c4c01",
+"name": "돼지고기가공품(등심햄)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 20,
+"defaultServingG": 100,
+"kcalPerServing": 20,
+"servingNutrition": {
+"carbsG": 0.5,
+"proteinG": 2.5,
+"fatG": 0.6
+}
+},
+{
+"id": "mafra-056f8090c78d",
+"name": "돼지고기가공품(런천미트)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 39,
+"defaultServingG": 100,
+"kcalPerServing": 39,
+"servingNutrition": {
+"carbsG": 0.4,
+"proteinG": 2.3,
+"fatG": 2.8
+}
+},
+{
+"id": "mafra-38cf171f12b7",
+"name": "돼지고기가공품(베이컨)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 17,
+"defaultServingG": 100,
+"kcalPerServing": 17,
+"servingNutrition": {
+"carbsG": 0.4,
+"proteinG": 1.6,
+"fatG": 0.9
+}
+},
+{
+"id": "mafra-f1f6190f48e7",
+"name": "돼지고기가공품(비엔나소시지)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 350,
+"defaultServingG": 30,
+"kcalPerServing": 105,
+"servingNutrition": {
+"carbsG": 1.0,
+"proteinG": 4.8,
+"fatG": 8.5
+}
+},
+{
+"id": "mafra-e04c5ed60dbd",
+"name": "돼지고기가공품(프랑크프르트소시지)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 323,
+"defaultServingG": 30,
+"kcalPerServing": 97,
+"servingNutrition": {
+"carbsG": 0.8,
+"proteinG": 5.0,
+"fatG": 7.7
+}
+},
+{
+"id": "mafra-daa98fb7a5dd",
+"name": "돼지고기구이",
+"category": "고기/생선/달걀",
+"kcalPer100g": 683,
+"defaultServingG": 63,
+"kcalPerServing": 427,
+"servingNutrition": {
+"carbsG": 1.8,
+"proteinG": 28.4,
+"fatG": 32.4
+}
+},
+{
+"id": "mafra-adab34b46d3d",
+"name": "돼지고기덮밥",
+"category": "밥/면/빵",
+"kcalPer100g": 473,
+"defaultServingG": 140,
+"kcalPerServing": 660,
+"servingNutrition": {
+"carbsG": 99.8,
+"proteinG": 22.7,
+"fatG": 17.2
+}
+},
+{
+"id": "mafra-43c1a32835d1",
+"name": "돼지고기볶음",
+"category": "고기/생선/달걀",
+"kcalPer100g": 603,
+"defaultServingG": 43,
+"kcalPerServing": 260,
+"servingNutrition": {
+"carbsG": 10.1,
+"proteinG": 15.4,
+"fatG": 17.6
+}
+},
+{
+"id": "mafra-b80764c68845",
+"name": "돼지고기장조림",
+"category": "고기/생선/달걀",
+"kcalPer100g": 303,
+"defaultServingG": 30,
+"kcalPerServing": 91,
+"servingNutrition": {
+"carbsG": 2.6,
+"proteinG": 6.4,
+"fatG": 5.8
+}
+},
+{
+"id": "mafra-a505fd0ee25a",
+"name": "돼지고기찌개",
+"category": "고기/생선/달걀",
+"kcalPer100g": 454,
+"defaultServingG": 30,
+"kcalPerServing": 136,
+"servingNutrition": {
+"carbsG": 5.1,
+"proteinG": 10.0,
+"fatG": 8.7
+}
+},
+{
+"id": "mafra-27697008e8e6",
+"name": "돼지불고기",
+"category": "고기/생선/달걀",
+"kcalPer100g": 598,
+"defaultServingG": 43,
+"kcalPerServing": 256,
+"servingNutrition": {
+"carbsG": 11.7,
+"proteinG": 13.9,
+"fatG": 17.2
+}
+},
+{
+"id": "mafra-da24dd41cd59",
+"name": "된장",
+"category": "기타",
+"kcalPer100g": 24,
+"defaultServingG": 100,
+"kcalPerServing": 24,
+"servingNutrition": {
+"carbsG": 2.7,
+"proteinG": 2.0,
+"fatG": 0.7
+}
+},
+{
+"id": "mafra-94a6023fbfb5",
+"name": "된장(가루된장)",
+"category": "기타",
+"kcalPer100g": 33,
+"defaultServingG": 100,
+"kcalPerServing": 33,
+"servingNutrition": {
+"carbsG": 2.3,
+"proteinG": 4.0,
+"fatG": 0.8
+}
+},
+{
+"id": "mafra-cc85fdc08300",
+"name": "된장국",
+"category": "기타",
+"kcalPer100g": 200,
+"defaultServingG": 30,
+"kcalPerServing": 60,
+"servingNutrition": {
+"carbsG": 5.6,
+"proteinG": 5.6,
+"fatG": 2.2
+}
+},
+{
+"id": "mafra-5fee6428bb73",
+"name": "된장찌개",
+"category": "기타",
+"kcalPer100g": 201,
+"defaultServingG": 30,
+"kcalPerServing": 60,
+"servingNutrition": {
+"carbsG": 6.1,
+"proteinG": 5.4,
+"fatG": 2.2
+}
+},
+{
+"id": "mafra-8f00d82e9a78",
+"name": "두릅",
+"category": "기타",
+"kcalPer100g": 13,
+"defaultServingG": 100,
+"kcalPerServing": 13,
+"servingNutrition": {
+"carbsG": 2.2,
+"proteinG": 2.2,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-e820134b29c1",
+"name": "두릅무침",
+"category": "기타",
+"kcalPer100g": 180,
+"defaultServingG": 30,
+"kcalPerServing": 54,
+"servingNutrition": {
+"carbsG": 8.1,
+"proteinG": 3.2,
+"fatG": 2.5
+}
+},
+{
+"id": "mafra-6b3b7deaf612",
+"name": "두부",
+"category": "기타",
+"kcalPer100g": 50,
+"defaultServingG": 100,
+"kcalPerServing": 50,
+"servingNutrition": {
+"carbsG": 0.8,
+"proteinG": 5.6,
+"fatG": 3.4
+}
+},
+{
+"id": "mafra-734c0588829f",
+"name": "두부김치",
+"category": "기타",
+"kcalPer100g": 520,
+"defaultServingG": 30,
+"kcalPerServing": 156,
+"servingNutrition": {
+"carbsG": 5.4,
+"proteinG": 12.1,
+"fatG": 11.0
+}
+},
+{
+"id": "mafra-d18740012468",
+"name": "두부부침",
+"category": "기타",
+"kcalPer100g": 50,
+"defaultServingG": 100,
+"kcalPerServing": 50,
+"servingNutrition": {
+"carbsG": 0.6,
+"proteinG": 4.1,
+"fatG": 3.9
+}
+},
+{
+"id": "mafra-601472702c95",
+"name": "두부조림",
+"category": "기타",
+"kcalPer100g": 298,
+"defaultServingG": 30,
+"kcalPerServing": 89,
+"servingNutrition": {
+"carbsG": 3.3,
+"proteinG": 8.2,
+"fatG": 5.9
+}
+},
+{
+"id": "mafra-a46699f9224a",
+"name": "두부찌개",
+"category": "기타",
+"kcalPer100g": 293,
+"defaultServingG": 30,
+"kcalPerServing": 88,
+"servingNutrition": {
+"carbsG": 5.6,
+"proteinG": 8.5,
+"fatG": 4.7
+}
+},
+{
+"id": "mafra-354b2a76c61b",
+"name": "두유음료",
+"category": "간식/음료",
+"kcalPer100g": 480,
+"defaultServingG": 30,
+"kcalPerServing": 144,
+"servingNutrition": {
+"carbsG": 9.6,
+"proteinG": 9.0,
+"fatG": 7.4
+}
+},
+{
+"id": "mafra-db0422a0e8aa",
+"name": "들기름",
+"category": "기타",
+"kcalPer100g": 35,
+"defaultServingG": 100,
+"kcalPerServing": 35,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 0.0,
+"fatG": 4.0
+}
+},
+{
+"id": "mafra-23d9fa5aad49",
+"name": "들깨",
+"category": "기타",
+"kcalPer100g": 8,
+"defaultServingG": 100,
+"kcalPerServing": 8,
+"servingNutrition": {
+"carbsG": 0.8,
+"proteinG": 0.3,
+"fatG": 0.7
+}
+},
+{
+"id": "mafra-9602f19b4676",
+"name": "들미나리",
+"category": "기타",
+"kcalPer100g": 5,
+"defaultServingG": 100,
+"kcalPerServing": 5,
+"servingNutrition": {
+"carbsG": 1.1,
+"proteinG": 0.7,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-63c6e936cd7e",
+"name": "딸기",
+"category": "기타",
+"kcalPer100g": 26,
+"defaultServingG": 100,
+"kcalPerServing": 26,
+"servingNutrition": {
+"carbsG": 6.7,
+"proteinG": 0.6,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-bf1c00a09159",
+"name": "딸기잼",
+"category": "기타",
+"kcalPer100g": 163,
+"defaultServingG": 30,
+"kcalPerServing": 49,
+"servingNutrition": {
+"carbsG": 12.6,
+"proteinG": 0.1,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-eaa52401f2c2",
+"name": "땅콩",
+"category": "기타",
+"kcalPer100g": 247,
+"defaultServingG": 30,
+"kcalPerServing": 74,
+"servingNutrition": {
+"carbsG": 2.8,
+"proteinG": 3.3,
+"fatG": 6.3
+}
+},
+{
+"id": "mafra-a2829b871cea",
+"name": "땅콩버터",
+"category": "기타",
+"kcalPer100g": 30,
+"defaultServingG": 100,
+"kcalPerServing": 30,
+"servingNutrition": {
+"carbsG": 1.6,
+"proteinG": 0.6,
+"fatG": 2.6
+}
+},
+{
+"id": "mafra-b43eab919148",
+"name": "떡국",
+"category": "밥/면/빵",
+"kcalPer100g": 425,
+"defaultServingG": 94,
+"kcalPerServing": 399,
+"servingNutrition": {
+"carbsG": 79.3,
+"proteinG": 11.2,
+"fatG": 3.4
+}
+},
+{
+"id": "mafra-cf3a814b7802",
+"name": "떡만두국",
+"category": "밥/면/빵",
+"kcalPer100g": 464,
+"defaultServingG": 101,
+"kcalPerServing": 470,
+"servingNutrition": {
+"carbsG": 73.3,
+"proteinG": 15.6,
+"fatG": 12.3
+}
+},
+{
+"id": "mafra-ee2cdcfa20dc",
+"name": "떡볶이",
+"category": "밥/면/빵",
+"kcalPer100g": 418,
+"defaultServingG": 41,
+"kcalPerServing": 170,
+"servingNutrition": {
+"carbsG": 34.1,
+"proteinG": 4.7,
+"fatG": 1.9
+}
+},
+{
+"id": "mafra-6377d6bc30bc",
+"name": "라면",
+"category": "밥/면/빵",
+"kcalPer100g": 455,
+"defaultServingG": 115,
+"kcalPerServing": 521,
+"servingNutrition": {
+"carbsG": 81.6,
+"proteinG": 13.2,
+"fatG": 19.8
+}
+},
+{
+"id": "mafra-f3744e5cbcfe",
+"name": "롤빵",
+"category": "밥/면/빵",
+"kcalPer100g": 466,
+"defaultServingG": 30,
+"kcalPerServing": 142,
+"servingNutrition": {
+"carbsG": 21.9,
+"proteinG": 4.5,
+"fatG": 4.1
+}
+},
+{
+"id": "mafra-e56fcc806d6f",
+"name": "롤케익",
+"category": "기타",
+"kcalPer100g": 506,
+"defaultServingG": 43,
+"kcalPerServing": 219,
+"servingNutrition": {
+"carbsG": 28.9,
+"proteinG": 4.5,
+"fatG": 9.9
+}
+},
+{
+"id": "mafra-bb2172df0333",
+"name": "마가린",
+"category": "기타",
+"kcalPer100g": 36,
+"defaultServingG": 100,
+"kcalPerServing": 36,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 0.0,
+"fatG": 4.1
+}
+},
+{
+"id": "mafra-2ca3117dc72e",
+"name": "마늘",
+"category": "기타",
+"kcalPer100g": 13,
+"defaultServingG": 100,
+"kcalPerServing": 13,
+"servingNutrition": {
+"carbsG": 3.0,
+"proteinG": 0.5,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-5c92f534f749",
+"name": "마늘장아찌",
+"category": "기타",
+"kcalPer100g": 6,
+"defaultServingG": 100,
+"kcalPerServing": 6,
+"servingNutrition": {
+"carbsG": 1.2,
+"proteinG": 0.4,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-681f1636eeac",
+"name": "마늘쫑무침",
+"category": "기타",
+"kcalPer100g": 14,
+"defaultServingG": 100,
+"kcalPerServing": 14,
+"servingNutrition": {
+"carbsG": 2.4,
+"proteinG": 0.5,
+"fatG": 0.6
+}
+},
+{
+"id": "mafra-b40503266c73",
+"name": "마늘쫑볶음",
+"category": "기타",
+"kcalPer100g": 31,
+"defaultServingG": 100,
+"kcalPerServing": 31,
+"servingNutrition": {
+"carbsG": 4.0,
+"proteinG": 0.8,
+"fatG": 1.8
+}
+},
+{
+"id": "mafra-dba0160177ea",
+"name": "마늘쫑장아찌",
+"category": "기타",
+"kcalPer100g": 6,
+"defaultServingG": 100,
+"kcalPerServing": 6,
+"servingNutrition": {
+"carbsG": 1.4,
+"proteinG": 0.3,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-e8a2384eaf0d",
+"name": "마요네즈",
+"category": "기타",
+"kcalPer100g": 74,
+"defaultServingG": 100,
+"kcalPerServing": 74,
+"servingNutrition": {
+"carbsG": 0.9,
+"proteinG": 0.1,
+"fatG": 7.5
+}
+},
+{
+"id": "mafra-605ef3a234c8",
+"name": "마파두부",
+"category": "기타",
+"kcalPer100g": 197,
+"defaultServingG": 30,
+"kcalPerServing": 59,
+"servingNutrition": {
+"carbsG": 3.4,
+"proteinG": 4.0,
+"fatG": 3.7
+}
+},
+{
+"id": "mafra-7cbab4f8dd3b",
+"name": "막걸리",
+"category": "기타",
+"kcalPer100g": 613,
+"defaultServingG": 30,
+"kcalPerServing": 184,
+"servingNutrition": {
+"carbsG": 7.2,
+"proteinG": 6.4,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-c44c3909bb9e",
+"name": "만두국",
+"category": "기타",
+"kcalPer100g": 525,
+"defaultServingG": 90,
+"kcalPerServing": 473,
+"servingNutrition": {
+"carbsG": 42.4,
+"proteinG": 24.9,
+"fatG": 22.8
+}
+},
+{
+"id": "mafra-fc3f240163e7",
+"name": "맛술(미림)",
+"category": "기타",
+"kcalPer100g": 7,
+"defaultServingG": 100,
+"kcalPerServing": 7,
+"servingNutrition": {
+"carbsG": 1.8,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-2c02309276ab",
+"name": "맥주",
+"category": "기타",
+"kcalPer100g": 437,
+"defaultServingG": 30,
+"kcalPerServing": 131,
+"servingNutrition": {
+"carbsG": 9.9,
+"proteinG": 1.1,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-6bf09f8bede4",
+"name": "머위",
+"category": "기타",
+"kcalPer100g": 9,
+"defaultServingG": 100,
+"kcalPerServing": 9,
+"servingNutrition": {
+"carbsG": 1.9,
+"proteinG": 1.2,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-505294ac5401",
+"name": "머위나물",
+"category": "채소",
+"kcalPer100g": 29,
+"defaultServingG": 100,
+"kcalPerServing": 29,
+"servingNutrition": {
+"carbsG": 3.0,
+"proteinG": 1.6,
+"fatG": 1.8
+}
+},
+{
+"id": "mafra-87f3c33935bf",
+"name": "멍게",
+"category": "기타",
+"kcalPer100g": 21,
+"defaultServingG": 100,
+"kcalPerServing": 21,
+"servingNutrition": {
+"carbsG": 2.0,
+"proteinG": 1.8,
+"fatG": 0.5
+}
+},
+{
+"id": "mafra-ab39adf1426a",
+"name": "메기",
+"category": "기타",
+"kcalPer100g": 287,
+"defaultServingG": 30,
+"kcalPerServing": 86,
+"servingNutrition": {
+"carbsG": 0.1,
+"proteinG": 11.3,
+"fatG": 4.0
+}
+},
+{
+"id": "mafra-bdc2e68bb468",
+"name": "메기매운탕",
+"category": "기타",
+"kcalPer100g": 343,
+"defaultServingG": 30,
+"kcalPerServing": 103,
+"servingNutrition": {
+"carbsG": 4.6,
+"proteinG": 11.9,
+"fatG": 4.5
+}
+},
+{
+"id": "mafra-d356082bc6f2",
+"name": "메밀국수(건면)",
+"category": "밥/면/빵",
+"kcalPer100g": 414,
+"defaultServingG": 108,
+"kcalPerServing": 447,
+"servingNutrition": {
+"carbsG": 86.7,
+"proteinG": 18.2,
+"fatG": 3.0
+}
+},
+{
+"id": "mafra-2a1547f321c7",
+"name": "메추라기알",
+"category": "기타",
+"kcalPer100g": 233,
+"defaultServingG": 30,
+"kcalPerServing": 70,
+"servingNutrition": {
+"carbsG": 0.9,
+"proteinG": 5.0,
+"fatG": 4.8
+}
+},
+{
+"id": "mafra-ad0217d9d67f",
+"name": "메추라기알장조림",
+"category": "기타",
+"kcalPer100g": 293,
+"defaultServingG": 30,
+"kcalPerServing": 88,
+"servingNutrition": {
+"carbsG": 4.4,
+"proteinG": 5.9,
+"fatG": 4.9
+}
+},
+{
+"id": "mafra-825a48472db7",
+"name": "멸치(자건품, 중)",
+"category": "기타",
+"kcalPer100g": 12,
+"defaultServingG": 100,
+"kcalPerServing": 12,
+"servingNutrition": {
+"carbsG": 0.2,
+"proteinG": 1.9,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-54534e8b1764",
+"name": "멸치볶음",
+"category": "기타",
+"kcalPer100g": 47,
+"defaultServingG": 100,
+"kcalPerServing": 47,
+"servingNutrition": {
+"carbsG": 2.1,
+"proteinG": 4.2,
+"fatG": 2.3
+}
+},
+{
+"id": "mafra-57f5d03d0e66",
+"name": "명란알",
+"category": "기타",
+"kcalPer100g": 28,
+"defaultServingG": 100,
+"kcalPerServing": 28,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 5.6,
+"fatG": 0.4
+}
+},
+{
+"id": "mafra-e140b7ba816f",
+"name": "명란젓",
+"category": "기타",
+"kcalPer100g": 18,
+"defaultServingG": 100,
+"kcalPerServing": 18,
+"servingNutrition": {
+"carbsG": 0.4,
+"proteinG": 3.1,
+"fatG": 0.5
+}
+},
+{
+"id": "mafra-368bc87c015b",
+"name": "명태(동태)",
+"category": "기타",
+"kcalPer100g": 37,
+"defaultServingG": 100,
+"kcalPerServing": 37,
+"servingNutrition": {
+"carbsG": 0.1,
+"proteinG": 8.0,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-1278ab87d050",
+"name": "명태(북어)",
+"category": "기타",
+"kcalPer100g": 193,
+"defaultServingG": 30,
+"kcalPerServing": 58,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 12.3,
+"fatG": 0.6
+}
+},
+{
+"id": "mafra-01be85149c1d",
+"name": "모듬회",
+"category": "기타",
+"kcalPer100g": 443,
+"defaultServingG": 42,
+"kcalPerServing": 185,
+"servingNutrition": {
+"carbsG": 6.4,
+"proteinG": 32.4,
+"fatG": 3.0
+}
+},
+{
+"id": "mafra-d66565e5b363",
+"name": "모밀국수",
+"category": "밥/면/빵",
+"kcalPer100g": 406,
+"defaultServingG": 116,
+"kcalPerServing": 472,
+"servingNutrition": {
+"carbsG": 92.4,
+"proteinG": 20.6,
+"fatG": 3.2
+}
+},
+{
+"id": "mafra-85ba01a3605a",
+"name": "모시조개젓",
+"category": "기타",
+"kcalPer100g": 5,
+"defaultServingG": 100,
+"kcalPerServing": 5,
+"servingNutrition": {
+"carbsG": 0.2,
+"proteinG": 0.9,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-97bf88dbca91",
+"name": "목이버섯(말린것)",
+"category": "기타",
+"kcalPer100g": 5,
+"defaultServingG": 100,
+"kcalPerServing": 5,
+"servingNutrition": {
+"carbsG": 1.4,
+"proteinG": 0.2,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-cb3e9be1a3a2",
+"name": "무",
+"category": "기타",
+"kcalPer100g": 28,
+"defaultServingG": 100,
+"kcalPerServing": 28,
+"servingNutrition": {
+"carbsG": 6.8,
+"proteinG": 1.2,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-e056ad3422dd",
+"name": "무국",
+"category": "기타",
+"kcalPer100g": 205,
+"defaultServingG": 30,
+"kcalPerServing": 61,
+"servingNutrition": {
+"carbsG": 10.8,
+"proteinG": 4.3,
+"fatG": 0.9
+}
+},
+{
+"id": "mafra-1c38633d8362",
+"name": "무나물",
+"category": "채소",
+"kcalPer100g": 177,
+"defaultServingG": 30,
+"kcalPerServing": 53,
+"servingNutrition": {
+"carbsG": 6.5,
+"proteinG": 1.3,
+"fatG": 3.0
+}
+},
+{
+"id": "mafra-913722528336",
+"name": "무된장국",
+"category": "기타",
+"kcalPer100g": 187,
+"defaultServingG": 30,
+"kcalPerServing": 56,
+"servingNutrition": {
+"carbsG": 10.3,
+"proteinG": 3.6,
+"fatG": 0.7
+}
+},
+{
+"id": "mafra-1c85a95b4a30",
+"name": "무말랭이",
+"category": "기타",
+"kcalPer100g": 11,
+"defaultServingG": 100,
+"kcalPerServing": 11,
+"servingNutrition": {
+"carbsG": 2.6,
+"proteinG": 0.4,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-b466deb7405d",
+"name": "무말랭이무침",
+"category": "기타",
+"kcalPer100g": 23,
+"defaultServingG": 100,
+"kcalPerServing": 23,
+"servingNutrition": {
+"carbsG": 4.3,
+"proteinG": 0.8,
+"fatG": 0.7
+}
+},
+{
+"id": "mafra-ef1b54dc53e2",
+"name": "무말랭이장아찌",
+"category": "기타",
+"kcalPer100g": 19,
+"defaultServingG": 100,
+"kcalPerServing": 19,
+"servingNutrition": {
+"carbsG": 3.5,
+"proteinG": 0.7,
+"fatG": 0.6
+}
+},
+{
+"id": "mafra-73f36f1ab87b",
+"name": "무생채",
+"category": "기타",
+"kcalPer100g": 183,
+"defaultServingG": 30,
+"kcalPerServing": 55,
+"servingNutrition": {
+"carbsG": 9.1,
+"proteinG": 1.6,
+"fatG": 2.1
+}
+},
+{
+"id": "mafra-dac20779a395",
+"name": "무장아찌(무초절임)",
+"category": "기타",
+"kcalPer100g": 13,
+"defaultServingG": 100,
+"kcalPerServing": 13,
+"servingNutrition": {
+"carbsG": 1.7,
+"proteinG": 0.3,
+"fatG": 0.9
+}
+},
+{
+"id": "mafra-75e1d053fe21",
+"name": "무짠지",
+"category": "기타",
+"kcalPer100g": 3,
+"defaultServingG": 100,
+"kcalPerServing": 3,
+"servingNutrition": {
+"carbsG": 0.8,
+"proteinG": 0.1,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-983234cf155e",
+"name": "무청",
+"category": "기타",
+"kcalPer100g": 11,
+"defaultServingG": 100,
+"kcalPerServing": 11,
+"servingNutrition": {
+"carbsG": 2.7,
+"proteinG": 1.2,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-aa381e26ac3e",
+"name": "문어",
+"category": "기타",
+"kcalPer100g": 7,
+"defaultServingG": 100,
+"kcalPerServing": 7,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 1.6,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-167213a048f7",
+"name": "물냉면",
+"category": "밥/면/빵",
+"kcalPer100g": 440,
+"defaultServingG": 132,
+"kcalPerServing": 583,
+"servingNutrition": {
+"carbsG": 89.0,
+"proteinG": 33.1,
+"fatG": 10.3
+}
+},
+{
+"id": "mafra-87a51f27138a",
+"name": "물엿",
+"category": "기타",
+"kcalPer100g": 197,
+"defaultServingG": 30,
+"kcalPerServing": 59,
+"servingNutrition": {
+"carbsG": 15.1,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-bd25afd4f0de",
+"name": "미꾸라지",
+"category": "기타",
+"kcalPer100g": 193,
+"defaultServingG": 30,
+"kcalPerServing": 58,
+"servingNutrition": {
+"carbsG": 0.1,
+"proteinG": 9.7,
+"fatG": 1.7
+}
+},
+{
+"id": "mafra-a5a58933bd66",
+"name": "미나리나물",
+"category": "채소",
+"kcalPer100g": 18,
+"defaultServingG": 100,
+"kcalPerServing": 18,
+"servingNutrition": {
+"carbsG": 1.9,
+"proteinG": 0.7,
+"fatG": 1.3
+}
+},
+{
+"id": "mafra-a3d87f6d6835",
+"name": "미나리무침",
+"category": "기타",
+"kcalPer100g": 21,
+"defaultServingG": 100,
+"kcalPerServing": 21,
+"servingNutrition": {
+"carbsG": 2.7,
+"proteinG": 0.7,
+"fatG": 1.2
+}
+},
+{
+"id": "mafra-3cd29ac73463",
+"name": "미더덕",
+"category": "기타",
+"kcalPer100g": 8,
+"defaultServingG": 100,
+"kcalPerServing": 8,
+"servingNutrition": {
+"carbsG": 0.4,
+"proteinG": 1.0,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-11165544d9f4",
+"name": "미숫가루",
+"category": "기타",
+"kcalPer100g": 283,
+"defaultServingG": 30,
+"kcalPerServing": 85,
+"servingNutrition": {
+"carbsG": 14.9,
+"proteinG": 3.1,
+"fatG": 1.1
+}
+},
+{
+"id": "mafra-ed12aa438685",
+"name": "미역(말린것)",
+"category": "기타",
+"kcalPer100g": 6,
+"defaultServingG": 100,
+"kcalPerServing": 6,
+"servingNutrition": {
+"carbsG": 2.2,
+"proteinG": 1.2,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-f219de9d0264",
+"name": "미역(생것)",
+"category": "기타",
+"kcalPer100g": 3,
+"defaultServingG": 100,
+"kcalPerServing": 3,
+"servingNutrition": {
+"carbsG": 1.5,
+"proteinG": 0.6,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-789ea037daa1",
+"name": "미역국",
+"category": "기타",
+"kcalPer100g": 20,
+"defaultServingG": 100,
+"kcalPerServing": 20,
+"servingNutrition": {
+"carbsG": 2.4,
+"proteinG": 2.1,
+"fatG": 1.2
+}
+},
+{
+"id": "mafra-96aa8e122d12",
+"name": "미역줄기볶음",
+"category": "기타",
+"kcalPer100g": 12,
+"defaultServingG": 100,
+"kcalPerServing": 12,
+"servingNutrition": {
+"carbsG": 1.5,
+"proteinG": 0.6,
+"fatG": 0.9
+}
+},
+{
+"id": "mafra-710e2efb8137",
+"name": "미역초무침",
+"category": "기타",
+"kcalPer100g": 23,
+"defaultServingG": 100,
+"kcalPerServing": 23,
+"servingNutrition": {
+"carbsG": 4.4,
+"proteinG": 0.8,
+"fatG": 1.0
+}
+},
+{
+"id": "mafra-63686ed980f2",
+"name": "밀가루(중력분)",
+"category": "기타",
+"kcalPer100g": 436,
+"defaultServingG": 39,
+"kcalPerServing": 170,
+"servingNutrition": {
+"carbsG": 33.3,
+"proteinG": 5.2,
+"fatG": 0.5
+}
+},
+{
+"id": "mafra-7913d8b210e0",
+"name": "바나나",
+"category": "과일",
+"kcalPer100g": 355,
+"defaultServingG": 30,
+"kcalPerServing": 108,
+"servingNutrition": {
+"carbsG": 28.5,
+"proteinG": 1.6,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-6a3a1fad141e",
+"name": "바지락조개(모시조개)",
+"category": "기타",
+"kcalPer100g": 24,
+"defaultServingG": 100,
+"kcalPerServing": 24,
+"servingNutrition": {
+"carbsG": 1.0,
+"proteinG": 4.0,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-5eb472a7598f",
+"name": "밤",
+"category": "기타",
+"kcalPer100g": 16,
+"defaultServingG": 100,
+"kcalPerServing": 16,
+"servingNutrition": {
+"carbsG": 3.7,
+"proteinG": 0.3,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-494a1a861638",
+"name": "배",
+"category": "과일",
+"kcalPer100g": 197,
+"defaultServingG": 30,
+"kcalPerServing": 59,
+"servingNutrition": {
+"carbsG": 16.4,
+"proteinG": 0.5,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-d4c6cc0d8029",
+"name": "배추",
+"category": "과일",
+"kcalPer100g": 6,
+"defaultServingG": 100,
+"kcalPerServing": 6,
+"servingNutrition": {
+"carbsG": 1.7,
+"proteinG": 0.5,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-461712c1aa6c",
+"name": "배추겉절이",
+"category": "과일",
+"kcalPer100g": 33,
+"defaultServingG": 100,
+"kcalPerServing": 33,
+"servingNutrition": {
+"carbsG": 3.5,
+"proteinG": 1.1,
+"fatG": 2.3
+}
+},
+{
+"id": "mafra-c44ef3603dc8",
+"name": "배추나물",
+"category": "과일",
+"kcalPer100g": 13,
+"defaultServingG": 100,
+"kcalPerServing": 13,
+"servingNutrition": {
+"carbsG": 1.6,
+"proteinG": 0.6,
+"fatG": 0.8
+}
+},
+{
+"id": "mafra-5ef85df5468f",
+"name": "백미",
+"category": "기타",
+"kcalPer100g": 417,
+"defaultServingG": 69,
+"kcalPerServing": 289,
+"servingNutrition": {
+"carbsG": 64.0,
+"proteinG": 5.0,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-2f4ed2c2e952",
+"name": "백미죽",
+"category": "밥/면/빵",
+"kcalPer100g": 419,
+"defaultServingG": 46,
+"kcalPerServing": 195,
+"servingNutrition": {
+"carbsG": 43.0,
+"proteinG": 3.2,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-622847427744",
+"name": "백설기",
+"category": "기타",
+"kcalPer100g": 416,
+"defaultServingG": 53,
+"kcalPerServing": 222,
+"servingNutrition": {
+"carbsG": 49.3,
+"proteinG": 3.3,
+"fatG": 0.8
+}
+},
+{
+"id": "mafra-0998512305e1",
+"name": "백합",
+"category": "기타",
+"kcalPer100g": 19,
+"defaultServingG": 100,
+"kcalPerServing": 19,
+"servingNutrition": {
+"carbsG": 0.9,
+"proteinG": 2.9,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-a38596122346",
+"name": "뱅어포",
+"category": "기타",
+"kcalPer100g": 36,
+"defaultServingG": 100,
+"kcalPerServing": 36,
+"servingNutrition": {
+"carbsG": 0.1,
+"proteinG": 6.0,
+"fatG": 1.1
+}
+},
+{
+"id": "mafra-68cd8c7ab3a0",
+"name": "버섯볶음",
+"category": "기타",
+"kcalPer100g": 26,
+"defaultServingG": 100,
+"kcalPerServing": 26,
+"servingNutrition": {
+"carbsG": 2.5,
+"proteinG": 0.9,
+"fatG": 1.8
+}
+},
+{
+"id": "mafra-35527a732f78",
+"name": "버터",
+"category": "기타",
+"kcalPer100g": 37,
+"defaultServingG": 100,
+"kcalPerServing": 37,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 0.0,
+"fatG": 4.2
+}
+},
+{
+"id": "mafra-7f6d63afbb61",
+"name": "보리",
+"category": "기타",
+"kcalPer100g": 34,
+"defaultServingG": 100,
+"kcalPerServing": 34,
+"servingNutrition": {
+"carbsG": 7.7,
+"proteinG": 0.9,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-af7c05206421",
+"name": "보리밥",
+"category": "밥/면/빵",
+"kcalPer100g": 416,
+"defaultServingG": 92,
+"kcalPerServing": 381,
+"servingNutrition": {
+"carbsG": 84.2,
+"proteinG": 6.8,
+"fatG": 0.5
+}
+},
+{
+"id": "mafra-575763dce282",
+"name": "보신탕",
+"category": "기타",
+"kcalPer100g": 513,
+"defaultServingG": 30,
+"kcalPerServing": 154,
+"servingNutrition": {
+"carbsG": 7.5,
+"proteinG": 11.0,
+"fatG": 10.0
+}
+},
+{
+"id": "mafra-cc9102a57f59",
+"name": "보쌈",
+"category": "기타",
+"kcalPer100g": 438,
+"defaultServingG": 46,
+"kcalPerServing": 202,
+"servingNutrition": {
+"carbsG": 12.4,
+"proteinG": 28.4,
+"fatG": 5.3
+}
+},
+{
+"id": "mafra-d1d32e87a72f",
+"name": "복매운탕",
+"category": "기타",
+"kcalPer100g": 310,
+"defaultServingG": 30,
+"kcalPerServing": 93,
+"servingNutrition": {
+"carbsG": 6.3,
+"proteinG": 15.9,
+"fatG": 1.5
+}
+},
+{
+"id": "mafra-fc45e4ab5c3d",
+"name": "복숭아(통조림)",
+"category": "기타",
+"kcalPer100g": 293,
+"defaultServingG": 30,
+"kcalPerServing": 88,
+"servingNutrition": {
+"carbsG": 24.0,
+"proteinG": 0.3,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-ea4cc5878f50",
+"name": "복어",
+"category": "기타",
+"kcalPer100g": 267,
+"defaultServingG": 30,
+"kcalPerServing": 80,
+"servingNutrition": {
+"carbsG": 0.1,
+"proteinG": 16.9,
+"fatG": 0.9
+}
+},
+{
+"id": "mafra-ded553d609b9",
+"name": "복지리",
+"category": "기타",
+"kcalPer100g": 407,
+"defaultServingG": 30,
+"kcalPerServing": 123,
+"servingNutrition": {
+"carbsG": 6.2,
+"proteinG": 22.1,
+"fatG": 1.9
+}
+},
+{
+"id": "mafra-922e2aa29e6c",
+"name": "볶음밥",
+"category": "밥/면/빵",
+"kcalPer100g": 479,
+"defaultServingG": 96,
+"kcalPerServing": 462,
+"servingNutrition": {
+"carbsG": 71.6,
+"proteinG": 12.0,
+"fatG": 12.7
+}
+},
+{
+"id": "mafra-ebd9fa4b8c2c",
+"name": "볼락",
+"category": "기타",
+"kcalPer100g": 46,
+"defaultServingG": 100,
+"kcalPerServing": 46,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 8.0,
+"fatG": 1.3
+}
+},
+{
+"id": "mafra-0ad1cedd28ee",
+"name": "부대찌개",
+"category": "기타",
+"kcalPer100g": 532,
+"defaultServingG": 32,
+"kcalPerServing": 171,
+"servingNutrition": {
+"carbsG": 13.3,
+"proteinG": 9.1,
+"fatG": 9.8
+}
+},
+{
+"id": "mafra-613b5d907d7b",
+"name": "부추",
+"category": "기타",
+"kcalPer100g": 6,
+"defaultServingG": 100,
+"kcalPerServing": 6,
+"servingNutrition": {
+"carbsG": 1.2,
+"proteinG": 0.9,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-eadb735807f1",
+"name": "부추무침",
+"category": "기타",
+"kcalPer100g": 24,
+"defaultServingG": 100,
+"kcalPerServing": 24,
+"servingNutrition": {
+"carbsG": 3.3,
+"proteinG": 1.7,
+"fatG": 1.1
+}
+},
+{
+"id": "mafra-4c114281437d",
+"name": "부추전",
+"category": "기타",
+"kcalPer100g": 498,
+"defaultServingG": 32,
+"kcalPerServing": 158,
+"servingNutrition": {
+"carbsG": 21.8,
+"proteinG": 4.6,
+"fatG": 5.3
+}
+},
+{
+"id": "mafra-9a49f7a04cbc",
+"name": "부추전(가정식)",
+"category": "기타",
+"kcalPer100g": 496,
+"defaultServingG": 53,
+"kcalPerServing": 263,
+"servingNutrition": {
+"carbsG": 36.4,
+"proteinG": 7.7,
+"fatG": 8.9
+}
+},
+{
+"id": "mafra-ae047c792e0c",
+"name": "부추전(외식)",
+"category": "기타",
+"kcalPer100g": 44,
+"defaultServingG": 100,
+"kcalPerServing": 44,
+"servingNutrition": {
+"carbsG": 6.1,
+"proteinG": 1.3,
+"fatG": 1.5
+}
+},
+{
+"id": "mafra-1d0abcf10345",
+"name": "북어국",
+"category": "기타",
+"kcalPer100g": 375,
+"defaultServingG": 30,
+"kcalPerServing": 112,
+"servingNutrition": {
+"carbsG": 2.8,
+"proteinG": 16.3,
+"fatG": 3.8
+}
+},
+{
+"id": "mafra-54f453d35889",
+"name": "북어조림",
+"category": "기타",
+"kcalPer100g": 257,
+"defaultServingG": 30,
+"kcalPerServing": 77,
+"servingNutrition": {
+"carbsG": 3.0,
+"proteinG": 13.9,
+"fatG": 0.7
+}
+},
+{
+"id": "mafra-65b3af3e2508",
+"name": "북어찜",
+"category": "기타",
+"kcalPer100g": 400,
+"defaultServingG": 30,
+"kcalPerServing": 120,
+"servingNutrition": {
+"carbsG": 5.8,
+"proteinG": 18.7,
+"fatG": 2.4
+}
+},
+{
+"id": "mafra-88477589c082",
+"name": "분말조미료(쇠고기)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 2,
+"defaultServingG": 100,
+"kcalPerServing": 2,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 0.1,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-5c8034c7f69a",
+"name": "불고기",
+"category": "고기/생선/달걀",
+"kcalPer100g": 561,
+"defaultServingG": 35,
+"kcalPerServing": 198,
+"servingNutrition": {
+"carbsG": 6.9,
+"proteinG": 17.4,
+"fatG": 10.9
+}
+},
+{
+"id": "mafra-93f3736dc2a4",
+"name": "불고기(가정식)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 440,
+"defaultServingG": 30,
+"kcalPerServing": 132,
+"servingNutrition": {
+"carbsG": 4.6,
+"proteinG": 11.6,
+"fatG": 7.3
+}
+},
+{
+"id": "mafra-d39a41d0a59c",
+"name": "불고기(외식)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 559,
+"defaultServingG": 41,
+"kcalPerServing": 230,
+"servingNutrition": {
+"carbsG": 8.1,
+"proteinG": 20.3,
+"fatG": 12.8
+}
+},
+{
+"id": "mafra-22fc3548900d",
+"name": "붉은고추",
+"category": "기타",
+"kcalPer100g": 1,
+"defaultServingG": 100,
+"kcalPerServing": 1,
+"servingNutrition": {
+"carbsG": 0.2,
+"proteinG": 0.1,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-254df738ff3d",
+"name": "브로콜리",
+"category": "기타",
+"kcalPer100g": 8,
+"defaultServingG": 100,
+"kcalPerServing": 8,
+"servingNutrition": {
+"carbsG": 1.5,
+"proteinG": 1.5,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-1ca39ebc97cb",
+"name": "비름",
+"category": "기타",
+"kcalPer100g": 12,
+"defaultServingG": 100,
+"kcalPerServing": 12,
+"servingNutrition": {
+"carbsG": 2.0,
+"proteinG": 1.3,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-f9ea303c44d7",
+"name": "비름나물",
+"category": "채소",
+"kcalPer100g": 29,
+"defaultServingG": 100,
+"kcalPerServing": 29,
+"servingNutrition": {
+"carbsG": 2.9,
+"proteinG": 1.7,
+"fatG": 1.8
+}
+},
+{
+"id": "mafra-2957f76eee0d",
+"name": "비빔국수",
+"category": "밥/면/빵",
+"kcalPer100g": 428,
+"defaultServingG": 140,
+"kcalPerServing": 599,
+"servingNutrition": {
+"carbsG": 117.2,
+"proteinG": 17.0,
+"fatG": 5.8
+}
+},
+{
+"id": "mafra-5d5add4d692c",
+"name": "비빔냉면",
+"category": "밥/면/빵",
+"kcalPer100g": 427,
+"defaultServingG": 129,
+"kcalPerServing": 552,
+"servingNutrition": {
+"carbsG": 96.1,
+"proteinG": 25.6,
+"fatG": 7.7
+}
+},
+{
+"id": "mafra-6549b5477367",
+"name": "비빔밥",
+"category": "밥/면/빵",
+"kcalPer100g": 454,
+"defaultServingG": 130,
+"kcalPerServing": 589,
+"servingNutrition": {
+"carbsG": 95.1,
+"proteinG": 20.5,
+"fatG": 14.1
+}
+},
+{
+"id": "mafra-8d1f3265f70b",
+"name": "비스킷(소프트)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 437,
+"defaultServingG": 30,
+"kcalPerServing": 131,
+"servingNutrition": {
+"carbsG": 15.7,
+"proteinG": 1.4,
+"fatG": 6.9
+}
+},
+{
+"id": "mafra-0a7cde76ddea",
+"name": "비스킷(하드)",
+"category": "기타",
+"kcalPer100g": 287,
+"defaultServingG": 30,
+"kcalPerServing": 86,
+"servingNutrition": {
+"carbsG": 15.6,
+"proteinG": 1.5,
+"fatG": 2.0
+}
+},
+{
+"id": "mafra-4e264bb3e8bf",
+"name": "빵가루",
+"category": "밥/면/빵",
+"kcalPer100g": 28,
+"defaultServingG": 100,
+"kcalPerServing": 28,
+"servingNutrition": {
+"carbsG": 5.8,
+"proteinG": 1.1,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-7a56f5adb68e",
+"name": "사과",
+"category": "과일",
+"kcalPer100g": 230,
+"defaultServingG": 30,
+"kcalPerServing": 69,
+"servingNutrition": {
+"carbsG": 18.2,
+"proteinG": 0.3,
+"fatG": 0.6
+}
+},
+{
+"id": "mafra-b2d5fa7bd494",
+"name": "사우전드아일랜드드레싱",
+"category": "기타",
+"kcalPer100g": 72,
+"defaultServingG": 100,
+"kcalPerServing": 72,
+"servingNutrition": {
+"carbsG": 1.7,
+"proteinG": 0.1,
+"fatG": 7.3
+}
+},
+{
+"id": "mafra-c7e426667b77",
+"name": "사이다",
+"category": "기타",
+"kcalPer100g": 333,
+"defaultServingG": 30,
+"kcalPerServing": 100,
+"servingNutrition": {
+"carbsG": 25.3,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-826544a6ca19",
+"name": "사탕",
+"category": "기타",
+"kcalPer100g": 24,
+"defaultServingG": 100,
+"kcalPerServing": 24,
+"servingNutrition": {
+"carbsG": 5.9,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-bf47a246401c",
+"name": "삼겹살구이",
+"category": "기타",
+"kcalPer100g": 713,
+"defaultServingG": 86,
+"kcalPerServing": 610,
+"servingNutrition": {
+"carbsG": 1.5,
+"proteinG": 31.7,
+"fatG": 52.4
+}
+},
+{
+"id": "mafra-512339c853cc",
+"name": "삼계탕(닭백숙)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 508,
+"defaultServingG": 78,
+"kcalPerServing": 395,
+"servingNutrition": {
+"carbsG": 32.0,
+"proteinG": 30.4,
+"fatG": 15.4
+}
+},
+{
+"id": "mafra-8a9446d75b38",
+"name": "삼치",
+"category": "기타",
+"kcalPer100g": 183,
+"defaultServingG": 30,
+"kcalPerServing": 55,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 7.6,
+"fatG": 2.4
+}
+},
+{
+"id": "mafra-84d891cbf449",
+"name": "삼치구이",
+"category": "기타",
+"kcalPer100g": 257,
+"defaultServingG": 30,
+"kcalPerServing": 77,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 8.6,
+"fatG": 4.4
+}
+},
+{
+"id": "mafra-9ae30de5fcbf",
+"name": "삼치조림",
+"category": "기타",
+"kcalPer100g": 242,
+"defaultServingG": 30,
+"kcalPerServing": 72,
+"servingNutrition": {
+"carbsG": 4.3,
+"proteinG": 8.5,
+"fatG": 2.6
+}
+},
+{
+"id": "mafra-2902ba5c6f51",
+"name": "상추",
+"category": "채소",
+"kcalPer100g": 2,
+"defaultServingG": 100,
+"kcalPerServing": 2,
+"servingNutrition": {
+"carbsG": 0.4,
+"proteinG": 0.3,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-308f91e08b02",
+"name": "상추겉절이",
+"category": "채소",
+"kcalPer100g": 34,
+"defaultServingG": 100,
+"kcalPerServing": 34,
+"servingNutrition": {
+"carbsG": 2.8,
+"proteinG": 1.3,
+"fatG": 2.5
+}
+},
+{
+"id": "mafra-b97f591f6853",
+"name": "새우(중하)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 33,
+"defaultServingG": 100,
+"kcalPerServing": 33,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 7.0,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-6cee8243a412",
+"name": "새우(중하,자건품)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 15,
+"defaultServingG": 100,
+"kcalPerServing": 15,
+"servingNutrition": {
+"carbsG": 0.1,
+"proteinG": 2.7,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-2691d2d8f87d",
+"name": "새우볶음",
+"category": "고기/생선/달걀",
+"kcalPer100g": 9,
+"defaultServingG": 100,
+"kcalPerServing": 9,
+"servingNutrition": {
+"carbsG": 0.4,
+"proteinG": 1.4,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-fda21cd1fce5",
+"name": "새우젓",
+"category": "고기/생선/달걀",
+"kcalPer100g": 2,
+"defaultServingG": 100,
+"kcalPerServing": 2,
+"servingNutrition": {
+"carbsG": 0.1,
+"proteinG": 0.4,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-4860788b5c14",
+"name": "새우젓무침",
+"category": "고기/생선/달걀",
+"kcalPer100g": 2,
+"defaultServingG": 100,
+"kcalPerServing": 2,
+"servingNutrition": {
+"carbsG": 0.1,
+"proteinG": 0.4,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-2eec389e8646",
+"name": "샌드위치",
+"category": "기타",
+"kcalPer100g": 541,
+"defaultServingG": 66,
+"kcalPerServing": 358,
+"servingNutrition": {
+"carbsG": 35.0,
+"proteinG": 12.8,
+"fatG": 18.4
+}
+},
+{
+"id": "mafra-a79d478b19d4",
+"name": "생강",
+"category": "기타",
+"kcalPer100g": 1,
+"defaultServingG": 100,
+"kcalPerServing": 1,
+"servingNutrition": {
+"carbsG": 0.1,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-ba8687588860",
+"name": "생선가스",
+"category": "고기/생선/달걀",
+"kcalPer100g": 387,
+"defaultServingG": 30,
+"kcalPerServing": 116,
+"servingNutrition": {
+"carbsG": 6.2,
+"proteinG": 9.7,
+"fatG": 5.7
+}
+},
+{
+"id": "mafra-0f0b18c72d81",
+"name": "생선전",
+"category": "고기/생선/달걀",
+"kcalPer100g": 220,
+"defaultServingG": 30,
+"kcalPerServing": 66,
+"servingNutrition": {
+"carbsG": 3.2,
+"proteinG": 5.2,
+"fatG": 3.4
+}
+},
+{
+"id": "mafra-d1f08d26b769",
+"name": "생선초밥",
+"category": "밥/면/빵",
+"kcalPer100g": 435,
+"defaultServingG": 104,
+"kcalPerServing": 454,
+"servingNutrition": {
+"carbsG": 74.8,
+"proteinG": 25.4,
+"fatG": 4.2
+}
+},
+{
+"id": "mafra-702b9abb80cd",
+"name": "샤베트",
+"category": "기타",
+"kcalPer100g": 340,
+"defaultServingG": 30,
+"kcalPerServing": 102,
+"servingNutrition": {
+"carbsG": 23.0,
+"proteinG": 0.7,
+"fatG": 0.8
+}
+},
+{
+"id": "mafra-13d8db0b3953",
+"name": "선짓국",
+"category": "기타",
+"kcalPer100g": 233,
+"defaultServingG": 30,
+"kcalPerServing": 70,
+"servingNutrition": {
+"carbsG": 4.0,
+"proteinG": 9.9,
+"fatG": 1.9
+}
+},
+{
+"id": "mafra-93afddae01ef",
+"name": "설렁탕",
+"category": "기타",
+"kcalPer100g": 466,
+"defaultServingG": 37,
+"kcalPerServing": 171,
+"servingNutrition": {
+"carbsG": 18.9,
+"proteinG": 13.0,
+"fatG": 4.8
+}
+},
+{
+"id": "mafra-c8eb27a3635d",
+"name": "설탕(백설탕)",
+"category": "기타",
+"kcalPer100g": 153,
+"defaultServingG": 30,
+"kcalPerServing": 46,
+"servingNutrition": {
+"carbsG": 12.0,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-faf83aa79a83",
+"name": "설탕(황설탕)",
+"category": "기타",
+"kcalPer100g": 153,
+"defaultServingG": 30,
+"kcalPerServing": 46,
+"servingNutrition": {
+"carbsG": 11.9,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-46e39df68c47",
+"name": "셀러리",
+"category": "기타",
+"kcalPer100g": 2,
+"defaultServingG": 100,
+"kcalPerServing": 2,
+"servingNutrition": {
+"carbsG": 0.5,
+"proteinG": 0.2,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-d4462955207d",
+"name": "소라",
+"category": "고기/생선/달걀",
+"kcalPer100g": 19,
+"defaultServingG": 100,
+"kcalPerServing": 19,
+"servingNutrition": {
+"carbsG": 0.5,
+"proteinG": 3.6,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-8998924f4cab",
+"name": "소면(건면)",
+"category": "밥/면/빵",
+"kcalPer100g": 421,
+"defaultServingG": 116,
+"kcalPerServing": 490,
+"servingNutrition": {
+"carbsG": 104.4,
+"proteinG": 11.7,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-5d3262333883",
+"name": "소주",
+"category": "고기/생선/달걀",
+"kcalPer100g": 63,
+"defaultServingG": 100,
+"kcalPerServing": 63,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-53276311c3ef",
+"name": "송편(깨)",
+"category": "기타",
+"kcalPer100g": 317,
+"defaultServingG": 30,
+"kcalPerServing": 95,
+"servingNutrition": {
+"carbsG": 20.5,
+"proteinG": 1.6,
+"fatG": 0.6
+}
+},
+{
+"id": "mafra-94eaf74941fc",
+"name": "쇠고기,수입우(갈비)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 676,
+"defaultServingG": 39,
+"kcalPerServing": 263,
+"servingNutrition": {
+"carbsG": 0.9,
+"proteinG": 18.5,
+"fatG": 19.5
+}
+},
+{
+"id": "mafra-e0ec1cd6875d",
+"name": "쇠고기,수입우(등심)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 337,
+"defaultServingG": 30,
+"kcalPerServing": 101,
+"servingNutrition": {
+"carbsG": 0.4,
+"proteinG": 7.9,
+"fatG": 7.2
+}
+},
+{
+"id": "mafra-37ef02d5d6b2",
+"name": "쇠고기,수입우(사태)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 42,
+"defaultServingG": 100,
+"kcalPerServing": 42,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 6.2,
+"fatG": 1.6
+}
+},
+{
+"id": "mafra-35a339c65497",
+"name": "쇠고기,수입우(양지)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 177,
+"defaultServingG": 30,
+"kcalPerServing": 53,
+"servingNutrition": {
+"carbsG": 0.4,
+"proteinG": 7.4,
+"fatG": 2.3
+}
+},
+{
+"id": "mafra-19701b0f6c76",
+"name": "쇠고기,수입우(우둔)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 34,
+"defaultServingG": 100,
+"kcalPerServing": 34,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 5.5,
+"fatG": 1.1
+}
+},
+{
+"id": "mafra-d7e406747c47",
+"name": "쇠고기,한우",
+"category": "고기/생선/달걀",
+"kcalPer100g": 48,
+"defaultServingG": 100,
+"kcalPerServing": 48,
+"servingNutrition": {
+"carbsG": 0.2,
+"proteinG": 4.8,
+"fatG": 2.8
+}
+},
+{
+"id": "mafra-a04c7b4f08b0",
+"name": "쇠고기,한우(등심)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 287,
+"defaultServingG": 30,
+"kcalPerServing": 86,
+"servingNutrition": {
+"carbsG": 0.5,
+"proteinG": 9.0,
+"fatG": 5.1
+}
+},
+{
+"id": "mafra-9a815892754d",
+"name": "쇠고기,한우(사태)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 46,
+"defaultServingG": 100,
+"kcalPerServing": 46,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 7.1,
+"fatG": 1.6
+}
+},
+{
+"id": "mafra-f09661aa2ea8",
+"name": "쇠고기,한우(양지)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 193,
+"defaultServingG": 30,
+"kcalPerServing": 58,
+"servingNutrition": {
+"carbsG": 0.4,
+"proteinG": 7.5,
+"fatG": 2.8
+}
+},
+{
+"id": "mafra-ba098ede2ad2",
+"name": "쇠고기국",
+"category": "고기/생선/달걀",
+"kcalPer100g": 220,
+"defaultServingG": 30,
+"kcalPerServing": 66,
+"servingNutrition": {
+"carbsG": 3.2,
+"proteinG": 7.7,
+"fatG": 2.7
+}
+},
+{
+"id": "mafra-ae6b3949cddd",
+"name": "쇠고기미역국",
+"category": "고기/생선/달걀",
+"kcalPer100g": 210,
+"defaultServingG": 30,
+"kcalPerServing": 63,
+"servingNutrition": {
+"carbsG": 3.7,
+"proteinG": 7.3,
+"fatG": 3.4
+}
+},
+{
+"id": "mafra-089a70999dca",
+"name": "쇠고기부산물(간)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 39,
+"defaultServingG": 100,
+"kcalPerServing": 39,
+"servingNutrition": {
+"carbsG": 0.4,
+"proteinG": 5.7,
+"fatG": 1.4
+}
+},
+{
+"id": "mafra-c26167609e21",
+"name": "쇠고기부산물(곱창)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 56,
+"defaultServingG": 100,
+"kcalPerServing": 56,
+"servingNutrition": {
+"carbsG": 0.2,
+"proteinG": 3.6,
+"fatG": 4.5
+}
+},
+{
+"id": "mafra-8acd36f71ac7",
+"name": "쇠고기부산물(선지)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 20,
+"defaultServingG": 100,
+"kcalPerServing": 20,
+"servingNutrition": {
+"carbsG": 1.0,
+"proteinG": 4.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-7423771d67e3",
+"name": "쇠고기산적",
+"category": "고기/생선/달걀",
+"kcalPer100g": 347,
+"defaultServingG": 30,
+"kcalPerServing": 104,
+"servingNutrition": {
+"carbsG": 9.1,
+"proteinG": 6.5,
+"fatG": 4.6
+}
+},
+{
+"id": "mafra-e95a16c98961",
+"name": "쇠고기전골",
+"category": "고기/생선/달걀",
+"kcalPer100g": 347,
+"defaultServingG": 30,
+"kcalPerServing": 104,
+"servingNutrition": {
+"carbsG": 6.1,
+"proteinG": 8.7,
+"fatG": 5.5
+}
+},
+{
+"id": "mafra-fbd7f7fef733",
+"name": "수박",
+"category": "기타",
+"kcalPer100g": 31,
+"defaultServingG": 100,
+"kcalPerServing": 31,
+"servingNutrition": {
+"carbsG": 6.9,
+"proteinG": 1.0,
+"fatG": 0.5
+}
+},
+{
+"id": "mafra-90756b6834af",
+"name": "수수",
+"category": "기타",
+"kcalPer100g": 25,
+"defaultServingG": 100,
+"kcalPerServing": 25,
+"servingNutrition": {
+"carbsG": 5.2,
+"proteinG": 0.7,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-21707b954a22",
+"name": "수수밥",
+"category": "밥/면/빵",
+"kcalPer100g": 412,
+"defaultServingG": 113,
+"kcalPerServing": 466,
+"servingNutrition": {
+"carbsG": 103.5,
+"proteinG": 8.6,
+"fatG": 1.0
+}
+},
+{
+"id": "mafra-5c79e812394f",
+"name": "수육(쇠고기)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 424,
+"defaultServingG": 30,
+"kcalPerServing": 127,
+"servingNutrition": {
+"carbsG": 3.2,
+"proteinG": 18.8,
+"fatG": 4.2
+}
+},
+{
+"id": "mafra-357773a3e274",
+"name": "수제비",
+"category": "기타",
+"kcalPer100g": 1511,
+"defaultServingG": 30,
+"kcalPerServing": 453,
+"servingNutrition": {
+"carbsG": 14.3,
+"proteinG": 2.8,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-7ff87010515b",
+"name": "숙주나물",
+"category": "채소",
+"kcalPer100g": 4,
+"defaultServingG": 100,
+"kcalPerServing": 4,
+"servingNutrition": {
+"carbsG": 0.6,
+"proteinG": 0.8,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-c75f7a07dca9",
+"name": "순대",
+"category": "기타",
+"kcalPer100g": 64,
+"defaultServingG": 100,
+"kcalPerServing": 64,
+"servingNutrition": {
+"carbsG": 1.1,
+"proteinG": 0.8,
+"fatG": 3.1
+}
+},
+{
+"id": "mafra-1dbddc939685",
+"name": "순대국",
+"category": "기타",
+"kcalPer100g": 423,
+"defaultServingG": 30,
+"kcalPerServing": 127,
+"servingNutrition": {
+"carbsG": 11.3,
+"proteinG": 6.7,
+"fatG": 5.1
+}
+},
+{
+"id": "mafra-3ca5d2c5e399",
+"name": "순두부",
+"category": "기타",
+"kcalPer100g": 40,
+"defaultServingG": 100,
+"kcalPerServing": 40,
+"servingNutrition": {
+"carbsG": 0.9,
+"proteinG": 4.0,
+"fatG": 2.7
+}
+},
+{
+"id": "mafra-b4008cf2a553",
+"name": "순두부찌개",
+"category": "기타",
+"kcalPer100g": 268,
+"defaultServingG": 30,
+"kcalPerServing": 80,
+"servingNutrition": {
+"carbsG": 4.3,
+"proteinG": 7.7,
+"fatG": 4.3
+}
+},
+{
+"id": "mafra-56d7320f23fe",
+"name": "스낵과자(밀가루)",
+"category": "기타",
+"kcalPer100g": 483,
+"defaultServingG": 30,
+"kcalPerServing": 145,
+"servingNutrition": {
+"carbsG": 20.6,
+"proteinG": 2.2,
+"fatG": 5.9
+}
+},
+{
+"id": "mafra-81a01e2ee39d",
+"name": "스낵과자(옥수수)",
+"category": "기타",
+"kcalPer100g": 540,
+"defaultServingG": 44,
+"kcalPerServing": 237,
+"servingNutrition": {
+"carbsG": 29.4,
+"proteinG": 2.3,
+"fatG": 12.2
+}
+},
+{
+"id": "mafra-b1ea9c5d8a57",
+"name": "스파게티",
+"category": "기타",
+"kcalPer100g": 458,
+"defaultServingG": 112,
+"kcalPerServing": 514,
+"servingNutrition": {
+"carbsG": 85.9,
+"proteinG": 16.5,
+"fatG": 9.9
+}
+},
+{
+"id": "mafra-4be30d5c50a3",
+"name": "스파게티(건면)",
+"category": "밥/면/빵",
+"kcalPer100g": 423,
+"defaultServingG": 73,
+"kcalPerServing": 309,
+"servingNutrition": {
+"carbsG": 63.4,
+"proteinG": 9.5,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-dc2f50ce2e82",
+"name": "스프",
+"category": "기타",
+"kcalPer100g": 479,
+"defaultServingG": 32,
+"kcalPerServing": 152,
+"servingNutrition": {
+"carbsG": 22.2,
+"proteinG": 3.4,
+"fatG": 6.2
+}
+},
+{
+"id": "mafra-252836637939",
+"name": "시금치",
+"category": "채소",
+"kcalPer100g": 14,
+"defaultServingG": 100,
+"kcalPerServing": 14,
+"servingNutrition": {
+"carbsG": 2.7,
+"proteinG": 1.4,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-fe3a328d4c02",
+"name": "시금치나물",
+"category": "채소",
+"kcalPer100g": 26,
+"defaultServingG": 100,
+"kcalPerServing": 26,
+"servingNutrition": {
+"carbsG": 3.1,
+"proteinG": 1.7,
+"fatG": 1.3
+}
+},
+{
+"id": "mafra-ff37c4899bfd",
+"name": "시금치된장국",
+"category": "채소",
+"kcalPer100g": 35,
+"defaultServingG": 100,
+"kcalPerServing": 35,
+"servingNutrition": {
+"carbsG": 5.1,
+"proteinG": 3.4,
+"fatG": 0.8
+}
+},
+{
+"id": "mafra-65ae85160ced",
+"name": "시래기된장국",
+"category": "기타",
+"kcalPer100g": 38,
+"defaultServingG": 100,
+"kcalPerServing": 38,
+"servingNutrition": {
+"carbsG": 5.4,
+"proteinG": 3.7,
+"fatG": 0.8
+}
+},
+{
+"id": "mafra-466465849413",
+"name": "시리얼(콘푸레이크)",
+"category": "기타",
+"kcalPer100g": 310,
+"defaultServingG": 30,
+"kcalPerServing": 93,
+"servingNutrition": {
+"carbsG": 21.7,
+"proteinG": 1.7,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-20e624902502",
+"name": "식빵",
+"category": "밥/면/빵",
+"kcalPer100g": 438,
+"defaultServingG": 36,
+"kcalPerServing": 156,
+"servingNutrition": {
+"carbsG": 28.1,
+"proteinG": 4.6,
+"fatG": 2.9
+}
+},
+{
+"id": "mafra-967515fbe89b",
+"name": "식초",
+"category": "기타",
+"kcalPer100g": 1,
+"defaultServingG": 100,
+"kcalPerServing": 1,
+"servingNutrition": {
+"carbsG": 0.2,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-ac7b5009696d",
+"name": "식혜",
+"category": "기타",
+"kcalPer100g": 297,
+"defaultServingG": 30,
+"kcalPerServing": 89,
+"servingNutrition": {
+"carbsG": 26.6,
+"proteinG": 0.5,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-dcb3867a2673",
+"name": "쌀과자",
+"category": "기타",
+"kcalPer100g": 469,
+"defaultServingG": 39,
+"kcalPerServing": 183,
+"servingNutrition": {
+"carbsG": 31.3,
+"proteinG": 1.3,
+"fatG": 6.4
+}
+},
+{
+"id": "mafra-0eea748c1679",
+"name": "쌀밥",
+"category": "밥/면/빵",
+"kcalPer100g": 420,
+"defaultServingG": 96,
+"kcalPerServing": 405,
+"servingNutrition": {
+"carbsG": 89.5,
+"proteinG": 6.6,
+"fatG": 0.4
+}
+},
+{
+"id": "mafra-77b95df286b1",
+"name": "쌈장",
+"category": "기타",
+"kcalPer100g": 35,
+"defaultServingG": 100,
+"kcalPerServing": 35,
+"servingNutrition": {
+"carbsG": 5.3,
+"proteinG": 1.8,
+"fatG": 0.8
+}
+},
+{
+"id": "mafra-843ddac91bc5",
+"name": "쌍화차(분말)",
+"category": "간식/음료",
+"kcalPer100g": 247,
+"defaultServingG": 30,
+"kcalPerServing": 74,
+"servingNutrition": {
+"carbsG": 17.5,
+"proteinG": 0.5,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-652a5a964307",
+"name": "쑥",
+"category": "기타",
+"kcalPer100g": 103,
+"defaultServingG": 30,
+"kcalPerServing": 31,
+"servingNutrition": {
+"carbsG": 9.0,
+"proteinG": 2.4,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-8ff77b79d2e7",
+"name": "쑥갓",
+"category": "기타",
+"kcalPer100g": 1,
+"defaultServingG": 100,
+"kcalPerServing": 1,
+"servingNutrition": {
+"carbsG": 0.2,
+"proteinG": 0.2,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-4ad19ec0da92",
+"name": "쑥된장국",
+"category": "기타",
+"kcalPer100g": 175,
+"defaultServingG": 30,
+"kcalPerServing": 52,
+"servingNutrition": {
+"carbsG": 11.7,
+"proteinG": 4.5,
+"fatG": 0.5
+}
+},
+{
+"id": "mafra-adc99e740303",
+"name": "씀바귀",
+"category": "기타",
+"kcalPer100g": 12,
+"defaultServingG": 100,
+"kcalPerServing": 12,
+"servingNutrition": {
+"carbsG": 2.8,
+"proteinG": 0.9,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-538ab83f5a3a",
+"name": "씀바귀나물",
+"category": "채소",
+"kcalPer100g": 43,
+"defaultServingG": 100,
+"kcalPerServing": 43,
+"servingNutrition": {
+"carbsG": 6.1,
+"proteinG": 1.6,
+"fatG": 2.2
+}
+},
+{
+"id": "mafra-093a586764fa",
+"name": "아구찜",
+"category": "기타",
+"kcalPer100g": 297,
+"defaultServingG": 30,
+"kcalPerServing": 89,
+"servingNutrition": {
+"carbsG": 5.6,
+"proteinG": 12.5,
+"fatG": 2.5
+}
+},
+{
+"id": "mafra-f38bdfc13a40",
+"name": "아귀",
+"category": "기타",
+"kcalPer100g": 160,
+"defaultServingG": 30,
+"kcalPerServing": 48,
+"servingNutrition": {
+"carbsG": 0.2,
+"proteinG": 10.1,
+"fatG": 0.4
+}
+},
+{
+"id": "mafra-65b8e1984a9b",
+"name": "아몬드",
+"category": "기타",
+"kcalPer100g": 48,
+"defaultServingG": 100,
+"kcalPerServing": 48,
+"servingNutrition": {
+"carbsG": 1.6,
+"proteinG": 1.5,
+"fatG": 4.3
+}
+},
+{
+"id": "mafra-c2183688393d",
+"name": "아욱",
+"category": "기타",
+"kcalPer100g": 10,
+"defaultServingG": 100,
+"kcalPerServing": 10,
+"servingNutrition": {
+"carbsG": 1.3,
+"proteinG": 1.8,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-6525fc70a198",
+"name": "아욱된장국",
+"category": "기타",
+"kcalPer100g": 131,
+"defaultServingG": 30,
+"kcalPerServing": 39,
+"servingNutrition": {
+"carbsG": 4.2,
+"proteinG": 5.2,
+"fatG": 1.0
+}
+},
+{
+"id": "mafra-c015152068cf",
+"name": "아이스크림",
+"category": "기타",
+"kcalPer100g": 513,
+"defaultServingG": 42,
+"kcalPerServing": 216,
+"servingNutrition": {
+"carbsG": 27.8,
+"proteinG": 4.7,
+"fatG": 9.6
+}
+},
+{
+"id": "mafra-f86329be0c92",
+"name": "아이스크림(소프트,바닐라)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 565,
+"defaultServingG": 32,
+"kcalPerServing": 178,
+"servingNutrition": {
+"carbsG": 17.8,
+"proteinG": 3.3,
+"fatG": 10.4
+}
+},
+{
+"id": "mafra-4dc6d6ff6ee6",
+"name": "아이스크림바(초콜렛)",
+"category": "기타",
+"kcalPer100g": 503,
+"defaultServingG": 34,
+"kcalPerServing": 173,
+"servingNutrition": {
+"carbsG": 22.6,
+"proteinG": 3.0,
+"fatG": 8.8
+}
+},
+{
+"id": "mafra-8bd5e6090bf6",
+"name": "아이스크림콘(바닐라)",
+"category": "기타",
+"kcalPer100g": 515,
+"defaultServingG": 32,
+"kcalPerServing": 167,
+"servingNutrition": {
+"carbsG": 22.0,
+"proteinG": 2.7,
+"fatG": 7.7
+}
+},
+{
+"id": "mafra-e4df65025286",
+"name": "약과",
+"category": "기타",
+"kcalPer100g": 478,
+"defaultServingG": 53,
+"kcalPerServing": 255,
+"servingNutrition": {
+"carbsG": 43.0,
+"proteinG": 2.3,
+"fatG": 8.0
+}
+},
+{
+"id": "mafra-014444aab8ad",
+"name": "양념꽃게장",
+"category": "기타",
+"kcalPer100g": 39,
+"defaultServingG": 100,
+"kcalPerServing": 39,
+"servingNutrition": {
+"carbsG": 3.9,
+"proteinG": 5.3,
+"fatG": 0.5
+}
+},
+{
+"id": "mafra-a94f88f4ed1c",
+"name": "양배추",
+"category": "과일",
+"kcalPer100g": 6,
+"defaultServingG": 100,
+"kcalPerServing": 6,
+"servingNutrition": {
+"carbsG": 1.6,
+"proteinG": 0.2,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-68c1ba0f98d0",
+"name": "양배추샐러드",
+"category": "과일",
+"kcalPer100g": 56,
+"defaultServingG": 100,
+"kcalPerServing": 56,
+"servingNutrition": {
+"carbsG": 2.9,
+"proteinG": 0.3,
+"fatG": 4.8
+}
+},
+{
+"id": "mafra-d06bea7e8ae2",
+"name": "양상추",
+"category": "채소",
+"kcalPer100g": 3,
+"defaultServingG": 100,
+"kcalPerServing": 3,
+"servingNutrition": {
+"carbsG": 0.8,
+"proteinG": 0.3,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-f258827a5973",
+"name": "양송이버섯",
+"category": "기타",
+"kcalPer100g": 2,
+"defaultServingG": 100,
+"kcalPerServing": 2,
+"servingNutrition": {
+"carbsG": 0.5,
+"proteinG": 0.4,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-13d93564847d",
+"name": "양주(위스키)",
+"category": "기타",
+"kcalPer100g": 71,
+"defaultServingG": 100,
+"kcalPerServing": 71,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-e1a153b793ce",
+"name": "양파",
+"category": "채소",
+"kcalPer100g": 3,
+"defaultServingG": 100,
+"kcalPerServing": 3,
+"servingNutrition": {
+"carbsG": 0.8,
+"proteinG": 0.1,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-ae3e0ca4458f",
+"name": "어묵",
+"category": "기타",
+"kcalPer100g": 35,
+"defaultServingG": 100,
+"kcalPerServing": 35,
+"servingNutrition": {
+"carbsG": 4.4,
+"proteinG": 3.0,
+"fatG": 0.6
+}
+},
+{
+"id": "mafra-21797a851b9a",
+"name": "어묵국",
+"category": "기타",
+"kcalPer100g": 177,
+"defaultServingG": 30,
+"kcalPerServing": 53,
+"servingNutrition": {
+"carbsG": 7.0,
+"proteinG": 4.6,
+"fatG": 0.9
+}
+},
+{
+"id": "mafra-93b5ad7cb1f5",
+"name": "어묵볶음",
+"category": "기타",
+"kcalPer100g": 296,
+"defaultServingG": 30,
+"kcalPerServing": 89,
+"servingNutrition": {
+"carbsG": 10.1,
+"proteinG": 5.5,
+"fatG": 3.1
+}
+},
+{
+"id": "mafra-245490de2530",
+"name": "어패류액젓(멸치액젓)",
+"category": "기타",
+"kcalPer100g": 1,
+"defaultServingG": 100,
+"kcalPerServing": 1,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 0.2,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-33d3854dd0c7",
+"name": "어패류액젓(어란젓)",
+"category": "기타",
+"kcalPer100g": 12,
+"defaultServingG": 100,
+"kcalPerServing": 12,
+"servingNutrition": {
+"carbsG": 0.2,
+"proteinG": 1.5,
+"fatG": 0.5
+}
+},
+{
+"id": "mafra-a987621b695d",
+"name": "어패류액젓(창란젓)",
+"category": "기타",
+"kcalPer100g": 12,
+"defaultServingG": 100,
+"kcalPerServing": 12,
+"servingNutrition": {
+"carbsG": 0.8,
+"proteinG": 1.3,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-b47282e70b29",
+"name": "연근",
+"category": "기타",
+"kcalPer100g": 17,
+"defaultServingG": 100,
+"kcalPerServing": 17,
+"servingNutrition": {
+"carbsG": 4.1,
+"proteinG": 0.5,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-de53f4ed14a8",
+"name": "연근조림",
+"category": "기타",
+"kcalPer100g": 24,
+"defaultServingG": 100,
+"kcalPerServing": 24,
+"servingNutrition": {
+"carbsG": 5.2,
+"proteinG": 0.8,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-2d2cb7dc1343",
+"name": "연두부",
+"category": "기타",
+"kcalPer100g": 45,
+"defaultServingG": 100,
+"kcalPerServing": 45,
+"servingNutrition": {
+"carbsG": 0.9,
+"proteinG": 5.7,
+"fatG": 2.6
+}
+},
+{
+"id": "mafra-2e40d8e21f57",
+"name": "연두부찌개",
+"category": "기타",
+"kcalPer100g": 294,
+"defaultServingG": 30,
+"kcalPerServing": 88,
+"servingNutrition": {
+"carbsG": 2.8,
+"proteinG": 9.5,
+"fatG": 5.0
+}
+},
+{
+"id": "mafra-dcc42c594033",
+"name": "연어(훈제)",
+"category": "기타",
+"kcalPer100g": 34,
+"defaultServingG": 100,
+"kcalPerServing": 34,
+"servingNutrition": {
+"carbsG": 0.1,
+"proteinG": 4.6,
+"fatG": 1.5
+}
+},
+{
+"id": "mafra-e09380c597bd",
+"name": "열무",
+"category": "기타",
+"kcalPer100g": 6,
+"defaultServingG": 100,
+"kcalPerServing": 6,
+"servingNutrition": {
+"carbsG": 1.3,
+"proteinG": 1.1,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-f023b0e29f6e",
+"name": "엿",
+"category": "기타",
+"kcalPer100g": 396,
+"defaultServingG": 32,
+"kcalPerServing": 127,
+"servingNutrition": {
+"carbsG": 31.4,
+"proteinG": 0.7,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-4f23ee593469",
+"name": "오곡밥",
+"category": "밥/면/빵",
+"kcalPer100g": 416,
+"defaultServingG": 80,
+"kcalPerServing": 334,
+"servingNutrition": {
+"carbsG": 72.5,
+"proteinG": 7.0,
+"fatG": 0.8
+}
+},
+{
+"id": "mafra-b874d51cee0a",
+"name": "오렌지",
+"category": "기타",
+"kcalPer100g": 287,
+"defaultServingG": 30,
+"kcalPerServing": 86,
+"servingNutrition": {
+"carbsG": 22.4,
+"proteinG": 1.8,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-8e5551b2e23d",
+"name": "오렌지주스",
+"category": "간식/음료",
+"kcalPer100g": 280,
+"defaultServingG": 30,
+"kcalPerServing": 84,
+"servingNutrition": {
+"carbsG": 21.0,
+"proteinG": 1.4,
+"fatG": 0.4
+}
+},
+{
+"id": "mafra-3c9797154c11",
+"name": "오리고기",
+"category": "고기/생선/달걀",
+"kcalPer100g": 713,
+"defaultServingG": 74,
+"kcalPerServing": 525,
+"servingNutrition": {
+"carbsG": 1.7,
+"proteinG": 26.4,
+"fatG": 45.5
+}
+},
+{
+"id": "mafra-233a26438665",
+"name": "오리고기로스",
+"category": "고기/생선/달걀",
+"kcalPer100g": 712,
+"defaultServingG": 71,
+"kcalPerServing": 508,
+"servingNutrition": {
+"carbsG": 2.0,
+"proteinG": 25.5,
+"fatG": 43.9
+}
+},
+{
+"id": "mafra-ab51d7931bb6",
+"name": "오므라이스",
+"category": "기타",
+"kcalPer100g": 451,
+"defaultServingG": 115,
+"kcalPerServing": 519,
+"servingNutrition": {
+"carbsG": 90.8,
+"proteinG": 14.6,
+"fatG": 9.7
+}
+},
+{
+"id": "mafra-2eee030e2714",
+"name": "오이",
+"category": "기타",
+"kcalPer100g": 4,
+"defaultServingG": 100,
+"kcalPerServing": 4,
+"servingNutrition": {
+"carbsG": 0.9,
+"proteinG": 0.3,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-140b7f0c2662",
+"name": "오이생채",
+"category": "기타",
+"kcalPer100g": 7,
+"defaultServingG": 100,
+"kcalPerServing": 7,
+"servingNutrition": {
+"carbsG": 1.2,
+"proteinG": 0.3,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-edca14ff4652",
+"name": "오이생채(가정식)",
+"category": "기타",
+"kcalPer100g": 6,
+"defaultServingG": 100,
+"kcalPerServing": 6,
+"servingNutrition": {
+"carbsG": 1.1,
+"proteinG": 0.2,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-7024aecd5f06",
+"name": "오이생채(단체급식)",
+"category": "기타",
+"kcalPer100g": 12,
+"defaultServingG": 100,
+"kcalPerServing": 12,
+"servingNutrition": {
+"carbsG": 1.9,
+"proteinG": 0.4,
+"fatG": 0.6
+}
+},
+{
+"id": "mafra-fe3c0a94ed83",
+"name": "오이지",
+"category": "기타",
+"kcalPer100g": 1,
+"defaultServingG": 100,
+"kcalPerServing": 1,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 0.1,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-0675731fe189",
+"name": "오이지무침",
+"category": "기타",
+"kcalPer100g": 7,
+"defaultServingG": 100,
+"kcalPerServing": 7,
+"servingNutrition": {
+"carbsG": 1.2,
+"proteinG": 0.3,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-f0e7369684ce",
+"name": "오이피클",
+"category": "기타",
+"kcalPer100g": 34,
+"defaultServingG": 100,
+"kcalPerServing": 34,
+"servingNutrition": {
+"carbsG": 9.3,
+"proteinG": 0.2,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-6c2cc1070e7a",
+"name": "오징어",
+"category": "고기/생선/달걀",
+"kcalPer100g": 33,
+"defaultServingG": 100,
+"kcalPerServing": 33,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 6.8,
+"fatG": 0.5
+}
+},
+{
+"id": "mafra-9df9f6e0ee82",
+"name": "오징어(말린것)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 177,
+"defaultServingG": 30,
+"kcalPerServing": 53,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 10.2,
+"fatG": 1.0
+}
+},
+{
+"id": "mafra-3db3f6830209",
+"name": "오징어국",
+"category": "고기/생선/달걀",
+"kcalPer100g": 207,
+"defaultServingG": 30,
+"kcalPerServing": 62,
+"servingNutrition": {
+"carbsG": 3.7,
+"proteinG": 10.2,
+"fatG": 0.8
+}
+},
+{
+"id": "mafra-f9143cdd4fc0",
+"name": "오징어덮밥",
+"category": "밥/면/빵",
+"kcalPer100g": 415,
+"defaultServingG": 110,
+"kcalPerServing": 456,
+"servingNutrition": {
+"carbsG": 84.2,
+"proteinG": 23.7,
+"fatG": 1.9
+}
+},
+{
+"id": "mafra-915305d2c2e4",
+"name": "오징어무침",
+"category": "고기/생선/달걀",
+"kcalPer100g": 40,
+"defaultServingG": 100,
+"kcalPerServing": 40,
+"servingNutrition": {
+"carbsG": 2.8,
+"proteinG": 6.1,
+"fatG": 0.6
+}
+},
+{
+"id": "mafra-c11d315c5476",
+"name": "오징어볶음",
+"category": "고기/생선/달걀",
+"kcalPer100g": 317,
+"defaultServingG": 30,
+"kcalPerServing": 95,
+"servingNutrition": {
+"carbsG": 6.8,
+"proteinG": 10.6,
+"fatG": 3.2
+}
+},
+{
+"id": "mafra-014ba0ed70ac",
+"name": "오징어젓무침",
+"category": "고기/생선/달걀",
+"kcalPer100g": 15,
+"defaultServingG": 100,
+"kcalPerServing": 15,
+"servingNutrition": {
+"carbsG": 0.4,
+"proteinG": 2.8,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-2522982f21a1",
+"name": "오징어찌개",
+"category": "고기/생선/달걀",
+"kcalPer100g": 38,
+"defaultServingG": 100,
+"kcalPerServing": 38,
+"servingNutrition": {
+"carbsG": 1.8,
+"proteinG": 6.6,
+"fatG": 0.5
+}
+},
+{
+"id": "mafra-e69dd365bb58",
+"name": "오징어채무침",
+"category": "고기/생선/달걀",
+"kcalPer100g": 328,
+"defaultServingG": 30,
+"kcalPerServing": 98,
+"servingNutrition": {
+"carbsG": 5.7,
+"proteinG": 13.5,
+"fatG": 2.5
+}
+},
+{
+"id": "mafra-2a2d490968f0",
+"name": "오징어채볶음",
+"category": "고기/생선/달걀",
+"kcalPer100g": 360,
+"defaultServingG": 30,
+"kcalPerServing": 108,
+"servingNutrition": {
+"carbsG": 5.3,
+"proteinG": 14.2,
+"fatG": 3.2
+}
+},
+{
+"id": "mafra-7e37680de7ef",
+"name": "오징어튀김",
+"category": "고기/생선/달걀",
+"kcalPer100g": 46,
+"defaultServingG": 100,
+"kcalPerServing": 46,
+"servingNutrition": {
+"carbsG": 2.3,
+"proteinG": 4.5,
+"fatG": 1.9
+}
+},
+{
+"id": "mafra-35714b94438a",
+"name": "오징어포조림",
+"category": "고기/생선/달걀",
+"kcalPer100g": 31,
+"defaultServingG": 100,
+"kcalPerServing": 31,
+"servingNutrition": {
+"carbsG": 2.0,
+"proteinG": 4.4,
+"fatG": 0.6
+}
+},
+{
+"id": "mafra-6ccca722ab27",
+"name": "옥수수기름",
+"category": "기타",
+"kcalPer100g": 35,
+"defaultServingG": 100,
+"kcalPerServing": 35,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 0.0,
+"fatG": 4.0
+}
+},
+{
+"id": "mafra-04f11214b865",
+"name": "옥수수통조림",
+"category": "기타",
+"kcalPer100g": 10,
+"defaultServingG": 100,
+"kcalPerServing": 10,
+"servingNutrition": {
+"carbsG": 2.2,
+"proteinG": 0.3,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-86a433f11c2a",
+"name": "옥수수튀밥",
+"category": "밥/면/빵",
+"kcalPer100g": 300,
+"defaultServingG": 30,
+"kcalPerServing": 90,
+"servingNutrition": {
+"carbsG": 19.1,
+"proteinG": 2.9,
+"fatG": 1.0
+}
+},
+{
+"id": "mafra-79393cd9f991",
+"name": "올리브",
+"category": "기타",
+"kcalPer100g": 4,
+"defaultServingG": 100,
+"kcalPerServing": 4,
+"servingNutrition": {
+"carbsG": 1.0,
+"proteinG": 0.1,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-7b994bf42cf2",
+"name": "올리브유",
+"category": "기타",
+"kcalPer100g": 37,
+"defaultServingG": 100,
+"kcalPerServing": 37,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 0.0,
+"fatG": 4.0
+}
+},
+{
+"id": "mafra-3a85caf4125d",
+"name": "완두콩",
+"category": "기타",
+"kcalPer100g": 8,
+"defaultServingG": 100,
+"kcalPerServing": 8,
+"servingNutrition": {
+"carbsG": 1.5,
+"proteinG": 0.6,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-e02bfdccc89a",
+"name": "완자전",
+"category": "기타",
+"kcalPer100g": 280,
+"defaultServingG": 30,
+"kcalPerServing": 84,
+"servingNutrition": {
+"carbsG": 2.5,
+"proteinG": 4.6,
+"fatG": 6.1
+}
+},
+{
+"id": "mafra-3fd2f7144fce",
+"name": "요구르트(액상)",
+"category": "기타",
+"kcalPer100g": 327,
+"defaultServingG": 30,
+"kcalPerServing": 98,
+"servingNutrition": {
+"carbsG": 22.4,
+"proteinG": 2.3,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-c4ef54b6b941",
+"name": "요구르트(호상, 딸기)",
+"category": "기타",
+"kcalPer100g": 363,
+"defaultServingG": 30,
+"kcalPerServing": 109,
+"servingNutrition": {
+"carbsG": 17.7,
+"proteinG": 3.5,
+"fatG": 3.0
+}
+},
+{
+"id": "mafra-7fbbae92549c",
+"name": "요구르트음료",
+"category": "간식/음료",
+"kcalPer100g": 183,
+"defaultServingG": 30,
+"kcalPerServing": 55,
+"servingNutrition": {
+"carbsG": 12.5,
+"proteinG": 1.3,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-e9d5c7900205",
+"name": "우거지국",
+"category": "기타",
+"kcalPer100g": 30,
+"defaultServingG": 100,
+"kcalPerServing": 30,
+"servingNutrition": {
+"carbsG": 3.0,
+"proteinG": 3.1,
+"fatG": 0.9
+}
+},
+{
+"id": "mafra-e7a3a6a307e1",
+"name": "우동",
+"category": "기타",
+"kcalPer100g": 447,
+"defaultServingG": 83,
+"kcalPerServing": 370,
+"servingNutrition": {
+"carbsG": 56.6,
+"proteinG": 20.2,
+"fatG": 5.9
+}
+},
+{
+"id": "mafra-8b5bdfc711f9",
+"name": "우동국수(생면)",
+"category": "밥/면/빵",
+"kcalPer100g": 424,
+"defaultServingG": 42,
+"kcalPerServing": 177,
+"servingNutrition": {
+"carbsG": 36.8,
+"proteinG": 4.4,
+"fatG": 0.5
+}
+},
+{
+"id": "mafra-b642270cfd1e",
+"name": "우스터소스",
+"category": "고기/생선/달걀",
+"kcalPer100g": 4,
+"defaultServingG": 100,
+"kcalPerServing": 4,
+"servingNutrition": {
+"carbsG": 0.9,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-2ff9dee68ea9",
+"name": "우엉",
+"category": "기타",
+"kcalPer100g": 10,
+"defaultServingG": 100,
+"kcalPerServing": 10,
+"servingNutrition": {
+"carbsG": 2.3,
+"proteinG": 0.5,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-d5b86a54e678",
+"name": "우엉조림",
+"category": "기타",
+"kcalPer100g": 147,
+"defaultServingG": 30,
+"kcalPerServing": 44,
+"servingNutrition": {
+"carbsG": 8.6,
+"proteinG": 1.4,
+"fatG": 1.0
+}
+},
+{
+"id": "mafra-54235ee0305e",
+"name": "우유",
+"category": "유제품",
+"kcalPer100g": 400,
+"defaultServingG": 30,
+"kcalPerServing": 120,
+"servingNutrition": {
+"carbsG": 9.4,
+"proteinG": 6.4,
+"fatG": 6.4
+}
+},
+{
+"id": "mafra-092d6559f004",
+"name": "유부",
+"category": "기타",
+"kcalPer100g": 160,
+"defaultServingG": 30,
+"kcalPerServing": 48,
+"servingNutrition": {
+"carbsG": 4.0,
+"proteinG": 4.6,
+"fatG": 2.2
+}
+},
+{
+"id": "mafra-5749f32dc3c5",
+"name": "유부초밥",
+"category": "밥/면/빵",
+"kcalPer100g": 437,
+"defaultServingG": 106,
+"kcalPerServing": 463,
+"servingNutrition": {
+"carbsG": 81.3,
+"proteinG": 16.5,
+"fatG": 8.2
+}
+},
+{
+"id": "mafra-2cffb1d58f8e",
+"name": "유자차(분말)",
+"category": "간식/음료",
+"kcalPer100g": 25,
+"defaultServingG": 100,
+"kcalPerServing": 25,
+"servingNutrition": {
+"carbsG": 6.3,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-4fdea2c19fea",
+"name": "육개장",
+"category": "기타",
+"kcalPer100g": 287,
+"defaultServingG": 30,
+"kcalPerServing": 86,
+"servingNutrition": {
+"carbsG": 6.2,
+"proteinG": 8.6,
+"fatG": 3.8
+}
+},
+{
+"id": "mafra-bd52b7eff4bb",
+"name": "율무차(분말)",
+"category": "간식/음료",
+"kcalPer100g": 200,
+"defaultServingG": 30,
+"kcalPerServing": 60,
+"servingNutrition": {
+"carbsG": 11.5,
+"proteinG": 1.1,
+"fatG": 1.1
+}
+},
+{
+"id": "mafra-bbea9da1dc93",
+"name": "은행",
+"category": "기타",
+"kcalPer100g": 9,
+"defaultServingG": 100,
+"kcalPerServing": 9,
+"servingNutrition": {
+"carbsG": 1.9,
+"proteinG": 0.3,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-f9d84f422c4d",
+"name": "이온스포츠음료",
+"category": "간식/음료",
+"kcalPer100g": 210,
+"defaultServingG": 30,
+"kcalPerServing": 63,
+"servingNutrition": {
+"carbsG": 15.8,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-ec3aef875688",
+"name": "인삼차(과립)",
+"category": "간식/음료",
+"kcalPer100g": 28,
+"defaultServingG": 100,
+"kcalPerServing": 28,
+"servingNutrition": {
+"carbsG": 6.8,
+"proteinG": 0.1,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-3fd890309329",
+"name": "인절미",
+"category": "기타",
+"kcalPer100g": 363,
+"defaultServingG": 30,
+"kcalPerServing": 109,
+"servingNutrition": {
+"carbsG": 22.4,
+"proteinG": 2.5,
+"fatG": 0.9
+}
+},
+{
+"id": "mafra-6e35b837f3c7",
+"name": "임연수구이",
+"category": "기타",
+"kcalPer100g": 340,
+"defaultServingG": 30,
+"kcalPerServing": 102,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 10.3,
+"fatG": 6.3
+}
+},
+{
+"id": "mafra-6fff131bbd49",
+"name": "임연수어",
+"category": "기타",
+"kcalPer100g": 277,
+"defaultServingG": 30,
+"kcalPerServing": 83,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 9.9,
+"fatG": 4.4
+}
+},
+{
+"id": "mafra-85388ead0a3c",
+"name": "자장면",
+"category": "밥/면/빵",
+"kcalPer100g": 490,
+"defaultServingG": 162,
+"kcalPerServing": 794,
+"servingNutrition": {
+"carbsG": 113.9,
+"proteinG": 22.2,
+"fatG": 26.0
+}
+},
+{
+"id": "mafra-dfaaece0d120",
+"name": "자장소스",
+"category": "고기/생선/달걀",
+"kcalPer100g": 33,
+"defaultServingG": 100,
+"kcalPerServing": 33,
+"servingNutrition": {
+"carbsG": 4.4,
+"proteinG": 2.4,
+"fatG": 0.8
+}
+},
+{
+"id": "mafra-b487927e08f2",
+"name": "잔멸치볶음",
+"category": "기타",
+"kcalPer100g": 16,
+"defaultServingG": 100,
+"kcalPerServing": 16,
+"servingNutrition": {
+"carbsG": 0.8,
+"proteinG": 1.5,
+"fatG": 0.7
+}
+},
+{
+"id": "mafra-db8a998b48d3",
+"name": "잔치국수",
+"category": "밥/면/빵",
+"kcalPer100g": 432,
+"defaultServingG": 148,
+"kcalPerServing": 638,
+"servingNutrition": {
+"carbsG": 118.7,
+"proteinG": 22.5,
+"fatG": 6.6
+}
+},
+{
+"id": "mafra-e52c7c921790",
+"name": "잡채",
+"category": "기타",
+"kcalPer100g": 475,
+"defaultServingG": 40,
+"kcalPerServing": 189,
+"servingNutrition": {
+"carbsG": 28.5,
+"proteinG": 4.4,
+"fatG": 7.0
+}
+},
+{
+"id": "mafra-b60c7e8a55f6",
+"name": "잡채밥",
+"category": "밥/면/빵",
+"kcalPer100g": 467,
+"defaultServingG": 96,
+"kcalPerServing": 447,
+"servingNutrition": {
+"carbsG": 75.4,
+"proteinG": 9.5,
+"fatG": 11.0
+}
+},
+{
+"id": "mafra-c64efd6ccf89",
+"name": "잣",
+"category": "기타",
+"kcalPer100g": 20,
+"defaultServingG": 100,
+"kcalPerServing": 20,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 0.4,
+"fatG": 2.0
+}
+},
+{
+"id": "mafra-56ee0f689870",
+"name": "장어(갯장어)",
+"category": "기타",
+"kcalPer100g": 520,
+"defaultServingG": 30,
+"kcalPerServing": 156,
+"servingNutrition": {
+"carbsG": 0.1,
+"proteinG": 15.7,
+"fatG": 9.5
+}
+},
+{
+"id": "mafra-6bd54b7da303",
+"name": "장어양념구이",
+"category": "기타",
+"kcalPer100g": 539,
+"defaultServingG": 41,
+"kcalPerServing": 220,
+"servingNutrition": {
+"carbsG": 12.8,
+"proteinG": 16.5,
+"fatG": 11.5
+}
+},
+{
+"id": "mafra-fa5e4abc3971",
+"name": "장조림",
+"category": "기타",
+"kcalPer100g": 45,
+"defaultServingG": 100,
+"kcalPerServing": 45,
+"servingNutrition": {
+"carbsG": 2.4,
+"proteinG": 6.1,
+"fatG": 1.2
+}
+},
+{
+"id": "mafra-504e6eb859aa",
+"name": "재첩(재치조개,갱조개)",
+"category": "기타",
+"kcalPer100g": 33,
+"defaultServingG": 100,
+"kcalPerServing": 33,
+"servingNutrition": {
+"carbsG": 2.0,
+"proteinG": 4.4,
+"fatG": 0.7
+}
+},
+{
+"id": "mafra-ff778793bfdb",
+"name": "적포도주",
+"category": "과일",
+"kcalPer100g": 84,
+"defaultServingG": 100,
+"kcalPerServing": 84,
+"servingNutrition": {
+"carbsG": 5.8,
+"proteinG": 0.2,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-0ced881ff49c",
+"name": "전복",
+"category": "기타",
+"kcalPer100g": 9,
+"defaultServingG": 100,
+"kcalPerServing": 9,
+"servingNutrition": {
+"carbsG": 0.5,
+"proteinG": 1.5,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-e46c690a4936",
+"name": "전복죽",
+"category": "밥/면/빵",
+"kcalPer100g": 456,
+"defaultServingG": 40,
+"kcalPerServing": 185,
+"servingNutrition": {
+"carbsG": 32.0,
+"proteinG": 5.1,
+"fatG": 3.4
+}
+},
+{
+"id": "mafra-c53533dfef36",
+"name": "전분",
+"category": "기타",
+"kcalPer100g": 17,
+"defaultServingG": 100,
+"kcalPerServing": 17,
+"servingNutrition": {
+"carbsG": 4.1,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-86ed627ba3b9",
+"name": "절편",
+"category": "기타",
+"kcalPer100g": 367,
+"defaultServingG": 30,
+"kcalPerServing": 110,
+"servingNutrition": {
+"carbsG": 21.9,
+"proteinG": 2.2,
+"fatG": 0.4
+}
+},
+{
+"id": "mafra-8aa09849dfec",
+"name": "제육(돼지고기)",
+"category": "고기/생선/달걀",
+"kcalPer100g": 413,
+"defaultServingG": 30,
+"kcalPerServing": 124,
+"servingNutrition": {
+"carbsG": 2.7,
+"proteinG": 21.7,
+"fatG": 2.8
+}
+},
+{
+"id": "mafra-2120e8c3a090",
+"name": "조개국",
+"category": "기타",
+"kcalPer100g": 28,
+"defaultServingG": 100,
+"kcalPerServing": 28,
+"servingNutrition": {
+"carbsG": 1.5,
+"proteinG": 4.5,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-6733c0685879",
+"name": "조기",
+"category": "기타",
+"kcalPer100g": 42,
+"defaultServingG": 100,
+"kcalPerServing": 42,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 8.2,
+"fatG": 0.8
+}
+},
+{
+"id": "mafra-f2dca028ae23",
+"name": "조기구이",
+"category": "기타",
+"kcalPer100g": 373,
+"defaultServingG": 30,
+"kcalPerServing": 112,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 18.3,
+"fatG": 3.8
+}
+},
+{
+"id": "mafra-61dacc53e6b6",
+"name": "조기매운탕",
+"category": "기타",
+"kcalPer100g": 267,
+"defaultServingG": 30,
+"kcalPerServing": 80,
+"servingNutrition": {
+"carbsG": 5.4,
+"proteinG": 12.6,
+"fatG": 1.4
+}
+},
+{
+"id": "mafra-16c03ddff557",
+"name": "조기찜",
+"category": "기타",
+"kcalPer100g": 243,
+"defaultServingG": 30,
+"kcalPerServing": 73,
+"servingNutrition": {
+"carbsG": 0.8,
+"proteinG": 13.6,
+"fatG": 1.4
+}
+},
+{
+"id": "mafra-529dca815647",
+"name": "조기튀김",
+"category": "기타",
+"kcalPer100g": 245,
+"defaultServingG": 30,
+"kcalPerServing": 73,
+"servingNutrition": {
+"carbsG": 3.0,
+"proteinG": 7.1,
+"fatG": 3.4
+}
+},
+{
+"id": "mafra-63c0af83e184",
+"name": "조미분",
+"category": "기타",
+"kcalPer100g": 2,
+"defaultServingG": 100,
+"kcalPerServing": 2,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 0.2,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-220a051b70f3",
+"name": "조미소",
+"category": "고기/생선/달걀",
+"kcalPer100g": 2,
+"defaultServingG": 100,
+"kcalPerServing": 2,
+"servingNutrition": {
+"carbsG": 0.2,
+"proteinG": 0.5,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-a6f46e7b6fd1",
+"name": "족발",
+"category": "기타",
+"kcalPer100g": 550,
+"defaultServingG": 30,
+"kcalPerServing": 165,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 15.5,
+"fatG": 11.6
+}
+},
+{
+"id": "mafra-17bbdeb80b24",
+"name": "주꾸미",
+"category": "기타",
+"kcalPer100g": 23,
+"defaultServingG": 100,
+"kcalPerServing": 23,
+"servingNutrition": {
+"carbsG": 0.2,
+"proteinG": 4.9,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-8daa557b1d01",
+"name": "죽순",
+"category": "밥/면/빵",
+"kcalPer100g": 3,
+"defaultServingG": 100,
+"kcalPerServing": 3,
+"servingNutrition": {
+"carbsG": 0.5,
+"proteinG": 0.7,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-bb8b7fba78de",
+"name": "중국국수(생면)",
+"category": "밥/면/빵",
+"kcalPer100g": 429,
+"defaultServingG": 92,
+"kcalPerServing": 393,
+"servingNutrition": {
+"carbsG": 78.0,
+"proteinG": 12.0,
+"fatG": 1.7
+}
+},
+{
+"id": "mafra-d29b24846e38",
+"name": "쥐치(말린것)",
+"category": "기타",
+"kcalPer100g": 167,
+"defaultServingG": 30,
+"kcalPerServing": 50,
+"servingNutrition": {
+"carbsG": 5.1,
+"proteinG": 6.3,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-3450f20e09fc",
+"name": "짬뽕",
+"category": "기타",
+"kcalPer100g": 465,
+"defaultServingG": 119,
+"kcalPerServing": 555,
+"servingNutrition": {
+"carbsG": 83.7,
+"proteinG": 21.2,
+"fatG": 14.4
+}
+},
+{
+"id": "mafra-3a6fcf408a41",
+"name": "쫄면",
+"category": "밥/면/빵",
+"kcalPer100g": 503,
+"defaultServingG": 115,
+"kcalPerServing": 580,
+"servingNutrition": {
+"carbsG": 95.6,
+"proteinG": 15.4,
+"fatG": 4.4
+}
+},
+{
+"id": "mafra-349b4a9d34e6",
+"name": "차조",
+"category": "간식/음료",
+"kcalPer100g": 23,
+"defaultServingG": 100,
+"kcalPerServing": 23,
+"servingNutrition": {
+"carbsG": 4.6,
+"proteinG": 0.6,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-eefe05a4f7dd",
+"name": "차조밥",
+"category": "밥/면/빵",
+"kcalPer100g": 420,
+"defaultServingG": 92,
+"kcalPerServing": 384,
+"servingNutrition": {
+"carbsG": 84.2,
+"proteinG": 6.6,
+"fatG": 0.7
+}
+},
+{
+"id": "mafra-b700fd1a8eeb",
+"name": "찰밥",
+"category": "밥/면/빵",
+"kcalPer100g": 418,
+"defaultServingG": 93,
+"kcalPerServing": 388,
+"servingNutrition": {
+"carbsG": 85.3,
+"proteinG": 7.1,
+"fatG": 0.4
+}
+},
+{
+"id": "mafra-55da9475ed4c",
+"name": "찰옥수수",
+"category": "기타",
+"kcalPer100g": 394,
+"defaultServingG": 32,
+"kcalPerServing": 126,
+"servingNutrition": {
+"carbsG": 26.5,
+"proteinG": 4.4,
+"fatG": 1.1
+}
+},
+{
+"id": "mafra-b8722e12c477",
+"name": "참기름",
+"category": "기타",
+"kcalPer100g": 35,
+"defaultServingG": 100,
+"kcalPerServing": 35,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 0.0,
+"fatG": 4.0
+}
+},
+{
+"id": "mafra-1b34601132f9",
+"name": "참나물",
+"category": "채소",
+"kcalPer100g": 140,
+"defaultServingG": 30,
+"kcalPerServing": 42,
+"servingNutrition": {
+"carbsG": 5.5,
+"proteinG": 2.6,
+"fatG": 2.2
+}
+},
+{
+"id": "mafra-2da65b172e75",
+"name": "참외",
+"category": "기타",
+"kcalPer100g": 83,
+"defaultServingG": 30,
+"kcalPerServing": 25,
+"servingNutrition": {
+"carbsG": 10.5,
+"proteinG": 3.1,
+"fatG": 0.6
+}
+},
+{
+"id": "mafra-47888bfc3a4f",
+"name": "참치찌개",
+"category": "기타",
+"kcalPer100g": 277,
+"defaultServingG": 30,
+"kcalPerServing": 83,
+"servingNutrition": {
+"carbsG": 1.6,
+"proteinG": 5.2,
+"fatG": 6.1
+}
+},
+{
+"id": "mafra-1f86b3f89610",
+"name": "찹쌀",
+"category": "기타",
+"kcalPer100g": 187,
+"defaultServingG": 30,
+"kcalPerServing": 56,
+"servingNutrition": {
+"carbsG": 12.3,
+"proteinG": 1.1,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-9490aa171dd7",
+"name": "찹쌀떡",
+"category": "밥/면/빵",
+"kcalPer100g": 416,
+"defaultServingG": 40,
+"kcalPerServing": 165,
+"servingNutrition": {
+"carbsG": 35.3,
+"proteinG": 3.4,
+"fatG": 1.0
+}
+},
+{
+"id": "mafra-4c1e7484f826",
+"name": "청국장",
+"category": "기타",
+"kcalPer100g": 31,
+"defaultServingG": 100,
+"kcalPerServing": 31,
+"servingNutrition": {
+"carbsG": 0.5,
+"proteinG": 3.5,
+"fatG": 1.5
+}
+},
+{
+"id": "mafra-253e3b8b294b",
+"name": "청국장찌개",
+"category": "기타",
+"kcalPer100g": 263,
+"defaultServingG": 30,
+"kcalPerServing": 79,
+"servingNutrition": {
+"carbsG": 2.5,
+"proteinG": 8.5,
+"fatG": 4.2
+}
+},
+{
+"id": "mafra-fc53a1b0ed76",
+"name": "청주",
+"category": "기타",
+"kcalPer100g": 48,
+"defaultServingG": 100,
+"kcalPerServing": 48,
+"servingNutrition": {
+"carbsG": 1.9,
+"proteinG": 0.3,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-1678407f6f60",
+"name": "청포묵무침",
+"category": "기타",
+"kcalPer100g": 33,
+"defaultServingG": 100,
+"kcalPerServing": 33,
+"servingNutrition": {
+"carbsG": 0.6,
+"proteinG": 1.2,
+"fatG": 1.9
+}
+},
+{
+"id": "mafra-3bf75d09a3a4",
+"name": "초고추장",
+"category": "기타",
+"kcalPer100g": 30,
+"defaultServingG": 100,
+"kcalPerServing": 30,
+"servingNutrition": {
+"carbsG": 8.2,
+"proteinG": 0.8,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-9c1fa39fed10",
+"name": "초코바",
+"category": "기타",
+"kcalPer100g": 516,
+"defaultServingG": 48,
+"kcalPerServing": 248,
+"servingNutrition": {
+"carbsG": 32.0,
+"proteinG": 4.5,
+"fatG": 11.6
+}
+},
+{
+"id": "mafra-29a9d83e9ad5",
+"name": "초코파이",
+"category": "기타",
+"kcalPer100g": 503,
+"defaultServingG": 30,
+"kcalPerServing": 153,
+"servingNutrition": {
+"carbsG": 22.3,
+"proteinG": 1.5,
+"fatG": 6.6
+}
+},
+{
+"id": "mafra-714741d39166",
+"name": "초콜릿",
+"category": "기타",
+"kcalPer100g": 327,
+"defaultServingG": 30,
+"kcalPerServing": 98,
+"servingNutrition": {
+"carbsG": 13.0,
+"proteinG": 2.0,
+"fatG": 9.2
+}
+},
+{
+"id": "mafra-44db5577a801",
+"name": "추어탕",
+"category": "기타",
+"kcalPer100g": 314,
+"defaultServingG": 30,
+"kcalPerServing": 94,
+"servingNutrition": {
+"carbsG": 6.4,
+"proteinG": 12.0,
+"fatG": 3.0
+}
+},
+{
+"id": "mafra-63c402df6bca",
+"name": "취나물",
+"category": "채소",
+"kcalPer100g": 14,
+"defaultServingG": 100,
+"kcalPerServing": 14,
+"servingNutrition": {
+"carbsG": 3.2,
+"proteinG": 1.5,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-b7fee38965f6",
+"name": "취나물(말린것)",
+"category": "채소",
+"kcalPer100g": 23,
+"defaultServingG": 100,
+"kcalPerServing": 23,
+"servingNutrition": {
+"carbsG": 5.4,
+"proteinG": 2.2,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-1969f06b0986",
+"name": "치즈",
+"category": "유제품",
+"kcalPer100g": 213,
+"defaultServingG": 30,
+"kcalPerServing": 64,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 5.3,
+"fatG": 4.6
+}
+},
+{
+"id": "mafra-0d2055d2e4a1",
+"name": "치즈,가공치즈",
+"category": "유제품",
+"kcalPer100g": 62,
+"defaultServingG": 100,
+"kcalPerServing": 62,
+"servingNutrition": {
+"carbsG": 1.1,
+"proteinG": 3.7,
+"fatG": 4.8
+}
+},
+{
+"id": "mafra-11d64ced39bc",
+"name": "치즈,모짜렐라",
+"category": "유제품",
+"kcalPer100g": 32,
+"defaultServingG": 100,
+"kcalPerServing": 32,
+"servingNutrition": {
+"carbsG": 1.9,
+"proteinG": 2.6,
+"fatG": 1.5
+}
+},
+{
+"id": "mafra-980ea29f39eb",
+"name": "치커리",
+"category": "기타",
+"kcalPer100g": 1,
+"defaultServingG": 100,
+"kcalPerServing": 1,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 0.2,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-3ea396622aff",
+"name": "카라멜",
+"category": "기타",
+"kcalPer100g": 41,
+"defaultServingG": 100,
+"kcalPerServing": 41,
+"servingNutrition": {
+"carbsG": 8.0,
+"proteinG": 0.2,
+"fatG": 1.1
+}
+},
+{
+"id": "mafra-f805eff3e4f5",
+"name": "카레(분말)",
+"category": "기타",
+"kcalPer100g": 32,
+"defaultServingG": 100,
+"kcalPerServing": 32,
+"servingNutrition": {
+"carbsG": 4.7,
+"proteinG": 0.8,
+"fatG": 1.2
+}
+},
+{
+"id": "mafra-d8a16ad30ec7",
+"name": "카레라이스",
+"category": "기타",
+"kcalPer100g": 452,
+"defaultServingG": 96,
+"kcalPerServing": 434,
+"servingNutrition": {
+"carbsG": 75.0,
+"proteinG": 12.2,
+"fatG": 8.8
+}
+},
+{
+"id": "mafra-56e11e44c1e7",
+"name": "카스테라",
+"category": "기타",
+"kcalPer100g": 459,
+"defaultServingG": 35,
+"kcalPerServing": 162,
+"servingNutrition": {
+"carbsG": 27.6,
+"proteinG": 3.4,
+"fatG": 4.3
+}
+},
+{
+"id": "mafra-fd0f9f2d5969",
+"name": "칼국수",
+"category": "밥/면/빵",
+"kcalPer100g": 385,
+"defaultServingG": 110,
+"kcalPerServing": 425,
+"servingNutrition": {
+"carbsG": 94.5,
+"proteinG": 13.4,
+"fatG": 2.6
+}
+},
+{
+"id": "mafra-e98f7a415b14",
+"name": "칼국수(반건)",
+"category": "밥/면/빵",
+"kcalPer100g": 384,
+"defaultServingG": 59,
+"kcalPerServing": 226,
+"servingNutrition": {
+"carbsG": 51.8,
+"proteinG": 5.8,
+"fatG": 1.3
+}
+},
+{
+"id": "mafra-7e98298ceb8e",
+"name": "캔커피",
+"category": "간식/음료",
+"kcalPer100g": 67,
+"defaultServingG": 30,
+"kcalPerServing": 20,
+"servingNutrition": {
+"carbsG": 8.8,
+"proteinG": 1.1,
+"fatG": 0.7
+}
+},
+{
+"id": "mafra-8afd5a202c5f",
+"name": "커피(분말크림)",
+"category": "간식/음료",
+"kcalPer100g": 29,
+"defaultServingG": 100,
+"kcalPerServing": 29,
+"servingNutrition": {
+"carbsG": 3.6,
+"proteinG": 0.5,
+"fatG": 1.4
+}
+},
+{
+"id": "mafra-585b1247bb22",
+"name": "커피(설탕)",
+"category": "간식/음료",
+"kcalPer100g": 19,
+"defaultServingG": 100,
+"kcalPerServing": 19,
+"servingNutrition": {
+"carbsG": 4.4,
+"proteinG": 0.4,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-96347c39965f",
+"name": "커피(설탕,분말크림)",
+"category": "간식/음료",
+"kcalPer100g": 40,
+"defaultServingG": 100,
+"kcalPerServing": 40,
+"servingNutrition": {
+"carbsG": 6.6,
+"proteinG": 0.5,
+"fatG": 1.4
+}
+},
+{
+"id": "mafra-ecb182eefbe3",
+"name": "커피(원두,블랙)",
+"category": "간식/음료",
+"kcalPer100g": 6,
+"defaultServingG": 100,
+"kcalPerServing": 6,
+"servingNutrition": {
+"carbsG": 1.1,
+"proteinG": 0.3,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-9b9b526397a3",
+"name": "커피믹스",
+"category": "간식/음료",
+"kcalPer100g": 180,
+"defaultServingG": 30,
+"kcalPerServing": 54,
+"servingNutrition": {
+"carbsG": 9.2,
+"proteinG": 0.6,
+"fatG": 1.8
+}
+},
+{
+"id": "mafra-4a1ea437091d",
+"name": "커피분말",
+"category": "간식/음료",
+"kcalPer100g": 7,
+"defaultServingG": 100,
+"kcalPerServing": 7,
+"servingNutrition": {
+"carbsG": 1.4,
+"proteinG": 0.4,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-8adf6e498f3a",
+"name": "커피프림",
+"category": "간식/음료",
+"kcalPer100g": 33,
+"defaultServingG": 100,
+"kcalPerServing": 33,
+"servingNutrition": {
+"carbsG": 3.4,
+"proteinG": 0.2,
+"fatG": 2.1
+}
+},
+{
+"id": "mafra-1a3a310d2ed7",
+"name": "케이크(생크림)",
+"category": "기타",
+"kcalPer100g": 516,
+"defaultServingG": 61,
+"kcalPerServing": 317,
+"servingNutrition": {
+"carbsG": 41.9,
+"proteinG": 3.8,
+"fatG": 15.7
+}
+},
+{
+"id": "mafra-f5aeba549731",
+"name": "케이크(초코릿)",
+"category": "기타",
+"kcalPer100g": 580,
+"defaultServingG": 75,
+"kcalPerServing": 437,
+"servingNutrition": {
+"carbsG": 40.2,
+"proteinG": 4.7,
+"fatG": 30.4
+}
+},
+{
+"id": "mafra-0b6ac8f6f097",
+"name": "케이크(파운드)",
+"category": "기타",
+"kcalPer100g": 537,
+"defaultServingG": 64,
+"kcalPerServing": 343,
+"servingNutrition": {
+"carbsG": 39.7,
+"proteinG": 4.8,
+"fatG": 19.4
+}
+},
+{
+"id": "mafra-85ca22853a61",
+"name": "콜라",
+"category": "간식/음료",
+"kcalPer100g": 333,
+"defaultServingG": 30,
+"kcalPerServing": 100,
+"servingNutrition": {
+"carbsG": 25.0,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-2b20a459084f",
+"name": "콩국수",
+"category": "밥/면/빵",
+"kcalPer100g": 439,
+"defaultServingG": 168,
+"kcalPerServing": 738,
+"servingNutrition": {
+"carbsG": 111.3,
+"proteinG": 40.6,
+"fatG": 16.3
+}
+},
+{
+"id": "mafra-d1949c72ae9d",
+"name": "콩기름",
+"category": "기타",
+"kcalPer100g": 35,
+"defaultServingG": 100,
+"kcalPerServing": 35,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 0.0,
+"fatG": 4.0
+}
+},
+{
+"id": "mafra-4847516bfb39",
+"name": "콩나물",
+"category": "채소",
+"kcalPer100g": 25,
+"defaultServingG": 100,
+"kcalPerServing": 25,
+"servingNutrition": {
+"carbsG": 2.2,
+"proteinG": 2.2,
+"fatG": 1.6
+}
+},
+{
+"id": "mafra-de2217b6d1c9",
+"name": "콩나물국",
+"category": "채소",
+"kcalPer100g": 18,
+"defaultServingG": 100,
+"kcalPerServing": 18,
+"servingNutrition": {
+"carbsG": 2.3,
+"proteinG": 2.6,
+"fatG": 0.6
+}
+},
+{
+"id": "mafra-497fa36f02b3",
+"name": "콩나물밥",
+"category": "밥/면/빵",
+"kcalPer100g": 424,
+"defaultServingG": 129,
+"kcalPerServing": 549,
+"servingNutrition": {
+"carbsG": 105.2,
+"proteinG": 18.0,
+"fatG": 6.2
+}
+},
+{
+"id": "mafra-843c6e6aeb69",
+"name": "콩밥",
+"category": "밥/면/빵",
+"kcalPer100g": 422,
+"defaultServingG": 91,
+"kcalPerServing": 383,
+"servingNutrition": {
+"carbsG": 80.0,
+"proteinG": 8.8,
+"fatG": 2.0
+}
+},
+{
+"id": "mafra-3f4228bc029e",
+"name": "콩비지",
+"category": "기타",
+"kcalPer100g": 15,
+"defaultServingG": 100,
+"kcalPerServing": 15,
+"servingNutrition": {
+"carbsG": 2.9,
+"proteinG": 0.9,
+"fatG": 0.4
+}
+},
+{
+"id": "mafra-31f8bbc8fc21",
+"name": "콩비지찌개",
+"category": "기타",
+"kcalPer100g": 230,
+"defaultServingG": 30,
+"kcalPerServing": 69,
+"servingNutrition": {
+"carbsG": 9.0,
+"proteinG": 4.9,
+"fatG": 3.0
+}
+},
+{
+"id": "mafra-82f3de7c903b",
+"name": "콩조림(콩자반)",
+"category": "기타",
+"kcalPer100g": 38,
+"defaultServingG": 100,
+"kcalPerServing": 38,
+"servingNutrition": {
+"carbsG": 3.8,
+"proteinG": 3.0,
+"fatG": 1.7
+}
+},
+{
+"id": "mafra-ee1d763f979a",
+"name": "쿠키",
+"category": "기타",
+"kcalPer100g": 467,
+"defaultServingG": 30,
+"kcalPerServing": 140,
+"servingNutrition": {
+"carbsG": 20.7,
+"proteinG": 1.8,
+"fatG": 5.6
+}
+},
+{
+"id": "mafra-601a3a71f2a4",
+"name": "크래커",
+"category": "기타",
+"kcalPer100g": 534,
+"defaultServingG": 33,
+"kcalPerServing": 175,
+"servingNutrition": {
+"carbsG": 20.6,
+"proteinG": 2.5,
+"fatG": 9.7
+}
+},
+{
+"id": "mafra-412542981ec1",
+"name": "크래커(샌드)",
+"category": "기타",
+"kcalPer100g": 534,
+"defaultServingG": 32,
+"kcalPerServing": 172,
+"servingNutrition": {
+"carbsG": 20.6,
+"proteinG": 3.1,
+"fatG": 8.5
+}
+},
+{
+"id": "mafra-1b79387d4807",
+"name": "크로켓",
+"category": "기타",
+"kcalPer100g": 549,
+"defaultServingG": 43,
+"kcalPerServing": 237,
+"servingNutrition": {
+"carbsG": 23.8,
+"proteinG": 4.8,
+"fatG": 14.6
+}
+},
+{
+"id": "mafra-75a9dc015032",
+"name": "크림빵",
+"category": "밥/면/빵",
+"kcalPer100g": 463,
+"defaultServingG": 62,
+"kcalPerServing": 288,
+"servingNutrition": {
+"carbsG": 47.8,
+"proteinG": 6.3,
+"fatG": 8.1
+}
+},
+{
+"id": "mafra-40fc0efafa2b",
+"name": "키위",
+"category": "기타",
+"kcalPer100g": 24,
+"defaultServingG": 100,
+"kcalPerServing": 24,
+"servingNutrition": {
+"carbsG": 6.5,
+"proteinG": 0.4,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-123a666f04ed",
+"name": "탕수육",
+"category": "기타",
+"kcalPer100g": 571,
+"defaultServingG": 40,
+"kcalPerServing": 230,
+"servingNutrition": {
+"carbsG": 19.9,
+"proteinG": 8.9,
+"fatG": 11.5
+}
+},
+{
+"id": "mafra-3ae910f848c9",
+"name": "토란",
+"category": "기타",
+"kcalPer100g": 26,
+"defaultServingG": 100,
+"kcalPerServing": 26,
+"servingNutrition": {
+"carbsG": 5.9,
+"proteinG": 1.1,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-37eb2bd13c3d",
+"name": "토란대(말린것)",
+"category": "기타",
+"kcalPer100g": 150,
+"defaultServingG": 30,
+"kcalPerServing": 45,
+"servingNutrition": {
+"carbsG": 13.1,
+"proteinG": 1.5,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-40ec10014efc",
+"name": "토마토",
+"category": "기타",
+"kcalPer100g": 14,
+"defaultServingG": 100,
+"kcalPerServing": 14,
+"servingNutrition": {
+"carbsG": 3.3,
+"proteinG": 0.9,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-d5dd6e9d36a3",
+"name": "토마토주스",
+"category": "간식/음료",
+"kcalPer100g": 27,
+"defaultServingG": 100,
+"kcalPerServing": 27,
+"servingNutrition": {
+"carbsG": 6.5,
+"proteinG": 1.7,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-8d46be06ce7d",
+"name": "토마토케첩",
+"category": "기타",
+"kcalPer100g": 6,
+"defaultServingG": 100,
+"kcalPerServing": 6,
+"servingNutrition": {
+"carbsG": 1.6,
+"proteinG": 0.1,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-e5fee928c463",
+"name": "토마토페이스트",
+"category": "기타",
+"kcalPer100g": 16,
+"defaultServingG": 100,
+"kcalPerServing": 16,
+"servingNutrition": {
+"carbsG": 3.9,
+"proteinG": 0.7,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-8a6be6cfa1c0",
+"name": "톳",
+"category": "기타",
+"kcalPer100g": 6,
+"defaultServingG": 100,
+"kcalPerServing": 6,
+"servingNutrition": {
+"carbsG": 2.5,
+"proteinG": 1.0,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-36050ad2a4f9",
+"name": "톳나물",
+"category": "채소",
+"kcalPer100g": 107,
+"defaultServingG": 30,
+"kcalPerServing": 32,
+"servingNutrition": {
+"carbsG": 7.7,
+"proteinG": 1.6,
+"fatG": 0.9
+}
+},
+{
+"id": "mafra-91b85f0fe6a8",
+"name": "파",
+"category": "기타",
+"kcalPer100g": 3,
+"defaultServingG": 100,
+"kcalPerServing": 3,
+"servingNutrition": {
+"carbsG": 0.7,
+"proteinG": 0.2,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-332ec2aad0a4",
+"name": "파래",
+"category": "기타",
+"kcalPer100g": 3,
+"defaultServingG": 100,
+"kcalPerServing": 3,
+"servingNutrition": {
+"carbsG": 1.2,
+"proteinG": 1.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-20a1880048f9",
+"name": "파래무침",
+"category": "기타",
+"kcalPer100g": 43,
+"defaultServingG": 100,
+"kcalPerServing": 43,
+"servingNutrition": {
+"carbsG": 4.3,
+"proteinG": 1.6,
+"fatG": 3.0
+}
+},
+{
+"id": "mafra-328e254680bb",
+"name": "파무침",
+"category": "기타",
+"kcalPer100g": 50,
+"defaultServingG": 100,
+"kcalPerServing": 50,
+"servingNutrition": {
+"carbsG": 3.0,
+"proteinG": 1.5,
+"fatG": 4.2
+}
+},
+{
+"id": "mafra-54a78e6ee63a",
+"name": "파인애플",
+"category": "기타",
+"kcalPer100g": 10,
+"defaultServingG": 100,
+"kcalPerServing": 10,
+"servingNutrition": {
+"carbsG": 2.8,
+"proteinG": 0.2,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-c9198674aa1a",
+"name": "파전",
+"category": "기타",
+"kcalPer100g": 364,
+"defaultServingG": 30,
+"kcalPerServing": 109,
+"servingNutrition": {
+"carbsG": 14.3,
+"proteinG": 3.2,
+"fatG": 4.1
+}
+},
+{
+"id": "mafra-8305c7254e1f",
+"name": "팝콘",
+"category": "기타",
+"kcalPer100g": 50,
+"defaultServingG": 100,
+"kcalPerServing": 50,
+"servingNutrition": {
+"carbsG": 5.8,
+"proteinG": 0.8,
+"fatG": 3.1
+}
+},
+{
+"id": "mafra-50938ca38fef",
+"name": "팥",
+"category": "기타",
+"kcalPer100g": 34,
+"defaultServingG": 100,
+"kcalPerServing": 34,
+"servingNutrition": {
+"carbsG": 6.8,
+"proteinG": 1.9,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-316466711a22",
+"name": "팥밥",
+"category": "밥/면/빵",
+"kcalPer100g": 416,
+"defaultServingG": 83,
+"kcalPerServing": 345,
+"servingNutrition": {
+"carbsG": 75.5,
+"proteinG": 7.1,
+"fatG": 0.4
+}
+},
+{
+"id": "mafra-b246bea45a19",
+"name": "팥시루떡",
+"category": "밥/면/빵",
+"kcalPer100g": 410,
+"defaultServingG": 48,
+"kcalPerServing": 195,
+"servingNutrition": {
+"carbsG": 41.4,
+"proteinG": 5.4,
+"fatG": 0.8
+}
+},
+{
+"id": "mafra-e9d01c28a718",
+"name": "팥죽",
+"category": "밥/면/빵",
+"kcalPer100g": 404,
+"defaultServingG": 61,
+"kcalPerServing": 248,
+"servingNutrition": {
+"carbsG": 52.1,
+"proteinG": 8.8,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-7fdf5b148bb2",
+"name": "팽이버섯",
+"category": "기타",
+"kcalPer100g": 3,
+"defaultServingG": 100,
+"kcalPerServing": 3,
+"servingNutrition": {
+"carbsG": 0.6,
+"proteinG": 0.3,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-3a77b696adc5",
+"name": "포도",
+"category": "과일",
+"kcalPer100g": 130,
+"defaultServingG": 30,
+"kcalPerServing": 39,
+"servingNutrition": {
+"carbsG": 10.6,
+"proteinG": 0.4,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-338233110276",
+"name": "포도,건포도",
+"category": "과일",
+"kcalPer100g": 11,
+"defaultServingG": 100,
+"kcalPerServing": 11,
+"servingNutrition": {
+"carbsG": 3.0,
+"proteinG": 0.1,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-0c316cfaa65f",
+"name": "포도주스",
+"category": "과일",
+"kcalPer100g": 367,
+"defaultServingG": 30,
+"kcalPerServing": 110,
+"servingNutrition": {
+"carbsG": 29.0,
+"proteinG": 0.6,
+"fatG": 0.4
+}
+},
+{
+"id": "mafra-ac0812607d87",
+"name": "표고버섯",
+"category": "기타",
+"kcalPer100g": 3,
+"defaultServingG": 100,
+"kcalPerServing": 3,
+"servingNutrition": {
+"carbsG": 0.6,
+"proteinG": 0.2,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-b72d3532ced5",
+"name": "표고버섯(말린것)",
+"category": "기타",
+"kcalPer100g": 8,
+"defaultServingG": 100,
+"kcalPerServing": 8,
+"servingNutrition": {
+"carbsG": 1.9,
+"proteinG": 0.5,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-2a20962a823e",
+"name": "풋고추",
+"category": "기타",
+"kcalPer100g": 2,
+"defaultServingG": 100,
+"kcalPerServing": 2,
+"servingNutrition": {
+"carbsG": 0.5,
+"proteinG": 0.1,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-554a58616063",
+"name": "풋고추조림",
+"category": "기타",
+"kcalPer100g": 11,
+"defaultServingG": 100,
+"kcalPerServing": 11,
+"servingNutrition": {
+"carbsG": 0.8,
+"proteinG": 0.5,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-a5ffc5588f55",
+"name": "풋마늘",
+"category": "기타",
+"kcalPer100g": 4,
+"defaultServingG": 100,
+"kcalPerServing": 4,
+"servingNutrition": {
+"carbsG": 0.9,
+"proteinG": 0.4,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-3812cd1068c5",
+"name": "피망",
+"category": "기타",
+"kcalPer100g": 1,
+"defaultServingG": 100,
+"kcalPerServing": 1,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-8ef013b98083",
+"name": "피자",
+"category": "기타",
+"kcalPer100g": 497,
+"defaultServingG": 78,
+"kcalPerServing": 390,
+"servingNutrition": {
+"carbsG": 43.6,
+"proteinG": 17.5,
+"fatG": 17.3
+}
+},
+{
+"id": "mafra-b5f2ab6d731f",
+"name": "함박스테이크",
+"category": "기타",
+"kcalPer100g": 344,
+"defaultServingG": 30,
+"kcalPerServing": 103,
+"servingNutrition": {
+"carbsG": 5.3,
+"proteinG": 6.6,
+"fatG": 6.2
+}
+},
+{
+"id": "mafra-f1550c2e57e6",
+"name": "핫도그",
+"category": "기타",
+"kcalPer100g": 413,
+"defaultServingG": 30,
+"kcalPerServing": 124,
+"servingNutrition": {
+"carbsG": 9.2,
+"proteinG": 5.3,
+"fatG": 7.4
+}
+},
+{
+"id": "mafra-eaa352c9ee24",
+"name": "해물탕",
+"category": "기타",
+"kcalPer100g": 288,
+"defaultServingG": 30,
+"kcalPerServing": 86,
+"servingNutrition": {
+"carbsG": 6.0,
+"proteinG": 13.9,
+"fatG": 1.4
+}
+},
+{
+"id": "mafra-abe4ba01bf80",
+"name": "해삼",
+"category": "기타",
+"kcalPer100g": 5,
+"defaultServingG": 100,
+"kcalPerServing": 5,
+"servingNutrition": {
+"carbsG": 0.3,
+"proteinG": 0.7,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-2c862f53a4d3",
+"name": "해파리",
+"category": "기타",
+"kcalPer100g": 7,
+"defaultServingG": 100,
+"kcalPerServing": 7,
+"servingNutrition": {
+"carbsG": 0.5,
+"proteinG": 1.0,
+"fatG": 0.1
+}
+},
+{
+"id": "mafra-13a98fcee3bd",
+"name": "햄버거",
+"category": "기타",
+"kcalPer100g": 493,
+"defaultServingG": 70,
+"kcalPerServing": 344,
+"servingNutrition": {
+"carbsG": 38.1,
+"proteinG": 17.0,
+"fatG": 14.7
+}
+},
+{
+"id": "mafra-8af27b4a3dc1",
+"name": "현미",
+"category": "기타",
+"kcalPer100g": 140,
+"defaultServingG": 30,
+"kcalPerServing": 42,
+"servingNutrition": {
+"carbsG": 9.3,
+"proteinG": 0.9,
+"fatG": 0.3
+}
+},
+{
+"id": "mafra-9e2951b2a3ae",
+"name": "현미밥",
+"category": "밥/면/빵",
+"kcalPer100g": 413,
+"defaultServingG": 94,
+"kcalPerServing": 389,
+"servingNutrition": {
+"carbsG": 86.0,
+"proteinG": 7.1,
+"fatG": 1.1
+}
+},
+{
+"id": "mafra-1fff74624f3f",
+"name": "호두",
+"category": "기타",
+"kcalPer100g": 327,
+"defaultServingG": 30,
+"kcalPerServing": 98,
+"servingNutrition": {
+"carbsG": 0.4,
+"proteinG": 2.3,
+"fatG": 10.0
+}
+},
+{
+"id": "mafra-1ac6a04cb063",
+"name": "호박(애호박)",
+"category": "기타",
+"kcalPer100g": 8,
+"defaultServingG": 100,
+"kcalPerServing": 8,
+"servingNutrition": {
+"carbsG": 2.1,
+"proteinG": 0.5,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-5e33b4b675e9",
+"name": "호박나물",
+"category": "채소",
+"kcalPer100g": 32,
+"defaultServingG": 100,
+"kcalPerServing": 32,
+"servingNutrition": {
+"carbsG": 3.6,
+"proteinG": 0.9,
+"fatG": 2.0
+}
+},
+{
+"id": "mafra-d4c7ba2d55bc",
+"name": "호박전",
+"category": "기타",
+"kcalPer100g": 253,
+"defaultServingG": 30,
+"kcalPerServing": 76,
+"servingNutrition": {
+"carbsG": 6.2,
+"proteinG": 2.9,
+"fatG": 4.5
+}
+},
+{
+"id": "mafra-c9b9c873bcea",
+"name": "호박죽",
+"category": "밥/면/빵",
+"kcalPer100g": 405,
+"defaultServingG": 60,
+"kcalPerServing": 244,
+"servingNutrition": {
+"carbsG": 51.4,
+"proteinG": 8.6,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-5ecfefd5cba5",
+"name": "호빵",
+"category": "밥/면/빵",
+"kcalPer100g": 426,
+"defaultServingG": 54,
+"kcalPerServing": 229,
+"servingNutrition": {
+"carbsG": 46.4,
+"proteinG": 6.6,
+"fatG": 0.8
+}
+},
+{
+"id": "mafra-e5d958fce112",
+"name": "홍어",
+"category": "기타",
+"kcalPer100g": 26,
+"defaultServingG": 100,
+"kcalPerServing": 26,
+"servingNutrition": {
+"carbsG": 0.0,
+"proteinG": 5.9,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-5f6d1f89b73c",
+"name": "홍어회무침",
+"category": "기타",
+"kcalPer100g": 148,
+"defaultServingG": 30,
+"kcalPerServing": 44,
+"servingNutrition": {
+"carbsG": 4.3,
+"proteinG": 5.7,
+"fatG": 0.8
+}
+},
+{
+"id": "mafra-99ae053d38b1",
+"name": "홍차",
+"category": "간식/음료",
+"kcalPer100g": 240,
+"defaultServingG": 30,
+"kcalPerServing": 72,
+"servingNutrition": {
+"carbsG": 17.5,
+"proteinG": 0.2,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-881904eba30f",
+"name": "홍차음료",
+"category": "간식/음료",
+"kcalPer100g": 213,
+"defaultServingG": 30,
+"kcalPerServing": 64,
+"servingNutrition": {
+"carbsG": 16.6,
+"proteinG": 0.0,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-86ac83a40808",
+"name": "홍합",
+"category": "기타",
+"kcalPer100g": 14,
+"defaultServingG": 100,
+"kcalPerServing": 14,
+"servingNutrition": {
+"carbsG": 0.8,
+"proteinG": 1.9,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-9dae816bc173",
+"name": "홍합미역국",
+"category": "기타",
+"kcalPer100g": 28,
+"defaultServingG": 100,
+"kcalPerServing": 28,
+"servingNutrition": {
+"carbsG": 2.8,
+"proteinG": 1.8,
+"fatG": 2.2
+}
+},
+{
+"id": "mafra-05da1abfd0dd",
+"name": "회덮밥",
+"category": "밥/면/빵",
+"kcalPer100g": 417,
+"defaultServingG": 167,
+"kcalPerServing": 696,
+"servingNutrition": {
+"carbsG": 121.9,
+"proteinG": 39.8,
+"fatG": 5.5
+}
+},
+{
+"id": "mafra-637657b9bd61",
+"name": "후렌치후라이",
+"category": "기타",
+"kcalPer100g": 515,
+"defaultServingG": 71,
+"kcalPerServing": 367,
+"servingNutrition": {
+"carbsG": 47.2,
+"proteinG": 4.4,
+"fatG": 19.7
+}
+},
+{
+"id": "mafra-1dda9b861e8d",
+"name": "후르츠샐러드(칵테일)",
+"category": "기타",
+"kcalPer100g": 29,
+"defaultServingG": 100,
+"kcalPerServing": 29,
+"servingNutrition": {
+"carbsG": 7.7,
+"proteinG": 0.1,
+"fatG": 0.2
+}
+},
+{
+"id": "mafra-8b5e13a45840",
+"name": "후추",
+"category": "기타",
+"kcalPer100g": 3,
+"defaultServingG": 100,
+"kcalPerServing": 3,
+"servingNutrition": {
+"carbsG": 0.7,
+"proteinG": 0.1,
+"fatG": 0.0
+}
+},
+{
+"id": "mafra-d0cfba6c814e",
+"name": "흑미밥",
+"category": "밥/면/빵",
+"kcalPer100g": 419,
+"defaultServingG": 92,
+"kcalPerServing": 387,
+"servingNutrition": {
+"carbsG": 85.0,
+"proteinG": 6.7,
+"fatG": 0.7
+}
+}
+]

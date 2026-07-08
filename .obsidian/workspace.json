@@ -1,0 +1,218 @@
+{
+  "main": {
+    "id": "bc4c7359c87c85ea",
+    "type": "split",
+    "children": [
+      {
+        "id": "93c3c78fc29d9633",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "94658116606f0a59",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ced0ed93f3c9485b",
+    "type": "split",
+    "children": [
+      {
+        "id": "9dbaf2267f35f45e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f0b160bc2823b36c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "8e9ac130972dd396",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "검색"
+            }
+          },
+          {
+            "id": "bc49c52342af1f42",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "북마크"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 446.5
+  },
+  "right": {
+    "id": "036bce2623a04bde",
+    "type": "split",
+    "children": [
+      {
+        "id": "1e4fed05aa755947",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4ea6bdd0d89442ed",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "백링크"
+            }
+          },
+          {
+            "id": "ff4eb67d2f97dfeb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "나가는 링크"
+            }
+          },
+          {
+            "id": "a5a4d4de84fb2a2e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "태그"
+            }
+          },
+          {
+            "id": "8b88644f8e277a20",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "모든 속성"
+            }
+          },
+          {
+            "id": "ddd2af4d8651d2f6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "개요"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:빠른 전환기 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "bases:새 베이스 생성하기": false
+    }
+  },
+  "active": "f0b160bc2823b36c",
+  "lastOpenFiles": [
+    "flutter/flutter/bin/cache/engine.stamp.tmp.4048",
+    "flutter/flutter/bin/cache/engine.stamp.tmp.12088",
+    "flutter/flutter/docs/engine/impeller/docs/xcode_frame_capture.md",
+    "flutter/flutter/docs/contributing/Tree-hygiene.md",
+    "minahai/apps/titanic/_docs/CLAUDE.md",
+    "flutter/flutter/docs/infra/Autosubmit-bot.md",
+    "minahai/_claude/entityrules.md",
+    "vault/minahai/CLAUDE.md",
+    "minahview/CLAUDE.md",
+    "minahai/CLAUDE.md",
+    "vault/minahview/CLAUDE.md",
+    "vault/minahview/CLAUDE.md.tmp.17352.fb91d417fa9d",
+    "vault/minahai/CLAUDE.md.tmp.17352.b48c2aca4196",
+    "CLAUDE.md.tmp.17352.b76a41849c5f",
+    "CLAUDE.md.tmp.17352.f979f35821c2",
+    "CLAUDE.md",
+    "minahai/apps/titanic/_docs/CLAUDE.md.tmp.17352.4af230118bdb",
+    "cloud.minahdev/minahai/CLAUDE.md",
+    "cloud.minahdev/minahai",
+    "cloud.minahdev",
+    "minahai/apps/titanic/_docs/minahai/CLAUDE.md",
+    "minahai/apps/titanic/_docs/minahai",
+    "minahview/CLAUDE.md.tmp.22020.900cef11a38a",
+    "minahai/apps/titanic/_docs/titanic-algorithm.md",
+    "vault/CLAUDE.md",
+    "minahai/_claude/CLAUDE.md",
+    "vault/Backend/PACE_ERD2.md",
+    "vault/Backend/PACE_ERD.md",
+    "minahai/apps/users/_docs/README.md",
+    "minahview/node_modules/js-tokens/README.md",
+    "minahview/node_modules/vaul/LICENSE.md",
+    "minahview/node_modules/eventemitter3/README.md",
+    "minahview/node_modules/next/license.md",
+    "minahview/node_modules/cmdk/LICENSE.md",
+    "minahview/node_modules/cmdk/README.md",
+    "minahview/node_modules/@date-fns/tz/CHANGELOG.md"
+  ]
+}

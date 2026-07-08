@@ -1,0 +1,1 @@
+C:/Users/hi/Documents/cloud.minahdev/vault/minahview/CLAUDE.md
