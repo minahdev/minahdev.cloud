@@ -1,8 +1,0 @@
-{
-  "hidden": true,
-  "hiddenList": [
-    "minahai/alembic",
-    "minahai/__pycache__",
-    "minahai/apps/__pycache__"
-  ]
-}

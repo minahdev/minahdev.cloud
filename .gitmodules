@@ -1,9 +1,0 @@
-[submodule "minahai"]
-	path = minahai
-	url = https://github.com/minahdev/cloud.minah.api.git
-[submodule "minahview"]
-	path = minahview
-	url = https://github.com/minahdev/cloud.minah.www.git
-[submodule "vault"]
-	path = vault
-	url = https://github.com/minahdev/cloud.minahdev.vault.git
