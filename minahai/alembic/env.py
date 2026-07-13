@@ -55,6 +55,12 @@ from users.app.dtos.user_dto import User  # noqa: F401, E402
 from titanic.adapter.outbound.orm.passenger_rose_model_orm import RoseModelOrm  # noqa: F401, E402
 from titanic.adapter.outbound.orm.passenger_jack_trainer_orm import PassengerModel  # noqa: F401, E402
 from inbody.adapter.outbound.orm.food_orm import Food  # noqa: F401, E402
+from moneyball.adapter.outbound.orm.soccer_orm import (  # noqa: F401, E402
+    Stadium,
+    Team,
+    Schedule,
+    Player,
+)
 
 target_metadata = Base.metadata
 

@@ -110,6 +110,7 @@ def _import_orm_models() -> None:
     import comm_agent.adapter.outbound.orm.contact_orm  # noqa: F401
     import comm_agent.adapter.outbound.orm.received_mail_orm  # noqa: F401
     import comm_agent.adapter.outbound.orm.push_subscription_orm  # noqa: F401
+    import moneyball.adapter.outbound.orm.soccer_orm  # noqa: F401
 
 
 async def create_database_tables() -> None:
