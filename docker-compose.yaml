@@ -17,25 +17,11 @@ services:
       - "host.docker.internal:host-gateway"
     volumes:
       # 로컬 학습 산출물(best.pt)을 컨테이너에서 그대로 읽도록 마운트
-      - ./minahai/apps/vision/resources/yolo_train/runs:/app/apps/vision/resources/yolo_train/runs
+      - ./minahai/apps/star_craft/resources/yolo_train/runs:/app/apps/star_craft/resources/yolo_train/runs
     depends_on:
       - pgvector
       - redis
       - neo4j
-
-  # --- 프론트엔드 서비스 ---
-  frontend:
-    container_name: minah_frontend
-    build:
-      context: ./minahview
-    ports:
-      - "3000:3000"
-    env_file:
-      - ./minahview/.env.local
-    environment:
-      - BACKEND_URL=http://backend:8000
-    depends_on:
-      - backend
 
   # --- n8n ---
   n8n:

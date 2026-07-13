@@ -166,7 +166,7 @@ from silicon_valley.adapter.inbound.api import silicon_valley_router
 from comm_agent.adapter.inbound.api import comm_agent_router
 from spam_filter.adapter.inbound.api import spam_filter_router
 from star_craft.adapter.inbound.api import star_craft_router
-from vision.adapter.inbound.api.v1.vision_router import vision_router
+from star_craft.adapter.inbound.api.v1.vision_router import vision_router
 
 logging.basicConfig(
     level=logging.INFO,

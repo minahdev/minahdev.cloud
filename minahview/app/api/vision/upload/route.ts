@@ -17,7 +17,7 @@ export async function POST(req: Request) {
   upstream.append("file", file, file.name)
 
   try {
-    const res = await backendFetch(`${backendBase}/api/vision/upload`, {
+    const res = await backendFetch(`${backendBase}/api/star_craft/upload`, {
       method: "POST",
       body: upstream,
     })
