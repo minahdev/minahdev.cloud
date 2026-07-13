@@ -162,7 +162,7 @@ from users.app.use_cases.user_interactor import UserService
 from inbody.community_media import get_community_media_storage
 from inbody.router import router as inbody_router
 from titanic.adapter.inbound.api import titanic_router
-from silicon_valley.adapter.inbound.api import silicon_valley_router
+from admin.adapter.inbound.api import silicon_valley_router
 from comm_agent.adapter.inbound.api import comm_agent_router
 from spam_filter.adapter.inbound.api import spam_filter_router
 from star_craft.adapter.inbound.api import star_craft_router
