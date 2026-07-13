@@ -19,14 +19,14 @@ minahai는 **모듈러 모놀리식(Modular Monolith)** 구조다.
            ┌───────────────┼───────────────┐
            ▼               ▼               ▼
        ┌───────┐       ┌───────┐       ┌─────────┐
-       │ secom │       │inbody │       │ titanic │  ← SPOKES (스포크)
+       │ users │       │inbody │       │ titanic │  ← SPOKES (스포크)
        └───────┘       └───────┘       └─────────┘
 ```
 
 | 역할 | 앱 | 설명 |
 |------|-----|------|
 | **Hub** | `star_craft` | 지식 교차점, 컨텍스트 라우팅, 전역 상태/인덱스 |
-| **Spoke** | `secom` | 회원·스케줄 도메인 |
+| **Spoke** | `users` | 회원·스케줄 도메인 |
 | **Spoke** | `inbody` | 커뮤니티·훈련일지·공지 도메인 |
 | **Spoke** | `titanic` | 학습용 승객 도메인 |
 
@@ -37,7 +37,7 @@ minahai는 **모듈러 모놀리식(Modular Monolith)** 구조다.
 ### 허용
 
 ```
-star_craft → secom      (Hub → Spoke: 허용)
+star_craft → users      (Hub → Spoke: 허용)
 star_craft → inbody     (Hub → Spoke: 허용)
 star_craft → titanic    (Hub → Spoke: 허용)
 spoke      → minahai.core.*  (공통 코어: 허용)
@@ -46,31 +46,31 @@ spoke      → minahai.core.*  (공통 코어: 허용)
 ### 금지
 
 ```
-secom   → inbody    ❌  (Spoke → Spoke 직통: 금지)
-secom   → titanic   ❌
-inbody  → secom     ❌  (기존 예외 있음 — 이전 대상)
+users   → inbody    ❌  (Spoke → Spoke 직통: 금지)
+users   → titanic   ❌
+inbody  → users     ❌  (기존 예외 있음 — 이전 대상)
 inbody  → titanic   ❌
-titanic → secom     ❌
+titanic → users     ❌
 titanic → inbody    ❌
 ```
 
 **스포크 간 직접 import는 순환 참조(Circular Dependency)를 유발하고 토폴로지를 파괴한다.**  
 스포크가 다른 스포크의 데이터가 필요하면 반드시 `star_craft`를 경유한다.
 
-> **기존 예외**: `inbody`가 `secom.UserRepository`를 직접 참조하는 코드가 현재 존재함.  
+> **기존 예외**: `inbody`가 `users.UserRepository`를 직접 참조하는 코드가 현재 존재함.  
 > star_craft 도입 후 `star_craft`의 UserContext로 이전 대상. 당장 건드리지 않음.
 
 ### Import 규칙 요약
 
 ```python
 # ✅ Hub가 Spoke를 참조
-from secom.app.ports.input.user_use_case import UserUseCase  # in star_craft
+from users.app.ports.input.user_use_case import UserUseCase  # in star_craft
 
 # ✅ Spoke가 Core를 참조
 from minahai.core.matrix.oracle_database import get_db  # in any spoke
 
 # ❌ Spoke가 Spoke를 직접 참조
-from secom.adapter.outbound.pg.user_repository import UserPgRepository  # in inbody — 금지
+from users.adapter.outbound.pg.user_repository import UserPgRepository  # in inbody — 금지
 ```
 
 ---

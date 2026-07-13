@@ -3,7 +3,7 @@
 ## 1. 개요
 
 `star_craft`는 스타 토폴로지의 **Hub**다.  
-스포크(secom · inbody · titanic)의 컨텍스트를 교차 연결하고 전역 인덱스를 관리한다.  
+스포크(users · inbody · titanic)의 컨텍스트를 교차 연결하고 전역 인덱스를 관리한다.  
 이를 위해 두 가지 DB가 필요하다:
 
 | DB 종류 | 용도 | 추천 이미지 |
@@ -144,7 +144,7 @@ qdrant-client==1.*  # Qdrant Python 클라이언트
 ## 8. 파이프라인 흐름 (예시: 스포크 데이터 허브 인덱싱)
 
 ```
-1. secom에서 신규 회원 생성
+1. users에서 신규 회원 생성
         │
         ▼
 2. star_craft Use Case가 이벤트 수신

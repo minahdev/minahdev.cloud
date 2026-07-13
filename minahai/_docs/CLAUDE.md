@@ -8,7 +8,7 @@ FastAPI 백엔드 전용 규칙. 전역 행동 원칙은 [루트 CLAUDE.md](../.
 
 사용자의 감정·상태·훈련 기록을 AI가 분석해 맞춤형 운동 루틴을 추천하는 퍼스널 트레이닝 플랫폼.
 
-- **secom**: 회원가입·로그인·마이페이지·스케줄 접근 관리
+- **users**: 회원가입·로그인·마이페이지·스케줄 접근 관리
 - **inbody**: 커뮤니티·오늘의 이야기·훈련일지·공지·식단
 - **titanic**: 헥사고날 아키텍처 참조 구현 (학습용 승객 도메인)
 
@@ -65,10 +65,10 @@ def get_foo_use_case(db: AsyncSession = Depends(get_db)) -> FooUseCase:
 | 앱 | 패턴 | 비고 |
 |----|------|------|
 | **titanic** | 헥사고날 **표준** — Port/Interactor/DI/thin router | 새 기능의 **참조 구현** |
-| **secom** | 헥사고날 골격 + `UserService` Facade, API는 `main.py` | `ports/` 일부 stub |
-| **inbody** | Router → Controller → Service → Repository (전통 3계층) | `secom.UserRepository`로 사용자 조회 |
+| **users** | 헥사고날 골격 + `UserService` Facade, API는 `main.py` | `ports/` 일부 stub |
+| **inbody** | Router → Controller → Service → Repository (전통 3계층) | `users.UserRepository`로 사용자 조회 |
 
-- **새 secom 기능:** titanic식 Port+Interactor+`dependencies/`로 점진 이전.
+- **새 users 기능:** titanic식 Port+Interactor+`dependencies/`로 점진 이전.
 - **새 inbody 기능:** 기존 Controller/Service/Repository 스타일 유지.
 - **새 앱 추가:** titanic을 참조 구현으로 복제.
 
@@ -83,14 +83,14 @@ def get_foo_use_case(db: AsyncSession = Depends(get_db)) -> FooUseCase:
 ```python
 app.include_router(inbody_router)
 app.include_router(titanic_router, prefix="/api")
-# secom 라우트는 main.py에 직접 정의
+# users 라우트는 main.py에 직접 정의
 ```
 
 ### 라우트 prefix
 
 | 모듈 | prefix 예 |
 |------|-----------|
-| secom | `/signup`, `/login`, `/mypage`, `/schedule/...` |
+| users | `/signup`, `/login`, `/mypage`, `/schedule/...` |
 | inbody | `/community/...`, `/notices`, `/train/...` |
 | titanic | `/api/titanic/<character>/...` |
 
@@ -136,7 +136,7 @@ from minahai.core.matrix.oracle_database import get_db  # 항상 이 경로
 
 | 앱 | 테이블 |
 |----|--------|
-| secom | `secom_users`, `user_information`, `schedule_access_grants`, `schedule_invite_codes` |
+| users | `secom_users`, `user_information`, `schedule_access_grants`, `schedule_invite_codes` |
 | inbody | `community_posts`, `community_comments`, `community_post_cheers`, `today_stories`, `train_daily_logs`, `lessons`, `notices` |
 | titanic | `titanic_person`, `titanic_booking` |
 

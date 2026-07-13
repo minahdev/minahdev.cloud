@@ -1,4 +1,4 @@
-# Pace 완성 ERD (secom + inbody)
+# Pace 완성 ERD (users + inbody)
 
 > **현재 Neon에 올라가는 3NF 스키마 전체** — 정규화 단계별 설명은 [[PACE_ERD_NORMALIZATION]]  
 > 요약·기능 매핑: [[PACE_ERD]]
@@ -168,7 +168,7 @@ erDiagram
 
 ## 전체 컬럼 (표)
 
-### secom
+### users
 
 | `secom_users` | 타입         | 비고                  |
 | ------------- | ---------- | ------------------- |
@@ -295,11 +295,11 @@ erDiagram
 
 | DB 테이블                   | 모듈     | PK   | 유일 제약 / 비고                         |     |
 | ------------------------ | ------ | ---- | ---------------------------------- | --- |
-| `secom_users`            | secom  | `id` | `user_id` UK                       |     |
-| `user_information`       | secom  | `id` | `user_id` FK → `secom_users.id` UK |     |
-| `schedule_access`        | secom  | `id` | 앱 전역 1행 · 구 공통 암호                  |     |
-| `schedule_invite_codes`  | secom  | `id` | `code_digest` UK                   |     |
-| `schedule_access_grants` | secom  | `id` | `user_id`(로그인 문자열) UK              |     |
+| `secom_users`            | users  | `id` | `user_id` UK                       |     |
+| `user_information`       | users  | `id` | `user_id` FK → `secom_users.id` UK |     |
+| `schedule_access`        | users  | `id` | 앱 전역 1행 · 구 공통 암호                  |     |
+| `schedule_invite_codes`  | users  | `id` | `code_digest` UK                   |     |
+| `schedule_access_grants` | users  | `id` | `user_id`(로그인 문자열) UK              |     |
 | `today_stories`          | inbody | `id` | `(user_id, story_date)`            |     |
 | `train_daily_logs`       | inbody | `id` | `(user_id, log_date)`              |     |
 | `lessons`                | inbody | `id` | `(member_user_id, client_id)`      |     |

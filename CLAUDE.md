@@ -12,7 +12,7 @@ Claude·Cursor 등 **코딩 보조 LLM**이 이 저장소에서 작업을 이어
 | 영역 | 규칙 파일 | 문서 디렉터리 |
 |------|-----------|---------------|
 | **공통** | 본 파일 | `_docs/` |
-| **백엔드** (FastAPI · 헥사고날 · DB · secom · inbody · titanic) | [minahai/CLAUDE.md](minahai/CLAUDE.md) | `minahai/_docs/` |
+| **백엔드** (FastAPI · 헥사고날 · DB · users · inbody · titanic) | [minahai/CLAUDE.md](minahai/CLAUDE.md) | `minahai/_docs/` |
 | **프론트엔드** (Next.js · API 연동) | [minahview/CLAUDE.md](minahview/CLAUDE.md) | `minahview/_docs/` |
 | **Flutter** | — | `minahflutter/_docs/` |
 | ERD | `docs/DevOps/Backend/PACE_FULL_ERD.md` | — |
@@ -84,7 +84,7 @@ cloud.minahdev/
 │   ├── CLAUDE.md            # 백엔드 규칙
 │   ├── _docs/               # 백엔드 전용 문서 (ERD, API 설계 등)
 │   ├── apps/
-│   │   ├── secom/           # 회원·스케줄 — 헥사고날
+│   │   ├── users/           # 회원·스케줄 — 헥사고날
 │   │   ├── inbody/          # 커뮤니티·훈련일지·공지 등
 │   │   └── titanic/         # 타이타닉 학습용 — 헥사고날 표준 참조
 │   └── core/
@@ -99,7 +99,7 @@ cloud.minahdev/
 
 | 앱 패키지 | 역할 | DB 테이블 예 |
 |-----------|------|--------------|
-| **secom** | 회원가입·로그인·마이페이지·스케줄 입장 | `secom_users`, `schedule_*` |
+| **users** | 회원가입·로그인·마이페이지·스케줄 입장 | `secom_users`, `schedule_*` |
 | **inbody** | 오늘의 이야기·훈련일지·레슨·커뮤니티·공지 | `today_stories`, `community_*`, `notices` |
 | **titanic** | CSV 업로드·승객 도메인 학습용 | `titanic_person`, `titanic_booking` |
 
