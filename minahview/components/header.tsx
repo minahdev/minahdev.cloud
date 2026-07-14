@@ -43,6 +43,7 @@ const lessonItems = [
   { href: "/titanic/data-collection", label: "데이터 수집" },
   { href: "/titanic/passengers",      label: "승객 목록" },
   { href: "/titanic/conversations",   label: "스미스 선장과의 대화" },
+  { href: "/moneyball/coach",         label: "축구 채팅 (머니볼 코치)" },
 ] as const
 
 // 상단 헤더 pill nav용 (숨김 처리지만 구조 유지)
@@ -87,15 +88,15 @@ const LESSON_DRAG_THRESHOLD_PX = 28
 
 type LessonDragState = { active: boolean; startY: number; dragged: boolean }
 
-function LessonMenuSection({ pathname, isTitanicActive }: { pathname: string; isTitanicActive: boolean }) {
-  const [expanded, setExpanded] = useState(isTitanicActive)
+function LessonMenuSection({ pathname, isLessonActive }: { pathname: string; isLessonActive: boolean }) {
+  const [expanded, setExpanded] = useState(isLessonActive)
   const dragRef = useRef<LessonDragState>({ active: false, startY: 0, dragged: false })
 
   useEffect(() => {
-    if (isTitanicActive) setExpanded(true)
-  }, [isTitanicActive])
+    if (isLessonActive) setExpanded(true)
+  }, [isLessonActive])
 
-  const showSubs = expanded || isTitanicActive
+  const showSubs = expanded || isLessonActive
 
   const endDrag = (target: HTMLElement, pointerId: number) => {
     dragRef.current.active = false
@@ -111,7 +112,7 @@ function LessonMenuSection({ pathname, isTitanicActive }: { pathname: string; is
         aria-label="수업용 메뉴"
         className={cn(
           "mx-2 flex touch-none select-none items-center justify-between rounded-lg py-2.5 text-sm font-medium transition-colors cursor-grab active:cursor-grabbing",
-          isTitanicActive
+          isLessonActive
             ? "border-l-2 border-primary bg-primary/10 pl-[10px] pr-3 text-foreground"
             : "px-3 text-muted-foreground hover:bg-secondary/40 hover:text-foreground",
         )}
@@ -348,7 +349,11 @@ export function Header() {
               <div className="mb-3 border-t border-border/50" />
               <LessonMenuSection
                 pathname={pathname}
-                isTitanicActive={pathname === "/titanic" || pathname.startsWith("/titanic/")}
+                isLessonActive={
+                  pathname === "/titanic" ||
+                  pathname.startsWith("/titanic/") ||
+                  pathname.startsWith("/moneyball")
+                }
               />
             </div>
           </nav>
