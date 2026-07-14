@@ -36,6 +36,7 @@
 - `address` (VARCHAR(60), Nullable)
 - `ddd` (VARCHAR(10), Nullable)
 - `tel` (VARCHAR(10), Nullable)
+- `stadium_embedding` (Vector(1536), Nullable) *— 경기장 소개·위치·시설 정보 기반 RAG 임베딩 (OpenAI text-embedding-3-small 규격 1536 차원).*
 
 ### 2. `team` 테이블 (구단)
 - `team_id` (VARCHAR(10), Primary Key)
@@ -52,6 +53,7 @@
 - `homepage` (VARCHAR(50), Nullable)
 - `owner` (VARCHAR(10), Nullable)
 - `stadium_id` (VARCHAR(10), Foreign Key -> `stadium.stadium_id` 참조)
+- `team_embedding` (Vector(1536), Nullable) *— 구단 소개·연고지·히스토리 기반 RAG 임베딩 (OpenAI text-embedding-3-small 규격 1536 차원).*
 
 ### 3. `schedule` 테이블 (경기 일정)
 - `sche_date` (VARCHAR(10), Primary Key)
@@ -61,6 +63,7 @@
 - `awayteam_id` (VARCHAR(10), Nullable)
 - `home_score` (INTEGER, Nullable)
 - `away_score` (INTEGER, Nullable)
+- `schedule_embedding` (Vector(1536), Nullable) *— 경기 요약·매치업·결과 기반 RAG 임베딩 (OpenAI text-embedding-3-small 규격 1536 차원).*
 
 ### 4. `player` 테이블 (선수 및 벡터 통합)
 - `player_id` (VARCHAR(10), Primary Key)
