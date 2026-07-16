@@ -9,26 +9,26 @@ type Mode = "crawler" | "scraper"
 
 const COPY: Record<
   Mode,
-  { title: string; desc: string; endpoint: string; commandHint: string }
+  { title: string; desc: string; endpoint: string; keywordHint: string }
 > = {
   crawler: {
     title: "크롤러",
     desc: "시드 URL에서 링크를 따라가며 키워드에 맞는 페이지 URL을 수집합니다.",
     endpoint: "/api/star-craft/crawl",
-    commandHint: "예) 테란·저그·프로토스 관련 문서 페이지를 모아줘",
+    keywordHint: "예) 테란,저그,프로토스",
   },
   scraper: {
     title: "스크래퍼",
-    desc: "수집한 URL에 접속해 제목·본문 텍스트를 추출합니다.",
+    desc: "수집한 URL에 접속해 제목·본문 텍스트를 추출합니다. (크롤 결과를 대상으로 실행)",
     endpoint: "/api/star-craft/scrape",
-    commandHint: "예) 각 페이지의 제목과 본문만 뽑아줘",
+    keywordHint: "예) 테란,저그,프로토스",
   },
 }
 
 function ModePanel({ mode }: { mode: Mode }) {
   const meta = COPY[mode]
   const [site, setSite] = useState("")
-  const [command, setCommand] = useState("")
+  const [keywords, setKeywords] = useState("")
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -42,7 +42,7 @@ function ModePanel({ mode }: { mode: Mode }) {
       const res = await fetch(meta.endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ site: site.trim(), command: command.trim() }),
+        body: JSON.stringify({ site: site.trim(), keywords: keywords.trim() }),
       })
       const data = await res.json().catch(() => ({}))
       if (!res.ok) {
@@ -78,12 +78,12 @@ function ModePanel({ mode }: { mode: Mode }) {
       <div className="space-y-1.5">
         <label className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
           <Bot className="h-3.5 w-3.5" aria-hidden />
-          자연어 명령
+          키워드 (콤마로 구분)
         </label>
         <textarea
-          value={command}
-          onChange={(e) => setCommand(e.target.value)}
-          placeholder={meta.commandHint}
+          value={keywords}
+          onChange={(e) => setKeywords(e.target.value)}
+          placeholder={meta.keywordHint}
           rows={3}
           className="w-full resize-none rounded-lg border border-border bg-secondary/40 px-3 py-2 text-sm outline-none placeholder:text-muted-foreground focus:border-primary/50 focus:bg-background"
         />

@@ -1,7 +1,7 @@
 import { backendBase, backendFetch } from "@/lib/backend"
 
 export async function POST(req: Request) {
-  let body: { site?: string; command?: string }
+  let body: { site?: string; keywords?: string }
   try {
     body = await req.json()
   } catch {

@@ -33,7 +33,12 @@ class CrawlerInteractor(CrawlerUseCase):
         self._fetcher = fetcher
         self._sink = sink
 
-    async def crawl(self) -> CrawlSummary:
+    async def crawl(
+        self, website: str | None = None, keywords: list[str] | None = None
+    ) -> CrawlSummary:
+        # 사용자 입력이 오면 먼저 Redis에 저장(스펙: 입력값을 Redis에 저장) 후 사용
+        if website:
+            await self._config.save(website, keywords or [])
         cfg = await self._config.load()
         keywords = [k.lower() for k in cfg.keywords if k.strip()]
         logger.info("[crawler] 시작 | site=%s | keywords=%s", cfg.website, keywords)

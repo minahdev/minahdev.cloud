@@ -10,7 +10,8 @@ logger = logging.getLogger(__name__)
 
 # 코사인 거리가 이보다 크면 질문과 무관한 선수로 간주 (bge-m3 기준, 0=동일·2=반대).
 # 관련 선수가 하나도 없으면 상위(orchestrator)가 gemini로 폴백한다.
-_RELEVANCE_MAX_DISTANCE = 0.6
+# 측정값: 실제 DB 선수 ~0.42~0.48, DB에 없는 유명인(손흥민 0.55·박지성 0.58) → 0.50으로 분리.
+_RELEVANCE_MAX_DISTANCE = 0.50
 
 
 class SoccerRetrievalInteractor(SoccerRetrievalUseCase):

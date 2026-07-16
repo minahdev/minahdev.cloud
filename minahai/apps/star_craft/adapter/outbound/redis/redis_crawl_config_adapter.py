@@ -22,6 +22,11 @@ class RedisCrawlConfigAdapter(CrawlConfigPort):
     def __init__(self, client: Redis) -> None:
         self._client = client
 
+    async def save(self, website: str, keywords: list[str]) -> None:
+        await self._client.set(_KEY_WEBSITE, website.strip())
+        cleaned = ",".join(k.strip() for k in keywords if k.strip())
+        await self._client.set(_KEY_KEYWORDS, cleaned)
+
     async def load(self) -> CrawlConfig:
         website = await self._client.get(_KEY_WEBSITE)
         if not website:
