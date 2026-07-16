@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     // NOTE: 현재 백엔드 /star_craft/crawl 은 Redis(crawl:website·crawl:keywords)
     // 설정만 읽고 요청 바디를 사용하지 않는다. site·command 전달은 백엔드
     // 반영(다음 작업) 이후 유효해진다.
-    const res = await backendFetch(`${backendBase}/star_craft/crawl`, {
+    const res = await backendFetch(`${backendBase}/api/star_craft/crawl`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),

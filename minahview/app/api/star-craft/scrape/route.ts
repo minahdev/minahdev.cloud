@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     // NOTE: 현재 백엔드 /star_craft/scrape 는 crawled.jsonl 을 읽어 스크래핑하며
     // 요청 바디를 사용하지 않는다. site·command 전달은 백엔드 반영(다음 작업)
     // 이후 유효해진다.
-    const res = await backendFetch(`${backendBase}/star_craft/scrape`, {
+    const res = await backendFetch(`${backendBase}/api/star_craft/scrape`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
