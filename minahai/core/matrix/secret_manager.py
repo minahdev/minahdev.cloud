@@ -87,16 +87,22 @@ class Keymaker:
                 ordered.append(name)
         return ordered
 
-    def send_chat(self, history: list[dict], user_text: str) -> tuple[str, str]:
+    def send_chat(
+        self,
+        history: list[dict],
+        user_text: str,
+        system_instruction: str | None = None,
+    ) -> tuple[str, str]:
         """
         Gemini 채팅 전송. 할당량(429)이면 다음 모델로 자동 재시도.
+        system_instruction 미지정 시 기본 Pace 어시스턴트 페르소나를 쓴다.
         Returns: (reply_text, model_name_used)
         """
         if not self.gemini_api_key or self._client is None:
             raise ValueError("GEMINI_API_KEY가 설정되어 있지 않습니다.")
 
         config = types.GenerateContentConfig(
-            system_instruction=_CHAT_SYSTEM_INSTRUCTION,
+            system_instruction=system_instruction or _CHAT_SYSTEM_INSTRUCTION,
         )
         contents = [
             types.Content(role=h["role"], parts=[types.Part(text=h["parts"])])

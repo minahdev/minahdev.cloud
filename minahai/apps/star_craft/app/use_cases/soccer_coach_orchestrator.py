@@ -65,6 +65,17 @@ _RAG_GUIDE = (
     "[축구 DB 컨텍스트]\n"
 )
 
+# 축구 외 일반 질문을 gemini로 답할 때 쓰는 중립 페르소나
+# (홈 화면의 'Pace 헬스케어' 페르소나와 분리 — 특정 정체성 없이 질문에 곧바로 답)
+_GEMINI_GENERAL_INSTRUCTION = """당신은 친절하고 정확한 AI 어시스턴트입니다. 한국어로 간결하게 답하세요.
+
+가독성 규칙:
+- 문단은 2~3문장으로 짧게 나누고, 문단 사이에 빈 줄을 넣으세요.
+- 목록은 `-` 또는 `1.` 번호 목록을 사용하세요.
+- 강조는 **굵게**만 사용하세요.
+- 긴 글은 ## 소제목으로 섹션을 나누세요.
+"""
+
 # player 컬럼 → 한국어 라벨 (SQL 결과 결정적 포맷용)
 _COLUMN_LABELS = {
     "player_name": "이름",
@@ -196,9 +207,9 @@ class SoccerCoachOrchestrator:
             if m.get("role") in ("user", "assistant") and m.get("content")
         ]
         reply, model_used = await run_in_threadpool(
-            self._keymaker.send_chat, history, question
+            self._keymaker.send_chat, history, question, _GEMINI_GENERAL_INSTRUCTION
         )
-        logger.info("[coach][3/3] Gemini 답변 | model=%s", model_used)
+        logger.info("[coach][3/3] Gemini 답변(중립) | model=%s", model_used)
         return reply
 
     async def _answer_sql(self, question: str) -> str | None:
