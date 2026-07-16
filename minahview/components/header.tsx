@@ -44,6 +44,8 @@ const lessonItems = [
   { href: "/titanic/passengers",      label: "승객 목록" },
   { href: "/titanic/conversations",   label: "스미스 선장과의 대화" },
   { href: "/moneyball/coach",         label: "축구 채팅 (머니볼 코치)" },
+  { href: "/star-craft/crawler",      label: "크롤러" },
+  { href: "/star-craft/scraper",      label: "스크래퍼" },
 ] as const
 
 // 상단 헤더 pill nav용 (숨김 처리지만 구조 유지)
@@ -352,7 +354,8 @@ export function Header() {
                 isLessonActive={
                   pathname === "/titanic" ||
                   pathname.startsWith("/titanic/") ||
-                  pathname.startsWith("/moneyball")
+                  pathname.startsWith("/moneyball") ||
+                  pathname.startsWith("/star-craft")
                 }
               />
             </div>
