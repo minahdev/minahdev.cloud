@@ -33,12 +33,15 @@ class PlayerVectorRepository(PlayerSearchPort):
     def __init__(self, session: AsyncSession) -> None:
         self._session = session
 
-    async def search_similar(self, embedding: list[float], top_k: int) -> list[str]:
+    async def search_similar(
+        self, embedding: list[float], top_k: int
+    ) -> list[tuple[str, float]]:
+        distance = Player.player_embedding.cosine_distance(embedding)
         stmt = (
-            select(Player)
+            select(Player, distance.label("distance"))
             .where(Player.player_embedding.is_not(None))
-            .order_by(Player.player_embedding.cosine_distance(embedding))
+            .order_by(distance)
             .limit(top_k)
         )
-        rows = (await self._session.execute(stmt)).scalars().all()
-        return [_player_context(p) for p in rows]
+        rows = (await self._session.execute(stmt)).all()
+        return [(_player_context(p), float(d)) for p, d in rows]
