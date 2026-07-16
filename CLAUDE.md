@@ -15,6 +15,7 @@ Claude·Cursor 등 **코딩 보조 LLM**이 이 저장소에서 작업을 이어
 | **백엔드** (FastAPI · 헥사고날 · DB · users · inbody · titanic) | [minahai/CLAUDE.md](minahai/CLAUDE.md) | `minahai/_docs/` |
 | **프론트엔드** (Next.js · API 연동) | [minahview/CLAUDE.md](minahview/CLAUDE.md) | `minahview/_docs/` |
 | **Flutter** | — | `minahflutter/_docs/` |
+| **Docker** (컨테이너·DB·백엔드 생성/삭제 승인 규칙) | [minahai/_docs/docker-rules.md](minahai/_docs/docker-rules.md) | — |
 | ERD | `docs/DevOps/Backend/PACE_FULL_ERD.md` | — |
 | Cursor 하네스 | `AGENTS.md`, `.cursorrules`, `CURSOR.md` | — |
 

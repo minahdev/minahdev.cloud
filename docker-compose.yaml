@@ -18,6 +18,8 @@ services:
     volumes:
       # 로컬 학습 산출물(best.pt)을 컨테이너에서 그대로 읽도록 마운트
       - ./minahai/apps/star_craft/resources/yolo_train/runs:/app/apps/star_craft/resources/yolo_train/runs
+      # 크롤/스크랩 결과(crawled.jsonl·scraped.jsonl)를 호스트에서 바로 확인하도록 마운트
+      - ./minahai/resources:/app/resources
     depends_on:
       - pgvector
       - redis
@@ -59,6 +61,21 @@ services:
       - pgvector
     restart: unless-stopped
 
+  # --- pgAdmin (PostgreSQL 전용 관리 콘솔) ---
+  pgadmin:
+    container_name: minah_pgadmin
+    image: dpage/pgadmin4:latest
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@minah.dev
+      PGADMIN_DEFAULT_PASSWORD: minah_password
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - pgvector
+    restart: unless-stopped
+
   # --- Redis ---
   redis:
     container_name: minah_redis
@@ -88,3 +105,4 @@ volumes:
   pgvector_data:
   redis_data:
   neo4j_data:
+  pgadmin_data:

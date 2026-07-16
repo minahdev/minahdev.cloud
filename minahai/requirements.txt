@@ -6,6 +6,8 @@ uvicorn[standard]==0.47.0   # ASGI 서버 (FastAPI 실행기)
 python-multipart==0.0.20    # 파일 업로드 / 폼 데이터 처리
 httpx==0.28.1               # 비동기 HTTP 클라이언트 (외부 API 호출)
 mcp>=1.0.0                  # Model Context Protocol (LLM 툴 연동)
+redis>=5.0.0                # Redis 클라이언트 (크롤 대상·키워드 조회)
+beautifulsoup4>=4.12.0      # HTML 파싱 (크롤러·스크래퍼)
 
 # ─────────────────────────────────────────────
 # 데이터베이스 / ORM

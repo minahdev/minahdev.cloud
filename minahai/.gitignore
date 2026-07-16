@@ -71,3 +71,10 @@ logs/
 tmp/
 temp/
 apps/uploads/
+
+# --- Local model weights (large; never commit) ---
+models/
+
+# --- 크롤/스크랩 생성 산출물 (런타임 데이터, 커밋 제외) ---
+resources/crawled/*.jsonl
+resources/scraped/*.jsonl

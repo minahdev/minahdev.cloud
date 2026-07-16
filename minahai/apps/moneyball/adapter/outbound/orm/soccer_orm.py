@@ -2,7 +2,7 @@
 
 4개 테이블: stadium · team · schedule · player.
 스키마는 soccer-dataset.sql 로 적재된 실제 DB 스키마에 맞춘다.
-player.player_embedding 은 pgvector 로 임베딩(1536차원)을 저장한다.
+player.player_embedding 은 pgvector 로 임베딩(1024차원, bge-m3)을 저장한다.
 
 참고: 데이터셋의 schedule 테이블엔 DB PK가 없어, ORM 매핑용으로만
 (sche_date, stadium_id) 복합키를 지정한다(데이터상 유일함).
@@ -90,4 +90,4 @@ class Player(Base):
     team_id: Mapped[str | None] = mapped_column(
         String(10), ForeignKey("team.team_id"), nullable=True
     )
-    player_embedding: Mapped[list[float] | None] = mapped_column(Vector(1536), nullable=True)
+    player_embedding: Mapped[list[float] | None] = mapped_column(Vector(1024), nullable=True)

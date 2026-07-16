@@ -1,1 +1,17 @@
 flutter/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+*.env
+
+# Node / Next.js
+node_modules/
+.next/
+
+# 기타
+.DS_Store
+*.log

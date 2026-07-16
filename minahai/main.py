@@ -167,6 +167,8 @@ from comm_agent.adapter.inbound.api import comm_agent_router
 from spam_filter.adapter.inbound.api import spam_filter_router
 from star_craft.adapter.inbound.api import star_craft_router
 from star_craft.adapter.inbound.api.v1.vision_router import vision_router
+from star_craft.adapter.inbound.api.v1.crawl_router import crawl_router
+from moneyball.adapter.inbound.api import moneyball_router
 
 logging.basicConfig(
     level=logging.INFO,
@@ -418,6 +420,8 @@ app.include_router(comm_agent_router, prefix="/api")
 app.include_router(spam_filter_router, prefix="/api")
 app.include_router(star_craft_router, prefix="/api")
 app.include_router(vision_router, prefix="/api")
+app.include_router(crawl_router, prefix="/api")
+app.include_router(moneyball_router, prefix="/api")
 
 @app.get("/")
 def read_root():

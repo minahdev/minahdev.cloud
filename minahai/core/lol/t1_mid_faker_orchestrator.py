@@ -7,8 +7,8 @@ MODEL = "exaone3.5:2.4b"
 
 
 class FakerOrchestrator:
-    def __init__(self, system_prompt: str = ""):
-        self.model = MODEL
+    def __init__(self, system_prompt: str = "", model: str | None = None):
+        self.model = model or MODEL
         self.system_prompt = system_prompt
         self.history: list[dict] = []
 
