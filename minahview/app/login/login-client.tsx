@@ -16,13 +16,36 @@ type LoginResponse = {
 const inputClass =
   "w-full bg-secondary border border-border rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50"
 
+// 브라우저에서 백엔드 OAuth로 직접 이동 → 빌드타임 공개 변수 필요.
+const PUBLIC_BACKEND = (process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://127.0.0.1:8000").replace(/\/$/, "")
+
+const socialProviders = [
+  { id: "naver", label: "네이버로 로그인", className: "bg-[#03C75A] text-white hover:bg-[#03C75A]/90" },
+  { id: "kakao", label: "카카오로 로그인", className: "bg-[#FEE500] text-black/85 hover:bg-[#FEE500]/90" },
+  {
+    id: "google",
+    label: "Google로 로그인",
+    className: "bg-white text-neutral-800 border border-neutral-300 hover:bg-neutral-50",
+  },
+] as const
+
+const OAUTH_ERRORS: Record<string, string> = {
+  provider_not_configured: "해당 소셜 로그인이 아직 설정되지 않았습니다.",
+  unknown_provider: "지원하지 않는 로그인 방식입니다.",
+  invalid_state: "인증 세션이 만료되었습니다. 다시 시도해주세요.",
+  provider_denied: "소셜 로그인이 취소되었습니다.",
+  oauth_failed: "소셜 로그인에 실패했습니다. 다시 시도해주세요.",
+}
+
 export function LoginClient() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const from = (searchParams.get("from") ?? "/mypage").trim() || "/mypage"
+  const oauthError = searchParams.get("error")
+  const oauthErrorMsg = oauthError ? (OAUTH_ERRORS[oauthError] ?? "로그인 중 오류가 발생했습니다.") : null
 
   const [submitting, setSubmitting] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+  const [error, setError] = useState<string | null>(oauthErrorMsg)
 
   const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -111,6 +134,24 @@ export function LoginClient() {
               {submitting ? "로그인 중…" : "로그인"}
             </button>
           </form>
+
+          <div className="mt-6">
+            <div className="relative mb-4 text-center">
+              <div className="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-border" aria-hidden />
+              <span className="relative z-10 bg-card px-3 text-xs text-muted-foreground">또는 소셜 계정으로</span>
+            </div>
+            <div className="space-y-2">
+              {socialProviders.map((provider) => (
+                <a
+                  key={provider.id}
+                  href={`${PUBLIC_BACKEND}/auth/${provider.id}/login`}
+                  className={`flex w-full items-center justify-center rounded-xl py-3 text-sm font-medium transition-colors ${provider.className}`}
+                >
+                  {provider.label}
+                </a>
+              ))}
+            </div>
+          </div>
 
           <div className="mt-6 text-center text-sm text-muted-foreground">
             계정이 없나요?{" "}

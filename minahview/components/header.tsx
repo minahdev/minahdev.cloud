@@ -9,6 +9,7 @@ import {
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
+import { AUTH_SESSION_EVENT, clearLoggedInUserId, getLoggedInUserId } from "@/lib/auth-session"
 
 import { CurrentWeather } from "@/components/current-weather"
 import {
@@ -238,7 +239,19 @@ export function Header() {
   const pathname = usePathname()
   const router = useRouter()
   const [menuOpen, setMenuOpen] = useState(false)
+  const [userId, setUserId] = useState<string | null>(null)
   const showBack = !ROOT_PATHS.includes(pathname)
+
+  useEffect(() => {
+    const sync = () => setUserId(getLoggedInUserId())
+    sync()
+    window.addEventListener(AUTH_SESSION_EVENT, sync)
+    window.addEventListener("storage", sync)
+    return () => {
+      window.removeEventListener(AUTH_SESSION_EVENT, sync)
+      window.removeEventListener("storage", sync)
+    }
+  }, [])
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-sm">
@@ -272,6 +285,25 @@ export function Header() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
+          {userId ? (
+            <button
+              type="button"
+              onClick={() => {
+                clearLoggedInUserId()
+                router.push("/")
+              }}
+              className="inline-flex h-9 items-center rounded-full border border-border/60 bg-secondary/40 px-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary/60 sm:h-10 sm:px-4"
+            >
+              로그아웃
+            </button>
+          ) : (
+            <Link
+              href="/login"
+              className="inline-flex h-9 items-center rounded-full bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 sm:h-10"
+            >
+              로그인
+            </Link>
+          )}
           <button
             type="button"
             onClick={() => setMenuOpen(true)}

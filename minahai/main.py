@@ -119,7 +119,7 @@ class _AuthMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):
         if not os.getenv("API_USERNAME"):
             return await call_next(request)
-        if request.url.path in self._SKIP:
+        if request.url.path in self._SKIP or request.url.path.startswith("/auth/"):
             return await call_next(request)
 
         # Vercel 서버 사이드 호출 — Basic Auth 헤더
@@ -159,6 +159,7 @@ from users.app.ports.input.schedule_access_use_case import ScheduleAccessUseCase
 from users.dependencies.schedule_access_provider import get_schedule_access_use_case
 from users.app.use_cases.signup_interactor import SignupInteractor
 from users.app.use_cases.user_interactor import UserService
+from users.oauth.oauth_router import oauth_router
 from inbody.community_media import get_community_media_storage
 from inbody.router import router as inbody_router
 from titanic.adapter.inbound.api import titanic_router
@@ -422,6 +423,7 @@ app.include_router(star_craft_router, prefix="/api")
 app.include_router(vision_router, prefix="/api")
 app.include_router(crawl_router, prefix="/api")
 app.include_router(moneyball_router, prefix="/api")
+app.include_router(oauth_router)  # 소셜 로그인 /auth/{provider}/... (dev 게이트 예외)
 
 @app.get("/")
 def read_root():
