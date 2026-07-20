@@ -1,0 +1,13 @@
+# Cloudflare Tunnel — lets AWS/Vercel reach the on-prem (NAT'd) laptop.
+# Fill TUNNEL_ID and hostname, then: `cloudflared tunnel run <name>`.
+tunnel: TUNNEL_ID
+credentials-file: /home/USER/.cloudflared/TUNNEL_ID.json
+
+ingress:
+  # Orchestrator delegates to the EXAONE agent (which fans out to Qwen over A2A).
+  - hostname: exaone.your-domain.example.com
+    service: http://localhost:8001
+  - hostname: qwen.your-domain.example.com
+    service: http://localhost:8002
+  # Required catch-all.
+  - service: http_status:404
