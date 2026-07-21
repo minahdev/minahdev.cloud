@@ -54,7 +54,7 @@ _REGISTRY: dict[str, ProviderConfig] = {
         authorize_url="https://kauth.kakao.com/oauth/authorize",
         token_url="https://kauth.kakao.com/oauth/token",
         userinfo_url="https://kapi.kakao.com/v2/user/me",
-        scope="account_email profile_nickname",
+        scope="profile_nickname",
         parse=_parse_kakao,
     ),
     "naver": ProviderConfig(
