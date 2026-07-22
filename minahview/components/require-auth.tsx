@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation"
 import { type ReactNode, useEffect, useState } from "react"
 
-import { getLoggedInUserId } from "@/lib/auth-session"
+import { getLoggedInUserId, hydrateSessionFromServer } from "@/lib/auth-session"
 
 /** `auth-session.ts`의 AUTH_SESSION_EVENT와 동일한 값 */
 const AUTH_SESSION_EVENT = "pace-auth-change"
@@ -18,20 +18,30 @@ export function RequireAuth({ children, loginRedirect = "/mypage" }: RequireAuth
   const [allowed, setAllowed] = useState(false)
 
   useEffect(() => {
-    const checkAuth = () => {
-      const userId = getLoggedInUserId()
-      if (!userId) {
-        const params = new URLSearchParams({ from: loginRedirect })
-        router.replace(`/login?${params.toString()}`)
-        setAllowed(false)
+    let cancelled = false
+
+    const decide = async () => {
+      if (getLoggedInUserId()) {
+        if (!cancelled) setAllowed(true)
         return
       }
-      setAllowed(true)
+      // 로컬 캐시가 비어있어도 세션 쿠키가 있으면 로그인 상태 → 서버 확인 후 재판정.
+      await hydrateSessionFromServer()
+      if (cancelled) return
+      if (getLoggedInUserId()) {
+        setAllowed(true)
+        return
+      }
+      setAllowed(false)
+      router.replace(`/login?${new URLSearchParams({ from: loginRedirect })}`)
     }
 
-    checkAuth()
-    window.addEventListener(AUTH_SESSION_EVENT, checkAuth)
-    return () => window.removeEventListener(AUTH_SESSION_EVENT, checkAuth)
+    void decide()
+    window.addEventListener(AUTH_SESSION_EVENT, decide)
+    return () => {
+      cancelled = true
+      window.removeEventListener(AUTH_SESSION_EVENT, decide)
+    }
   }, [router, loginRedirect])
 
   if (!allowed) {

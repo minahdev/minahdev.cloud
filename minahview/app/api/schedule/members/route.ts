@@ -1,4 +1,4 @@
-import { backendBase, backendFetch } from "@/lib/backend"
+import { backendBase, backendFetchAuthed } from "@/lib/backend"
 
 function errorFromFastAPI(body: unknown, fallback: string): string {
   if (!body || typeof body !== "object") return fallback
@@ -11,17 +11,9 @@ function errorFromFastAPI(body: unknown, fallback: string): string {
   return fallback
 }
 
-export async function GET(req: Request) {
-  const userId = new URL(req.url).searchParams.get("userId")?.trim()
-  if (!userId) {
-    return Response.json({ error: "userId가 필요합니다." }, { status: 400 })
-  }
-
+export async function GET() {
   try {
-    const res = await backendFetch(
-      `${backendBase}/schedule/members?${new URLSearchParams({ userId })}`,
-      { cache: "no-store" },
-    )
+    const res = await backendFetchAuthed(`${backendBase}/schedule/members`, { cache: "no-store" })
     const data: unknown = await res.json().catch(() => ({}))
     if (!res.ok) {
       return Response.json(

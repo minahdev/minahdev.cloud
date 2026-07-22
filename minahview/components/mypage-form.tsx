@@ -2,10 +2,16 @@
 
 import { useRouter } from "next/navigation"
 import { type ChangeEvent, type FormEvent, useEffect, useMemo, useState } from "react"
-import { Activity, Heart, LogOut, Mars, Pencil, Save, UserRound, Venus, X } from "lucide-react"
+import { Activity, Dumbbell, Heart, LogOut, Mars, Pencil, Save, Shield, UserRound, Venus, X } from "lucide-react"
 
 import { ScheduleAccessSettings } from "@/components/schedule-access-settings"
-import { clearLoggedInUserId, getLoggedInUserId, getLoggedInUserRole } from "@/lib/auth-session"
+import {
+  AUTH_SESSION_EVENT,
+  changeMyRole,
+  clearLoggedInUserId,
+  getLoggedInUserId,
+  getLoggedInUserRole,
+} from "@/lib/auth-session"
 import {
   calcBmi,
   EXPERIENCE_OPTIONS,
@@ -231,7 +237,31 @@ export function MyPageForm({ embedded = false }: { embedded?: boolean }) {
   const router = useRouter()
   const [state, setState] = useState<MyPageState>(initialState)
   const [editSnapshot, setEditSnapshot] = useState<ProfileFields | null>(null)
-  const coachView = isCoachOrAdmin(getLoggedInUserRole())
+  const [role, setRole] = useState<string | null>(null)
+  const [roleSwitching, setRoleSwitching] = useState(false)
+  const [roleError, setRoleError] = useState<string | null>(null)
+  const coachView = isCoachOrAdmin(role)
+
+  useEffect(() => {
+    const sync = () => setRole(getLoggedInUserRole())
+    sync()
+    window.addEventListener(AUTH_SESSION_EVENT, sync)
+    return () => window.removeEventListener(AUTH_SESSION_EVENT, sync)
+  }, [])
+
+  const handleChangeRole = async (next: "user" | "coach") => {
+    if (roleSwitching || next === role) return
+    setRoleError(null)
+    setRoleSwitching(true)
+    try {
+      const updated = await changeMyRole(next)
+      setRole(updated)
+    } catch (err) {
+      setRoleError(err instanceof Error ? err.message : "역할 변경에 실패했습니다.")
+    } finally {
+      setRoleSwitching(false)
+    }
+  }
 
   function handleLogout() {
     if (!getLoggedInUserId()) {
@@ -421,6 +451,58 @@ export function MyPageForm({ embedded = false }: { embedded?: boolean }) {
           ) : null}
         </p>
       )}
+
+      {userId ? (
+        <div className="mb-6 rounded-2xl border border-border bg-card/90 p-5 shadow-lg shadow-black/10 backdrop-blur-sm">
+          <div className="flex items-center justify-between gap-3">
+            <div>
+              <h2 className="text-sm font-semibold text-foreground">내 역할</h2>
+              <p className="mt-0.5 text-xs text-muted-foreground">
+                {role === "admin"
+                  ? "관리자 계정입니다. 역할은 이메일 기준으로 자동 부여돼요."
+                  : "회원/코치를 선택하세요. 코치는 스케줄·회원 관리 기능을 사용합니다."}
+              </p>
+            </div>
+            {role === "admin" ? (
+              <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-primary/15 px-3 py-1.5 text-xs font-semibold text-primary">
+                <Shield className="size-3.5" aria-hidden />
+                관리자
+              </span>
+            ) : null}
+          </div>
+
+          {role !== "admin" ? (
+            <div className="mt-3 grid grid-cols-2 gap-2">
+              {([
+                { value: "user", label: "회원", Icon: UserRound },
+                { value: "coach", label: "코치", Icon: Dumbbell },
+              ] as const).map((opt) => {
+                const selected = role === opt.value
+                return (
+                  <button
+                    key={opt.value}
+                    type="button"
+                    onClick={() => handleChangeRole(opt.value)}
+                    disabled={roleSwitching || selected}
+                    className={`flex items-center justify-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-medium transition-colors ${
+                      selected
+                        ? "border-primary/60 bg-primary/10 text-foreground"
+                        : "border-border bg-secondary/50 text-muted-foreground hover:border-primary/30 hover:text-foreground disabled:opacity-60"
+                    }`}
+                  >
+                    <opt.Icon className="size-4" aria-hidden />
+                    {opt.label}
+                    {selected ? <span className="text-xs text-primary">(현재)</span> : null}
+                  </button>
+                )
+              })}
+            </div>
+          ) : null}
+
+          {roleError ? <p className="mt-2 text-sm text-destructive">{roleError}</p> : null}
+          {roleSwitching ? <p className="mt-2 text-xs text-muted-foreground">역할 변경 중…</p> : null}
+        </div>
+      ) : null}
 
       <div className="space-y-8 rounded-2xl border border-border bg-card/90 p-6 shadow-lg shadow-black/10 backdrop-blur-sm md:p-8">
         {!editing && hasProfile ? (

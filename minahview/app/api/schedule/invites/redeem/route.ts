@@ -1,4 +1,4 @@
-import { backendBase, backendFetch } from "@/lib/backend"
+import { backendBase, backendFetchAuthed } from "@/lib/backend"
 
 function errorFromFastAPI(body: unknown, fallback: string): string {
   if (!body || typeof body !== "object") return fallback
@@ -12,27 +12,23 @@ function errorFromFastAPI(body: unknown, fallback: string): string {
 }
 
 export async function POST(req: Request) {
-  let body: { userId?: string; code?: string }
+  let body: { code?: string }
   try {
     body = await req.json()
   } catch {
     return Response.json({ error: "Invalid JSON" }, { status: 400 })
   }
 
-  const userId = body.userId?.trim()
   const code = body.code?.trim() ?? ""
-  if (!userId) {
-    return Response.json({ error: "로그인이 필요합니다." }, { status: 400 })
-  }
   if (!code) {
     return Response.json({ error: "입장 코드를 입력하세요." }, { status: 400 })
   }
 
   try {
-    const res = await backendFetch(`${backendBase}/schedule/invites/redeem`, {
+    const res = await backendFetchAuthed(`${backendBase}/schedule/invites/redeem`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ userId, code }),
+      body: JSON.stringify({ code }),
     })
     const data: unknown = await res.json().catch(() => ({}))
     if (!res.ok) {

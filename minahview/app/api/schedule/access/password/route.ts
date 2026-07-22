@@ -1,4 +1,4 @@
-import { backendBase, backendFetch } from "@/lib/backend"
+import { backendBase, backendFetchAuthed } from "@/lib/backend"
 
 function errorFromFastAPI(body: unknown, fallback: string): string {
   if (!body || typeof body !== "object") return fallback
@@ -12,24 +12,23 @@ function errorFromFastAPI(body: unknown, fallback: string): string {
 }
 
 export async function PUT(req: Request) {
-  let body: { userId?: string; password?: string }
+  let body: { password?: string }
   try {
     body = await req.json()
   } catch {
     return Response.json({ error: "Invalid JSON" }, { status: 400 })
   }
 
-  const userId = body.userId?.trim()
   const password = body.password ?? ""
-  if (!userId || !password) {
-    return Response.json({ error: "아이디와 접근 암호를 입력하세요." }, { status: 400 })
+  if (!password.trim()) {
+    return Response.json({ error: "접근 암호를 입력하세요." }, { status: 400 })
   }
 
   try {
-    const res = await backendFetch(`${backendBase}/schedule/access/password`, {
+    const res = await backendFetchAuthed(`${backendBase}/schedule/access/password`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ userId, password }),
+      body: JSON.stringify({ password }),
     })
     const data: unknown = await res.json().catch(() => ({}))
     if (!res.ok) {

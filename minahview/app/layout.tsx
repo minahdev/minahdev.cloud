@@ -7,6 +7,7 @@ import './globals.css'
 import { Header } from '@/components/header'
 import { BottomNav } from '@/components/bottom-nav'
 import { Footer } from '@/components/footer'
+import { SessionHydrator } from '@/components/session-hydrator'
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
     <html lang="ko" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <body className="font-sans antialiased min-h-screen flex flex-col bg-background">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+          <SessionHydrator />
           <Suspense fallback={<div className="h-16 shrink-0 border-b border-border/50 bg-background/80 md:h-20 lg:h-24" aria-hidden />}>
             <Header />
           </Suspense>

@@ -9,7 +9,7 @@ import {
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { AUTH_SESSION_EVENT, clearLoggedInUserId, getLoggedInUserId } from "@/lib/auth-session"
+import { AUTH_SESSION_EVENT, clearLoggedInUserId, getLoggedInUserId, getLoggedInUserRole } from "@/lib/auth-session"
 
 import { CurrentWeather } from "@/components/current-weather"
 import {
@@ -240,10 +240,14 @@ export function Header() {
   const router = useRouter()
   const [menuOpen, setMenuOpen] = useState(false)
   const [userId, setUserId] = useState<string | null>(null)
+  const [role, setRole] = useState<string | null>(null)
   const showBack = !ROOT_PATHS.includes(pathname)
 
   useEffect(() => {
-    const sync = () => setUserId(getLoggedInUserId())
+    const sync = () => {
+      setUserId(getLoggedInUserId())
+      setRole(getLoggedInUserRole())
+    }
     sync()
     window.addEventListener(AUTH_SESSION_EVENT, sync)
     window.addEventListener("storage", sync)
@@ -363,6 +367,17 @@ export function Header() {
                   </SheetClose>
                 )
               })}
+              {role === "admin" ? (
+                <SheetClose asChild>
+                  <Link
+                    href="/admin"
+                    className={menuItemCls(pathname === "/admin" || pathname.startsWith("/admin/"))}
+                  >
+                    <Shield className="h-4 w-4 shrink-0" aria-hidden />
+                    관리자
+                  </Link>
+                </SheetClose>
+              ) : null}
 
               {/* ── 비전 ── */}
               <SectionLabel className="mt-5">비전</SectionLabel>

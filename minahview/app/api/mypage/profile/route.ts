@@ -1,4 +1,4 @@
-import { backendBase, backendFetch } from "@/lib/backend"
+import { backendBase, backendFetchAuthed } from "@/lib/backend"
 
 function err(data: unknown, fallback: string) {
   if (!data || typeof data !== "object") return fallback
@@ -6,11 +6,8 @@ function err(data: unknown, fallback: string) {
   return d.detail || d.error || fallback
 }
 
-export async function GET(req: Request) {
-  const userId = new URL(req.url).searchParams.get("userId")?.trim()
-  if (!userId) return Response.json({ error: "userId가 필요합니다." }, { status: 400 })
-  const q = new URLSearchParams({ userId })
-  const res = await backendFetch(`${backendBase}/mypage/profile?${q}`, { cache: "no-store" })
+export async function GET() {
+  const res = await backendFetchAuthed(`${backendBase}/mypage/profile`, { cache: "no-store" })
   const data = await res.json().catch(() => ({}))
   if (!res.ok) return Response.json({ error: err(data, "조회 실패") }, { status: res.status })
   return Response.json(data)
@@ -18,7 +15,7 @@ export async function GET(req: Request) {
 
 export async function PUT(req: Request) {
   const body = await req.json()
-  const res = await backendFetch(`${backendBase}/mypage/profile`, {
+  const res = await backendFetchAuthed(`${backendBase}/mypage/profile`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),

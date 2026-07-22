@@ -234,16 +234,12 @@ function ChartTooltip({ active, payload, label }: {
 
 // ─── Main page ────────────────────────────────────────────────────────────────
 export default function AdminPage() {
-  const [authorized, setAuthorized] = useState<boolean | null>(null)
   const [stats, setStats] = useState<Stats>({ notices: 0, members: 0, posts: 0, scheduleOpen: false })
   const [notices, setNotices] = useState<Notice[]>([])
   const [posts, setPosts]     = useState<Post[]>([])
 
-  // TODO: 완성 후 로그인 권한 체크 활성화
-  useEffect(() => { setAuthorized(true) }, [])
-
+  // 접근 인가는 middleware.ts(쿠키 role=admin) + 백엔드 API가 담당 → 여기선 데이터만 로드.
   useEffect(() => {
-    if (!authorized) return
     async function load() {
       try {
         const [nRes, pRes, mRes, sRes] = await Promise.allSettled([
@@ -287,15 +283,7 @@ export default function AdminPage() {
       } catch { /* silently fail */ }
     }
     load()
-  }, [authorized])
-
-  if (authorized === null) {
-    return (
-      <div className="flex min-h-[60vh] items-center justify-center">
-        <Shield className="h-10 w-10 animate-pulse text-primary" aria-hidden />
-      </div>
-    )
-  }
+  }, [])
 
   const pieData = [
     { name: "공지", value: Math.max(stats.notices, 1), color: C.amber },
