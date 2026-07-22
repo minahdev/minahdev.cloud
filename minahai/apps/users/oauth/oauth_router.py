@@ -1,7 +1,8 @@
 """소셜 로그인 라우터 — /auth/{provider}/login·callback.
 
 흐름: 버튼 → /auth/{provider}/login(302 provider) → provider → /auth/{provider}/callback
-     → 토큰 교환 → 프로필 → secom_users upsert → 프론트 /login/callback?userId&role 로 302.
+     → 토큰 교환 → 프로필 → secom_users upsert → 서명 신원 토큰을 프론트
+       /api/auth/oauth?token=... 로 302 (Next가 httpOnly pace_session 쿠키 설정).
 
 state는 CSRF 방지용 랜덤값을 쿠키에 저장하고 콜백에서 대조한다.
 """
@@ -20,6 +21,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from core.matrix.database_manager import get_db
 from users.adapter.outbound.pg.signup_pg_repository import SignupPgRepository
 from users.app.dtos.signup_dto import SignupCommand
+from users.auth.admin_allowlist import resolve_role
+from users.auth.tokens import SESSION_TTL_SECONDS, sign_identity
 from users.oauth.oauth_service import exchange_code_for_token, fetch_profile
 from users.oauth.providers import client_id, get_provider
 
@@ -107,12 +110,21 @@ async def oauth_callback(
                 role="user",
             )
         )
-        role = "user"
+        db_role = "user"
     else:
-        role = existing.role
+        db_role = existing.role
 
-    logger.info("[oauth] 로그인 provider=%s user_id=%s", provider, user_id)
-    params = urlencode({"userId": user_id, "role": role})
-    resp = RedirectResponse(f"{_frontend_base()}/login/callback?{params}", status_code=302)
+    # role은 검증된 소셜 이메일 기준으로 서버가 결정 (admin은 allowlist로만).
+    role = resolve_role(profile.email, db_role, email_verified=True)
+
+    logger.info("[oauth] 로그인 provider=%s user_id=%s role=%s", provider, user_id, role)
+    # 서명 신원 토큰을 Next 쿠키-세터 라우트로 전달 → Next가 httpOnly `pace_session` 쿠키 설정.
+    # 소셜 로그인은 이메일 검증됨(ev=True) → allowlist 이메일이면 admin 가능.
+    token = sign_identity(
+        {"sub": user_id, "email": profile.email, "ev": True, "role": role},
+        ttl_seconds=SESSION_TTL_SECONDS,
+    )
+    params = urlencode({"token": token})
+    resp = RedirectResponse(f"{_frontend_base()}/api/auth/oauth?{params}", status_code=302)
     resp.delete_cookie(_STATE_COOKIE)
     return resp

@@ -159,6 +159,12 @@ from users.app.ports.input.schedule_access_use_case import ScheduleAccessUseCase
 from users.dependencies.schedule_access_provider import get_schedule_access_use_case
 from users.app.use_cases.signup_interactor import SignupInteractor
 from users.app.use_cases.user_interactor import UserService
+from users.auth.admin_allowlist import resolve_role
+from users.auth.current_user import (
+    CurrentUser,
+    get_current_user,
+    require_coach_or_admin,
+)
 from users.oauth.oauth_router import oauth_router
 from inbody.community_media import get_community_media_storage
 from inbody.router import router as inbody_router
@@ -270,7 +276,8 @@ class SignupRequest(BaseModel):
     password: str = Field(..., min_length=1, max_length=128)
     email: str = Field(..., min_length=3, max_length=254, pattern=r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
     nickname: str = Field(..., min_length=1, max_length=64)
-    role: Literal["user", "admin", "coach"] = "user"
+    # 회원가입으로 선택 가능한 역할은 회원/코치뿐. admin은 절대 불가(allowlist로만).
+    role: Literal["user", "coach"] = "user"
 
 
 class SignupResponse(BaseModel):
@@ -450,7 +457,8 @@ async def check_signup_user_id(userId: str, db: AsyncSession = Depends(get_db)) 
 @app.post("/signup", response_model=SignupResponse)
 async def signup(req: SignupRequest, db: AsyncSession = Depends(get_db)) -> SignupResponse:
     """회원가입 — uvicorn 터미널에 입력 정보 로그."""
-    role = req.role if req.role in ("user", "admin", "coach") else "user"
+    # 서버에서도 방어: 회원/코치 외 값(admin 등)은 전부 user로 강등 (자가승격 차단).
+    role = req.role if req.role in ("user", "coach") else "user"
     logger.info(
         "[회원가입] 아이디=%s | 이메일=%s | 닉네임=%s | role=%s",
         req.userId,
@@ -501,7 +509,13 @@ async def login(req: LoginRequest, db: AsyncSession = Depends(get_db)) -> LoginR
     except ValueError as e:
         raise HTTPException(status_code=401, detail=str(e)) from e
 
-    role = await UserService(repository=UserPgRepository(session=db)).get_user_role(req.userId)
+    # 비밀번호 로그인은 이메일 미검증 → admin 불가. 저장된 admin이라도 user로 강등.
+    row = await UserPgRepository(session=db).find_by_user_id(req.userId)
+    role = resolve_role(
+        row.email if row else None,
+        row.role if row else "user",
+        email_verified=False,
+    )
 
     return LoginResponse(
         message="로그인 요청이 접수되었습니다.",
@@ -510,15 +524,26 @@ async def login(req: LoginRequest, db: AsyncSession = Depends(get_db)) -> LoginR
     )
 
 
-@app.get("/mypage/profile", response_model=MyPageProfileResponse)
-async def get_mypage_profile(userId: str, db: AsyncSession = Depends(get_db)) -> MyPageProfileResponse:
-    """마이페이지 프로필 조회 — Neon `user_information` 테이블."""
-    user_id = userId.strip()
-    if not user_id:
-        raise HTTPException(status_code=400, detail="userId가 필요합니다.")
+class MeResponse(BaseModel):
+    userId: str
+    email: str
+    role: str
 
+
+@app.get("/auth/me", response_model=MeResponse)
+async def auth_me(user: CurrentUser = Depends(get_current_user)) -> MeResponse:
+    """검증된 세션 신원(X-Pace-Identity 헤더) → {userId, email, role}. UI가 role의 SSOT로 사용."""
+    return MeResponse(userId=user.user_id, email=user.email, role=user.role)
+
+
+@app.get("/mypage/profile", response_model=MyPageProfileResponse)
+async def get_mypage_profile(
+    current_user: CurrentUser = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> MyPageProfileResponse:
+    """마이페이지 프로필 조회 — 신원(X-Pace-Identity)에서 userId 도출."""
     user_controller = MyPageInteractor(repository=UserInformationRepository(session=db))
-    profile = await user_controller.get_profile(user_id)
+    profile = await user_controller.get_profile(current_user.user_id)
     if profile is None:
         raise HTTPException(status_code=404, detail="사용자를 찾을 수 없습니다.")
     return profile
@@ -526,20 +551,47 @@ async def get_mypage_profile(userId: str, db: AsyncSession = Depends(get_db)) ->
 
 @app.put("/mypage/profile", response_model=MyPageProfileResponse)
 async def save_mypage_profile(
-    req: MyPageProfileSchema, db: AsyncSession = Depends(get_db)
+    req: MyPageProfileSchema,
+    current_user: CurrentUser = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
 ) -> MyPageProfileResponse:
-    """마이페이지 프로필 저장 — Neon `user_information` INSERT/UPDATE."""
+    """마이페이지 프로필 저장 — 신원의 userId로만 저장(본인만). 클라이언트 userId는 무시."""
+    req.userId = current_user.user_id
     user_controller = MyPageInteractor(repository=UserInformationRepository(session=db))
     try:
         await user_controller.save_profile(req)
     except ValueError as e:
         raise HTTPException(status_code=404, detail=str(e)) from e
 
-    profile = await user_controller.get_profile(req.userId)
+    profile = await user_controller.get_profile(current_user.user_id)
     if profile is None:
         raise HTTPException(status_code=404, detail="사용자를 찾을 수 없습니다.")
     profile.message = "마이페이지 정보가 저장되었습니다."
     return profile
+
+
+class RoleChangeRequest(BaseModel):
+    role: Literal["user", "coach"]
+
+
+class RoleChangeResponse(BaseModel):
+    role: str
+
+
+@app.put("/mypage/role", response_model=RoleChangeResponse)
+async def change_my_role(
+    req: RoleChangeRequest,
+    current_user: CurrentUser = Depends(get_current_user),
+    service: ScheduleAccessUseCase = Depends(get_schedule_access_use_case),
+) -> RoleChangeResponse:
+    """마이페이지 역할 전환(회원↔코치). 신원 기반. admin은 allowlist로만 결정되므로 여기서 못 바꾼다."""
+    try:
+        await service.change_role(current_user.user_id, req.role)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e)) from e
+    # 서버 권위 role: allowlist admin이면 admin 유지, 아니면 방금 저장한 role.
+    new_role = "admin" if current_user.is_admin else req.role
+    return RoleChangeResponse(role=new_role)
 
 
 class ScheduleAccessStatusResponse(BaseModel):
@@ -547,7 +599,6 @@ class ScheduleAccessStatusResponse(BaseModel):
 
 
 class ScheduleAccessVerifyRequest(BaseModel):
-    userId: str = Field(min_length=1)
     password: str = Field(min_length=1)
 
 
@@ -560,7 +611,6 @@ class ScheduleAccessVerifyResponse(BaseModel):
 
 
 class ScheduleAccessPasswordRequest(BaseModel):
-    userId: str = Field(min_length=1)
     password: str = Field(min_length=4)
 
 
@@ -576,30 +626,26 @@ async def schedule_access_status(service: ScheduleAccessUseCase = Depends(get_sc
 
 @app.get("/schedule/access/admitted", response_model=ScheduleAccessAdmittedResponse)
 async def schedule_access_admitted(
-    userId: str, service: ScheduleAccessUseCase = Depends(get_schedule_access_use_case)
+    current_user: CurrentUser = Depends(get_current_user),
+    service: ScheduleAccessUseCase = Depends(get_schedule_access_use_case),
 ) -> ScheduleAccessAdmittedResponse:
-    member_id = userId.strip()
-    if not member_id:
-        raise HTTPException(status_code=400, detail="userId가 필요합니다.")
-    admitted = await service.is_admitted(member_id)
+    admitted = await service.is_admitted(current_user.user_id)
     return ScheduleAccessAdmittedResponse(admitted=admitted)
 
 
 @app.post("/schedule/access/verify", response_model=ScheduleAccessVerifyResponse)
 async def schedule_access_verify(
-    req: ScheduleAccessVerifyRequest, service: ScheduleAccessUseCase = Depends(get_schedule_access_use_case)
+    req: ScheduleAccessVerifyRequest,
+    current_user: CurrentUser = Depends(get_current_user),
+    service: ScheduleAccessUseCase = Depends(get_schedule_access_use_case),
 ) -> ScheduleAccessVerifyResponse:
     try:
-        await service.verify_and_grant(req.userId.strip(), req.password)
+        await service.verify_and_grant(current_user.user_id, req.password)
     except ValueError as e:
         msg = str(e)
         status = 401 if "올바르지 않습니다" in msg else 400
         raise HTTPException(status_code=status, detail=msg) from e
     return ScheduleAccessVerifyResponse()
-
-
-class ScheduleInviteCreateRequest(BaseModel):
-    userId: str = Field(min_length=1)
 
 
 class ScheduleInviteCreateResponse(BaseModel):
@@ -608,7 +654,6 @@ class ScheduleInviteCreateResponse(BaseModel):
 
 
 class ScheduleInviteRedeemRequest(BaseModel):
-    userId: str = Field(min_length=1)
     code: str = Field(min_length=1)
 
 
@@ -618,10 +663,11 @@ class ScheduleInviteRedeemResponse(BaseModel):
 
 @app.post("/schedule/invites", response_model=ScheduleInviteCreateResponse)
 async def schedule_invite_create(
-    req: ScheduleInviteCreateRequest, service: ScheduleAccessUseCase = Depends(get_schedule_access_use_case)
+    current_user: CurrentUser = Depends(require_coach_or_admin),
+    service: ScheduleAccessUseCase = Depends(get_schedule_access_use_case),
 ) -> ScheduleInviteCreateResponse:
     try:
-        payload = await service.create_invite_code(req.userId.strip())
+        payload = await service.create_invite_code(current_user.user_id)
     except ValueError as e:
         raise HTTPException(status_code=403, detail=str(e)) from e
     return ScheduleInviteCreateResponse(**payload)
@@ -629,10 +675,12 @@ async def schedule_invite_create(
 
 @app.post("/schedule/invites/redeem", response_model=ScheduleInviteRedeemResponse)
 async def schedule_invite_redeem(
-    req: ScheduleInviteRedeemRequest, service: ScheduleAccessUseCase = Depends(get_schedule_access_use_case)
+    req: ScheduleInviteRedeemRequest,
+    current_user: CurrentUser = Depends(get_current_user),
+    service: ScheduleAccessUseCase = Depends(get_schedule_access_use_case),
 ) -> ScheduleInviteRedeemResponse:
     try:
-        await service.redeem_invite_code(req.userId.strip(), req.code)
+        await service.redeem_invite_code(current_user.user_id, req.code)
     except ValueError as e:
         msg = str(e)
         status = 401 if "올바르지 않" in msg or "만료" in msg else 400
@@ -642,10 +690,12 @@ async def schedule_invite_redeem(
 
 @app.put("/schedule/access/password", response_model=ScheduleAccessPasswordResponse)
 async def schedule_access_set_password(
-    req: ScheduleAccessPasswordRequest, service: ScheduleAccessUseCase = Depends(get_schedule_access_use_case)
+    req: ScheduleAccessPasswordRequest,
+    current_user: CurrentUser = Depends(require_coach_or_admin),
+    service: ScheduleAccessUseCase = Depends(get_schedule_access_use_case),
 ) -> ScheduleAccessPasswordResponse:
     try:
-        await service.set_password(req.userId.strip(), req.password)
+        await service.set_password(current_user.user_id, req.password)
     except ValueError as e:
         raise HTTPException(status_code=403, detail=str(e)) from e
     return ScheduleAccessPasswordResponse()
@@ -661,13 +711,13 @@ class ScheduleMembersResponse(BaseModel):
 
 
 @app.get("/schedule/members", response_model=ScheduleMembersResponse)
-async def schedule_members(userId: str, service: ScheduleAccessUseCase = Depends(get_schedule_access_use_case)) -> ScheduleMembersResponse:
+async def schedule_members(
+    current_user: CurrentUser = Depends(require_coach_or_admin),
+    service: ScheduleAccessUseCase = Depends(get_schedule_access_use_case),
+) -> ScheduleMembersResponse:
     """코치·관리자용 — 접근 암호를 입력한 회원만 (스케줄 탭)."""
-    coach_id = userId.strip()
-    if not coach_id:
-        raise HTTPException(status_code=400, detail="userId가 필요합니다.")
     try:
-        rows = await service.list_admitted_members_for_coach(coach_id)
+        rows = await service.list_admitted_members_for_coach(current_user.user_id)
     except ValueError as e:
         raise HTTPException(status_code=403, detail=str(e)) from e
     return ScheduleMembersResponse(

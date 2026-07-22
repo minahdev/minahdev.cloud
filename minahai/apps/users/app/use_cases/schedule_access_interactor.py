@@ -59,6 +59,10 @@ class ScheduleAccessService(ScheduleAccessUseCase):
         if not await self.verify_password(password):
             raise ValueError("접근 암호가 올바르지 않습니다.")
         await self._repo.grant_user(user_id)
+        # 암호를 설정한 코치의 담당 회원으로 연결
+        row = await self._repo.get_row()
+        if row and row.updated_by_user_id:
+            await self._repo.link_coach_member(row.updated_by_user_id, user_id)
 
     async def create_invite_code(self, coach_user_id: str) -> dict[str, str]:
         user = await self._users.find_by_user_id(coach_user_id)
@@ -97,6 +101,8 @@ class ScheduleAccessService(ScheduleAccessUseCase):
 
         await self._repo.mark_invite_used(invite.id)
         await self._repo.grant_user(user_id)
+        # 코드를 발급한 코치의 담당 회원으로 연결
+        await self._repo.link_coach_member(invite.created_by_user_id, user_id)
 
     async def require_member_admitted(self, login_user_id: str) -> None:
         user = await self._users.find_by_user_id(login_user_id)
@@ -129,5 +135,26 @@ class ScheduleAccessService(ScheduleAccessUseCase):
             raise ValueError("사용자를 찾을 수 없습니다.")
         if requester.role not in ("coach", "admin"):
             raise ValueError("코치 또는 관리자만 회원 목록을 조회할 수 있습니다.")
-        rows = await self._repo.list_admitted_members()
+        # 관리자는 전체, 코치는 본인 담당 회원만
+        if requester.role == "admin":
+            rows = await self._repo.list_admitted_members()
+        else:
+            rows = await self._repo.list_members_for_coach(requester_user_id)
         return [{"userId": uid, "nickname": nick} for uid, nick in rows]
+
+    async def change_role(self, user_id: str, new_role: str) -> None:
+        """회원↔코치 역할 전환. 코치→회원 하향 시 담당 회원이 있으면 차단(먼저 정리)."""
+        if new_role not in ("user", "coach"):
+            raise ValueError("역할은 회원 또는 코치만 선택할 수 있습니다.")
+        user = await self._users.find_by_user_id(user_id)
+        if user is None:
+            raise ValueError("사용자를 찾을 수 없습니다.")
+        if user.role == new_role:
+            return
+        if new_role == "user":
+            member_count = await self._repo.count_members_for_coach(user_id)
+            if member_count > 0:
+                raise ValueError(
+                    f"담당 회원 {member_count}명을 먼저 정리한 뒤 회원으로 전환할 수 있습니다."
+                )
+        await self._users.update_role(user_id, new_role)

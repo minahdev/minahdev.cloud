@@ -3,6 +3,7 @@
 from sqlalchemy import delete, func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from users.app.dtos.coach_member_dto import ScheduleCoachMember
 from users.app.dtos.schedule_access_grant_dto import ScheduleAccessGrant
 from users.app.dtos.schedule_access_dto import ScheduleAccess
 from users.app.dtos.schedule_invite_code_dto import ScheduleInviteCode
@@ -119,6 +120,45 @@ class ScheduleAccessPgRepository(ScheduleAccessRepositoryPort):
         stmt = select(func.count()).select_from(ScheduleInviteCode).where(
             ScheduleInviteCode.use_count < ScheduleInviteCode.max_uses,
             ScheduleInviteCode.expires_at > now,
+        )
+        result = await self._session.execute(stmt)
+        return int(result.scalar_one() or 0)
+
+    async def link_coach_member(self, coach_user_id: str, member_user_id: str) -> None:
+        """회원을 코치의 담당으로 연결(upsert). 이미 다른 코치면 재연결."""
+        now = datetime.now(timezone.utc)
+        result = await self._session.execute(
+            select(ScheduleCoachMember).where(
+                ScheduleCoachMember.member_user_id == member_user_id
+            )
+        )
+        row = result.scalar_one_or_none()
+        if row is None:
+            self._session.add(
+                ScheduleCoachMember(
+                    member_user_id=member_user_id,
+                    coach_user_id=coach_user_id,
+                    linked_at=now,
+                )
+            )
+        else:
+            row.coach_user_id = coach_user_id
+            row.linked_at = now
+        await self._session.commit()
+
+    async def list_members_for_coach(self, coach_user_id: str) -> list[tuple[str, str]]:
+        stmt = (
+            select(User.user_id, User.nickname)
+            .join(ScheduleCoachMember, ScheduleCoachMember.member_user_id == User.user_id)
+            .where(ScheduleCoachMember.coach_user_id == coach_user_id)
+            .order_by(User.nickname)
+        )
+        result = await self._session.execute(stmt)
+        return [(r[0], r[1]) for r in result.all()]
+
+    async def count_members_for_coach(self, coach_user_id: str) -> int:
+        stmt = select(func.count()).select_from(ScheduleCoachMember).where(
+            ScheduleCoachMember.coach_user_id == coach_user_id
         )
         result = await self._session.execute(stmt)
         return int(result.scalar_one() or 0)

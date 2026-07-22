@@ -28,3 +28,6 @@ class ScheduleAccessUseCase(ABC):
 
     @abstractmethod
     async def list_admitted_members_for_coach(self, requester_user_id: str) -> list[dict[str, str]]: ...
+
+    @abstractmethod
+    async def change_role(self, user_id: str, new_role: str) -> None: ...

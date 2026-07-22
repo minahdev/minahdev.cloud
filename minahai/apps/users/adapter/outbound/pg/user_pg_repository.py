@@ -1,6 +1,6 @@
 ﻿import logging
 
-from sqlalchemy import select
+from sqlalchemy import select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from users.adapter.inbound.api.schemas.user_schema import UserSchema
@@ -44,3 +44,8 @@ class UserPgRepository(UserRepositoryPort):
         stmt = select(User).where(User.role == role).order_by(User.nickname)
         result = await self._session.execute(stmt)
         return list(result.scalars().all())
+
+    async def update_role(self, user_id: str, role: str) -> None:
+        stmt = update(User).where(User.user_id == user_id).values(role=role)
+        await self._session.execute(stmt)
+        await self._session.commit()

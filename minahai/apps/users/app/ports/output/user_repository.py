@@ -16,3 +16,6 @@ class UserRepository(ABC):
 
     @abstractmethod
     async def list_by_role(self, role: str) -> list[User]: ...
+
+    @abstractmethod
+    async def update_role(self, user_id: str, role: str) -> None: ...

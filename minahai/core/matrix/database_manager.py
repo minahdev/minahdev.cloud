@@ -97,6 +97,7 @@ def _import_orm_models() -> None:
     import users.app.dtos.schedule_access_grant_dto  # noqa: F401
     import users.app.dtos.schedule_access_dto  # noqa: F401
     import users.app.dtos.schedule_invite_code_dto  # noqa: F401
+    import users.app.dtos.coach_member_dto  # noqa: F401
     import users.app.dtos.user_information_dto  # noqa: F401
     import users.app.dtos.user_dto  # noqa: F401
     import inbody.adapter.outbound.orm.community_orm  # noqa: F401
