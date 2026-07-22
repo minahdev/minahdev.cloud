@@ -7,6 +7,10 @@ __pycache__/
 venv/
 .env
 *.env
+# auth 게이트 비밀 (JWT 개인/공개키 env, PEM)
+.env.auth
+.env.backend
+*.pem
 
 # Node / Next.js
 node_modules/

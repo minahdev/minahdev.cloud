@@ -25,6 +25,26 @@ services:
       - redis
       - neo4j
 
+  # --- 인증 게이트 (auth.minahdev.cloud) — 별도 엔트리포인트 auth_main ---
+  auth:
+    container_name: minah_auth
+    build:
+      context: ./minahai
+    command: uvicorn auth_main:app --host 0.0.0.0 --port 9000
+    env_file:
+      - ./minahai/.env          # 공용: DB·Redis·OAuth·JWT_PUBLIC_KEY·JWT_KID·SERVICE_AUD
+      - ./minahai/.env.auth     # auth 전용: JWT_PRIVATE_KEY (.env.auth.example 참고)
+    environment:
+      - DATABASE_URL=postgresql+psycopg://minah_user:minah_password@pgvector:5432/minah_db?sslmode=disable
+      - REDIS_URL=redis://redis:6379/0
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      - pgvector
+      - redis
+    restart: unless-stopped
+    # ⚠️ ports 없음(규칙) — cloudflared(cf-tunnel)가 서비스명 auth:9000 으로 접근.
+
   # --- n8n ---
   n8n:
     container_name: minah_n8n

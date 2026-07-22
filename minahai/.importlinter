@@ -1,5 +1,22 @@
 [importlinter]
-root_package = minahai
+# 모듈명은 런타임 import 스타일과 맞춘다 — main.py가 apps/를 sys.path에 추가하므로
+# 실제 import는 bare(`from users...`·`from titanic...`)다. `apps.` 접두사로 쓰면
+# 그래프에 앱 간 의존이 하나도 안 잡혀 모든 contract가 무의미하게 통과한다.
+#
+# 실행:  cd minahai && PYTHONPATH=apps lint-imports
+root_packages =
+    admin
+    auth
+    comm_agent
+    dumb_and_dumber
+    inbody
+    moneyball
+    spam_filter
+    star_craft
+    titanic
+    users
+    weather
+    core
 include_external_packages = True
 
 # ──────────────────────────────────────────────
@@ -10,58 +27,96 @@ include_external_packages = True
 name = Spokes must not import each other directly
 type = independence
 modules =
-    apps.secom
-    apps.inbody
-    apps.titanic
+    users
+    inbody
+    titanic
 ignore_imports =
-    # 기존 inbody → secom 참조: star_craft UserContext 이전 전까지 임시 허용
-    apps.inbody.* -> apps.secom.*
+    # 기존 inbody → users 참조: star_craft UserContext 이전 전까지 임시 허용
+    inbody.** -> users.**
+    # ORM 등록 허브(CONTRACT 2 주석 참고) 경유 간접 경로는 Spoke 간 결합으로 보지 않는다
+    core.matrix.database_manager -> users.**
+    core.matrix.database_manager -> inbody.**
+    core.matrix.database_manager -> titanic.**
 
 # ──────────────────────────────────────────────
 # CONTRACT 2: Core 레이어 순수성 — Core는 App을 모른다
+# 예외: database_manager._import_orm_models() — SQLAlchemy 매퍼 등록을 위해
+#       앱 ORM/DTO를 한곳에서 import하는 건 설계(minahai/CLAUDE.md §4).
 # ──────────────────────────────────────────────
 [importlinter:contract:core-purity]
 name = Core must not import from apps
 type = forbidden
 source_modules =
-    minahai.core
+    core
 forbidden_modules =
-    apps.secom
-    apps.inbody
-    apps.titanic
-    apps.star_craft
+    users
+    inbody
+    titanic
+    star_craft
+ignore_imports =
+    core.matrix.database_manager -> users.**
+    core.matrix.database_manager -> inbody.**
+    core.matrix.database_manager -> titanic.**
 
 # ──────────────────────────────────────────────
 # CONTRACT 3: Hub 접근 방향 — Hub는 Spoke Port만 참조
 # Hub(star_craft)는 Spoke의 인바운드 어댑터(router)나 구현체(PgRepository)를 직접 참조하지 않는다.
+# (allow_indirect_imports: core ORM 등록을 경유한 간접 경로는 대상 아님 — "직접"만 본다)
 # ──────────────────────────────────────────────
 [importlinter:contract:hub-to-port-only]
 name = Hub may only import Spoke ports and DTOs
 type = forbidden
+allow_indirect_imports = True
 source_modules =
-    apps.star_craft
+    star_craft
 forbidden_modules =
-    apps.secom.adapter.outbound
-    apps.inbody.adapter.outbound
-    apps.titanic.adapter.outbound
-    apps.secom.adapter.inbound
-    apps.inbody.adapter.inbound
-    apps.titanic.adapter.inbound
+    users.adapter.outbound
+    inbody.adapter.outbound
+    titanic.adapter.outbound
+    users.adapter.inbound
+    inbody.adapter.inbound
+    titanic.adapter.inbound
 
 # ──────────────────────────────────────────────
 # CONTRACT 4: 클린 아키텍처 계층 무결성
 # Router(인바운드 어댑터)는 Repository 구현체를 직접 import하지 않는다.
+# (allow_indirect_imports: router → dependencies/*_provider → PgRepository 는
+#  Composition Root 패턴이라 허용. 금지 대상은 router가 직접 잡는 경우.)
 # ──────────────────────────────────────────────
 [importlinter:contract:clean-arch-layers]
 name = Routers must not import outbound adapters directly
 type = forbidden
+allow_indirect_imports = True
 source_modules =
-    apps.secom.adapter.inbound
-    apps.inbody.adapter.inbound
-    apps.titanic.adapter.inbound
-    apps.star_craft.adapter.inbound
+    users.adapter.inbound
+    inbody.adapter.inbound
+    titanic.adapter.inbound
+    star_craft.adapter.inbound
 forbidden_modules =
-    apps.secom.adapter.outbound.pg
-    apps.inbody.adapter.outbound.pg
-    apps.titanic.adapter.outbound.pg
-    apps.star_craft.adapter.outbound.pg
+    users.adapter.outbound.pg
+    inbody.adapter.outbound.pg
+    titanic.adapter.outbound.pg
+    star_craft.adapter.outbound.pg
+
+# ──────────────────────────────────────────────
+# CONTRACT 5: auth 격리 — auth는 auth_main만 import
+# 비즈니스 앱들이 인증 게이트를 직접 참조하지 못하게 막는다.
+# (백엔드가 쓸 수 있는 것은 core.matrix.dependencies 뿐)
+# 간접 경로까지 금지 — 격리가 이 contract의 목적이므로 완화하지 않는다.
+# ──────────────────────────────────────────────
+[importlinter:contract:auth-isolation]
+name = auth is only imported by auth_main
+type = forbidden
+source_modules =
+    admin
+    comm_agent
+    dumb_and_dumber
+    inbody
+    moneyball
+    spam_filter
+    star_craft
+    titanic
+    users
+    weather
+forbidden_modules =
+    auth
