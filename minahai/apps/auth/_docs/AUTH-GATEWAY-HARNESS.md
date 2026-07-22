@@ -244,6 +244,15 @@ forbidden_modules =
 - refresh E2E(실 Redis): 1차 로테이션 200·새 토큰 발급 → 구 refresh 재사용 401 → **`auth:rt:{sub}:*` 키 0개(전 세션 폐기)** → 폐기 후 최신 refresh도 401
 - logout: 무토큰 401 / 유효 access 200 / 블랙리스트된 access 재사용 401
 
+**공개 URL 검증 완료(터널 경유, 풀스택 기동 후)**
+- `https://auth.minahdev.cloud/healthz` → **200** `{"ok":true}`
+- `https://auth.minahdev.cloud/auth/.well-known/jwks.json` → 공개키 노출(내부 응답과 modulus 동일 = 같은 키)
+- `/auth/refresh`·`/auth/logout` 토큰 없이 → 401
+- `/auth/login/google` → 302 accounts.google.com, `redirect_uri=https://auth.minahdev.cloud/auth/callback/google`
+  ⚠️ 이 값이 provider 콘솔에 등록돼 있어야 콜백이 성립(기존 `api.` 기준만 등록돼 있으면 추가 필요)
+- `/docs` → 404 (문서 비노출 유지)
+- `https://api.minahdev.cloud/` → 401 = `main.py` 인라인 Basic 게이트 정상 동작(별개 계층)
+
 **cloudflared — §2.8 대체(실측)**: 이 프로젝트 터널은 `TUNNEL_TOKEN` **대시보드 관리형**이라 로컬
 `config.yml`이 없고 `cloudflared tunnel route dns`도 쓰지 않는다. 기존 3개 룰은 전부
 `http://172.17.0.1:<호스트포트>`(호스트 게이트웨이)로 나감 — cf-tunnel이 compose 네트워크 밖(`bridge`)이었기 때문.

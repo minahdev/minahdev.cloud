@@ -1,4 +1,17 @@
 services:
+  # --- Cloudflare 터널 (유일한 외부 진입점) ---
+  # compose 네트워크 안에 두어야 대시보드 라우트를 컨테이너 이름(backend:8000 등)으로 쓸 수 있다.
+  # 호스트에 직접 붙은 것(sshd 등)은 host.docker.internal 로 간다.
+  cloudflared:
+    container_name: cf-tunnel
+    image: cloudflare/cloudflared:latest
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN:?TUNNEL_TOKEN 이 루트 .env 에 있어야 합니다}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
   # --- 백엔드 서비스 ---
   backend:
     container_name: minah_backend
