@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation"
 import { type ChangeEvent, type FormEvent, useEffect, useMemo, useState } from "react"
 import { Activity, Dumbbell, Heart, LogOut, Mars, Pencil, Save, Shield, UserRound, Venus, X } from "lucide-react"
 
+import { MyPageOnboarding } from "@/components/mypage-onboarding"
 import { ScheduleAccessSettings } from "@/components/schedule-access-settings"
 import {
   AUTH_SESSION_EVENT,
@@ -240,6 +241,8 @@ export function MyPageForm({ embedded = false }: { embedded?: boolean }) {
   const [role, setRole] = useState<string | null>(null)
   const [roleSwitching, setRoleSwitching] = useState(false)
   const [roleError, setRoleError] = useState<string | null>(null)
+  // 첫 가입자는 단계별 설문으로 받는다. 링크를 눌러 기존 한 장짜리 폼으로 빠질 수 있다.
+  const [skipWizard, setSkipWizard] = useState(false)
   const coachView = isCoachOrAdmin(role)
 
   useEffect(() => {
@@ -425,6 +428,20 @@ export function MyPageForm({ embedded = false }: { embedded?: boolean }) {
 
   if (!hydrated) {
     return <div className="min-h-[20rem] animate-pulse rounded-2xl bg-secondary/30" aria-hidden />
+  }
+
+  // 프로필이 아직 없으면 설문 마법사만 보여준다 — 머리말·역할 카드는 첫 입력에 방해가 된다.
+  if (userId && !hasProfile && !skipWizard) {
+    return (
+      <MyPageOnboarding
+        userId={userId}
+        initial={pickProfileFields(state)}
+        onUseFullForm={() => setSkipWizard(true)}
+        onComplete={(saved, message) => {
+          patch({ ...saved, hasProfile: true, editing: false, error: null, savedMessage: message })
+        }}
+      />
+    )
   }
 
   return (
