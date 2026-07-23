@@ -33,7 +33,7 @@ export default function MyPostsPage() {
     if (cheeringId) return
     setCheeringId(post.id)
     try {
-      await toggleCommunityCheer(post.id, post.authorId)
+      await toggleCommunityCheer(post.id)
       refresh()
     } finally {
       setCheeringId(null)
@@ -79,6 +79,8 @@ export default function MyPostsPage() {
           post={commentPost}
           open={commentsOpen}
           onOpenChange={setCommentsOpen}
+          loggedInId={userId}
+          onCommentAdded={refresh}
         />
       )}
     </div>
