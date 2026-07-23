@@ -3,20 +3,25 @@
 import { type ReactNode, useMemo, useState } from "react"
 import { ArrowLeft, ArrowRight, Check, Heart, Mars, Venus } from "lucide-react"
 
+import { WheelPicker } from "@/components/wheel-picker"
 import {
   calcBmi,
   EXPERIENCE_OPTIONS,
   FAVORITE_EXERCISE_OPTIONS,
   formatBirthDate,
   GENDER_OPTIONS,
+  HEALTH_FLAG_OPTIONS,
   isValidBirthDate,
+  toggleHealthFlag,
+  type FavoriteExercise,
   type Gender,
+  type HealthFlag,
   type MyPageProfile,
   saveMyPageProfileToApi,
   WEEKLY_GOAL_OPTIONS,
 } from "@/lib/mypage-profile"
 
-type ProfileFields = Omit<MyPageProfile, "updatedAt">
+type ProfileFields = Omit<MyPageProfile, "updatedAt" | "healthUnreadable">
 
 const inputClass =
   "w-full bg-secondary border border-border rounded-xl px-4 py-3 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50"
@@ -26,8 +31,6 @@ type Step = {
   id: string
   question: string
   hint?: string
-  /** 선택지를 고르면 자동으로 다음 단계로 넘어간다 (설문 리듬 유지) */
-  autoAdvance?: boolean
   optional?: boolean
   validate?: (f: ProfileFields) => string | null
   render: (ctx: {
@@ -77,6 +80,53 @@ function ChoiceList<T extends string>({
   )
 }
 
+function MultiChoiceList<T extends string>({
+  options,
+  values,
+  onToggle,
+}: {
+  options: { value: T; label: string }[]
+  values: T[]
+  onToggle: (v: T) => void
+}) {
+  return (
+    <div className="grid gap-2.5">
+      {options.map((opt) => {
+        const selected = values.includes(opt.value)
+        return (
+          <button
+            key={opt.value}
+            type="button"
+            aria-pressed={selected}
+            onClick={() => onToggle(opt.value)}
+            className={`flex items-center gap-3 rounded-xl border px-5 py-4 text-left text-base transition-colors ${
+              selected
+                ? "border-primary/60 bg-primary/10 text-foreground"
+                : "border-border bg-secondary/50 text-muted-foreground hover:border-primary/30 hover:text-foreground"
+            }`}
+          >
+            <span
+              className={`flex size-5 shrink-0 items-center justify-center rounded-md border ${
+                selected ? "border-primary bg-primary text-primary-foreground" : "border-border"
+              }`}
+            >
+              {selected ? <Check className="size-3.5" aria-hidden /> : null}
+            </span>
+            <span className="font-medium">{opt.label}</span>
+          </button>
+        )
+      })}
+    </div>
+  )
+}
+
+function toggleExercise(
+  values: FavoriteExercise[],
+  value: FavoriteExercise,
+): FavoriteExercise[] {
+  return values.includes(value) ? values.filter((v) => v !== value) : [...values, value]
+}
+
 const STEPS: Step[] = [
   {
     id: "name",
@@ -99,38 +149,18 @@ const STEPS: Step[] = [
     ),
   },
   {
-    id: "gender",
-    question: "성별을 선택해 주세요",
-    autoAdvance: true,
-    render: ({ fields, set, advance }) => (
-      <ChoiceList
-        options={GENDER_OPTIONS}
-        value={fields.gender}
-        onPick={(v: Gender) => {
-          set({ gender: v })
-          advance()
-        }}
-        icons={{
-          male: <Mars className="size-5" aria-hidden />,
-          female: <Venus className="size-5" aria-hidden />,
-        }}
-      />
-    ),
-  },
-  {
-    id: "birthDate",
-    question: "생년월일이 언제인가요?",
-    hint: "숫자 8자리로 입력해 주세요 (예: 20030401)",
-    validate: (f) => (isValidBirthDate(f.birthDate) ? null : "생년월일을 8자리로 입력해 주세요."),
+    id: "nickname",
+    question: "닉네임을 정해주세요",
+    hint: "커뮤니티에서 보일 이름이에요",
+    validate: (f) => (f.nickname.trim() ? null : "닉네임을 입력해 주세요."),
     render: ({ fields, set, advance }) => (
       <input
         autoFocus
-        inputMode="numeric"
-        maxLength={10}
+        maxLength={20}
         className={inputClass}
-        placeholder="20030401"
-        value={formatBirthDate(fields.birthDate)}
-        onChange={(e) => set({ birthDate: e.target.value.replace(/\D/g, "").slice(0, 8) })}
+        placeholder="러닝하는곰"
+        value={fields.nickname}
+        onChange={(e) => set({ nickname: e.target.value })}
         onKeyDown={(e) => {
           if (e.key === "Enter") {
             e.preventDefault()
@@ -141,9 +171,34 @@ const STEPS: Step[] = [
     ),
   },
   {
+    id: "gender",
+    question: "성별을 선택해 주세요",
+    render: ({ fields, set }) => (
+      <ChoiceList
+        options={GENDER_OPTIONS}
+        value={fields.gender}
+        onPick={(v: Gender) => set({ gender: v })}
+        icons={{
+          male: <Mars className="size-5" aria-hidden />,
+          female: <Venus className="size-5" aria-hidden />,
+        }}
+      />
+    ),
+  },
+  {
+    id: "birthDate",
+    question: "생년월일이 언제인가요?",
+    hint: "위아래로 굴려서 맞춰 주세요",
+    validate: (f) => (isValidBirthDate(f.birthDate) ? null : "생년월일을 선택해 주세요."),
+    render: ({ fields, set }) => (
+      <WheelPicker value={fields.birthDate} onChange={(v) => set({ birthDate: v })} />
+    ),
+  },
+  {
     id: "phone",
     question: "연락처를 입력해 주세요",
-    validate: (f) => (f.phone.trim() ? null : "전화번호를 입력해 주세요."),
+    hint: "선택 사항이에요. 지금 넘어가도 괜찮아요",
+    optional: true,
     render: ({ fields, set, advance }) => (
       <input
         autoFocus
@@ -234,36 +289,30 @@ const STEPS: Step[] = [
     },
   },
   {
-    id: "favoriteExercise",
+    id: "favoriteExercises",
     question: "어떤 운동을 자주 하나요?",
-    validate: (f) =>
-      f.favoriteExercise === "other" && !f.favoriteExerciseOther.trim()
-        ? "어떤 운동인지 입력해 주세요."
-        : null,
-    render: ({ fields, set, advance }) => (
+    hint: "여러 개 고를 수 있어요",
+    validate: (f) => {
+      if (!f.favoriteExercises.length) return "하나 이상 선택해 주세요."
+      if (f.favoriteExercises.includes("other") && !f.favoriteExerciseOther.trim()) {
+        return "어떤 운동인지 입력해 주세요."
+      }
+      return null
+    },
+    render: ({ fields, set }) => (
       <div className="space-y-3">
-        <ChoiceList
+        <MultiChoiceList
           options={FAVORITE_EXERCISE_OPTIONS}
-          value={fields.favoriteExercise}
-          onPick={(v) => {
-            set({ favoriteExercise: v })
-            // '기타'는 종목을 더 받아야 하므로 자동으로 넘기지 않는다.
-            if (v !== "other") advance()
-          }}
+          values={fields.favoriteExercises}
+          onToggle={(v) => set({ favoriteExercises: toggleExercise(fields.favoriteExercises, v) })}
         />
-        {fields.favoriteExercise === "other" ? (
+        {fields.favoriteExercises.includes("other") ? (
           <input
             autoFocus
             className={inputClass}
             placeholder="예: 수영, 요가, 클라이밍"
             value={fields.favoriteExerciseOther}
             onChange={(e) => set({ favoriteExerciseOther: e.target.value })}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                e.preventDefault()
-                advance()
-              }
-            }}
           />
         ) : null}
       </div>
@@ -272,47 +321,55 @@ const STEPS: Step[] = [
   {
     id: "experience",
     question: "운동은 얼마나 하셨나요?",
-    autoAdvance: true,
-    render: ({ fields, set, advance }) => (
+    render: ({ fields, set }) => (
       <ChoiceList
         options={EXPERIENCE_OPTIONS}
         value={fields.experience}
-        onPick={(v) => {
-          set({ experience: v })
-          advance()
-        }}
+        onPick={(v) => set({ experience: v })}
       />
     ),
   },
   {
     id: "weeklyGoal",
-    question: "일주일에 몇 번 운동하고 싶으세요?",
-    autoAdvance: true,
-    render: ({ fields, set, advance }) => (
+    question: "일주일에 운동 목표가 어느 정도인가요?",
+    render: ({ fields, set }) => (
       <ChoiceList
         options={WEEKLY_GOAL_OPTIONS}
         value={fields.weeklyGoal}
-        onPick={(v) => {
-          set({ weeklyGoal: v })
-          advance()
-        }}
+        onPick={(v) => set({ weeklyGoal: v })}
       />
     ),
   },
   {
-    id: "healthNote",
-    question: "코치가 알아야 할 게 있나요?",
-    hint: "부상 이력, 알레르기, 복용 중인 약 등",
-    optional: true,
+    id: "healthFlags",
+    question: "Pace가 알아야 할 점이 있을까요?",
+    hint: "해당하는 것을 모두 골라 주세요. 본인만 볼 수 있어요",
+    validate: (f) =>
+      f.healthFlags.length ? null : "해당 없으면 '해당 없음'을 선택해 주세요.",
     render: ({ fields, set }) => (
-      <textarea
-        autoFocus
-        rows={4}
-        className={`${inputClass} min-h-[7rem] resize-y`}
-        placeholder="예: 무릎 통증 있어 러닝 시 주의"
-        value={fields.healthNote}
-        onChange={(e) => set({ healthNote: e.target.value })}
-      />
+      <div className="space-y-3">
+        <MultiChoiceList
+          options={HEALTH_FLAG_OPTIONS}
+          values={fields.healthFlags}
+          onToggle={(v: HealthFlag) => {
+            const next = toggleHealthFlag(fields.healthFlags, v)
+            // '해당 없음'을 고르면 자유입력도 함께 비운다.
+            set(next.includes("none") ? { healthFlags: next, healthNote: "" } : { healthFlags: next })
+          }}
+        />
+        {fields.healthFlags.includes("none") ? null : (
+          <div className="space-y-2">
+            <p className="text-sm font-medium text-foreground">기타 (직접 입력)</p>
+            <textarea
+              rows={3}
+              className={`${inputClass} min-h-[5.5rem] resize-y`}
+              placeholder="예: 무릎 통증 있어 러닝 시 주의"
+              value={fields.healthNote}
+              onChange={(e) => set({ healthNote: e.target.value })}
+            />
+          </div>
+        )}
+      </div>
     ),
   },
 ]
@@ -321,12 +378,10 @@ export function MyPageOnboarding({
   userId,
   initial,
   onComplete,
-  onUseFullForm,
 }: {
   userId: string
   initial: ProfileFields
   onComplete: (fields: ProfileFields, message: string) => void
-  onUseFullForm: () => void
 }) {
   const [index, setIndex] = useState(0)
   const [fields, setFields] = useState<ProfileFields>(initial)
@@ -336,6 +391,8 @@ export function MyPageOnboarding({
   const step = STEPS[index]
   const isLast = index === STEPS.length - 1
   const progress = useMemo(() => Math.round(((index + 1) / STEPS.length) * 100), [index])
+  // 필수 항목이 안 채워졌으면 [다음]을 막고 무엇이 필요한지 보여준다.
+  const blockedBy = step.validate?.(fields) ?? null
 
   const set = (partial: Partial<ProfileFields>) => {
     setFields((prev) => ({ ...prev, ...partial }))
@@ -356,15 +413,13 @@ export function MyPageOnboarding({
   }
 
   /** 검증 후 다음 단계로. 마지막 단계면 저장한다. */
-  const advance = (override?: Partial<ProfileFields>) => {
-    const next = override ? { ...fields, ...override } : fields
-    const message = step.validate?.(next) ?? null
-    if (message) {
-      setError(message)
+  const advance = () => {
+    if (blockedBy) {
+      setError(blockedBy)
       return
     }
     if (isLast) {
-      void submit(next)
+      void submit(fields)
       return
     }
     setError(null)
@@ -379,17 +434,8 @@ export function MyPageOnboarding({
   return (
     <div className="mx-auto w-full max-w-xl">
       <div className="mb-6">
-        <div className="mb-2 flex items-center justify-between text-xs text-muted-foreground">
-          <span>
-            {index + 1} / {STEPS.length}
-          </span>
-          <button
-            type="button"
-            onClick={onUseFullForm}
-            className="underline underline-offset-4 transition-colors hover:text-foreground"
-          >
-            한 번에 입력하기
-          </button>
+        <div className="mb-2 text-xs text-muted-foreground">
+          {index + 1} / {STEPS.length}
         </div>
         <div className="h-1.5 w-full overflow-hidden rounded-full bg-secondary">
           <div
@@ -405,10 +451,14 @@ export function MyPageOnboarding({
 
         {/* key로 단계마다 입력 상태를 새로 마운트해 autoFocus가 매번 걸리게 한다 */}
         <div className="mt-6" key={step.id}>
-          {step.render({ fields, set, advance: () => advance() })}
+          {step.render({ fields, set, advance })}
         </div>
 
-        {error ? <p className="mt-4 text-sm text-destructive">{error}</p> : null}
+        {error ? (
+          <p className="mt-4 text-sm text-destructive">{error}</p>
+        ) : blockedBy ? (
+          <p className="mt-4 text-sm text-muted-foreground">{blockedBy}</p>
+        ) : null}
 
         <div className="mt-8 flex items-center gap-3">
           {index > 0 ? (
@@ -425,8 +475,8 @@ export function MyPageOnboarding({
 
           <button
             type="button"
-            onClick={() => advance()}
-            disabled={submitting}
+            onClick={advance}
+            disabled={submitting || blockedBy != null}
             className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-primary py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 disabled:opacity-60"
           >
             {submitting ? (

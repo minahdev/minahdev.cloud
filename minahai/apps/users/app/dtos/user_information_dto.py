@@ -31,4 +31,8 @@ class UserInformation(Base):
     favorite_exercise_other: Mapped[str | None] = mapped_column(String(128), nullable=True)
     exercise_experience: Mapped[str | None] = mapped_column(String(32), nullable=True)
     weekly_goal: Mapped[str | None] = mapped_column(String(32), nullable=True)
+    # 복수 선택 운동 코드 CSV. favorite_exercise(단일)는 기존 조회 호환을 위해 첫 항목을 계속 채운다.
+    favorite_exercises: Mapped[str | None] = mapped_column(Text, nullable=True)
+    # ↓ 민감 건강정보 — core.matrix.field_crypto 로 암호화해 저장(키 없으면 평문).
+    health_flags: Mapped[str | None] = mapped_column(Text, nullable=True)
     health_note: Mapped[str | None] = mapped_column(Text, nullable=True)

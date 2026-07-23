@@ -1,7 +1,7 @@
 import {
   calcBmi,
   getExperienceLabel,
-  getFavoriteExerciseLabel,
+  getFavoriteExercisesLabel,
   getGenderLabel,
   getWeeklyGoalLabel,
   type MyPageProfile,
@@ -19,7 +19,10 @@ export function buildTodayWorkoutPrompt(
   todayStory: TodayStoryEntry | null,
 ): string {
   const bmi = calcBmi(profile.heightCm, profile.weightKg)
-  const favorite = getFavoriteExerciseLabel(profile.favoriteExercise, profile.favoriteExerciseOther)
+  const favorite = getFavoriteExercisesLabel(
+    profile.favoriteExercises,
+    profile.favoriteExerciseOther,
+  )
   const lines = [
     "당신은 친절한 헬스케어·운동 코치입니다. 아래 회원 프로필을 바탕으로 **오늘 하루**에 맞는 운동 추천만 작성하세요.",
     "",
@@ -53,15 +56,20 @@ export function buildTodayWorkoutPrompt(
 
 /** Gemini 실패 시 표시할 간단 규칙 기반 추천 */
 export function fallbackTodayWorkout(profile: MyPageProfile): string {
-  const favorite = getFavoriteExerciseLabel(profile.favoriteExercise, profile.favoriteExerciseOther)
+  const favorite = getFavoriteExercisesLabel(
+    profile.favoriteExercises,
+    profile.favoriteExerciseOther,
+  )
   const weekly = getWeeklyGoalLabel(profile.weeklyGoal)
   const exp = getExperienceLabel(profile.experience)
 
+  // 규칙 기반 추천이라 복수 선택 중 첫 번째 종목만 기준으로 잡는다.
+  const primary = profile.favoriteExercises[0]
   let focus = "가벼운 전신 워밍업과 스트레칭"
-  if (profile.favoriteExercise === "gym") focus = "상·하체를 나눠 45~60분 헬스(가슴·등·하체 중 1~2부위)"
-  if (profile.favoriteExercise === "running") focus = "20~35분 조깅 또는 인터벌 러닝"
-  if (profile.favoriteExercise === "cycling") focus = "30~45분 편안한 페이스 사이클 또는 실내 바이크"
-  if (profile.favoriteExercise === "other" && profile.favoriteExerciseOther.trim()) {
+  if (primary === "gym") focus = "상·하체를 나눠 45~60분 헬스(가슴·등·하체 중 1~2부위)"
+  if (primary === "running") focus = "20~35분 조깅 또는 인터벌 러닝"
+  if (primary === "cycling") focus = "30~45분 편안한 페이스 사이클 또는 실내 바이크"
+  if (primary === "other" && profile.favoriteExerciseOther.trim()) {
     focus = `${profile.favoriteExerciseOther.trim()} 위주 30~40분`
   }
 

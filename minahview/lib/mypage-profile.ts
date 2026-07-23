@@ -11,18 +11,31 @@ export type WeeklyExerciseGoal = "1_2" | "3_4" | "5_plus"
 
 export type Gender = "male" | "female"
 
+/** 민감 건강 특이사항. 코드는 백엔드 HEALTH_FLAG_LABELS 와 일치해야 한다. */
+export type HealthFlag =
+  | "diabetes"
+  | "pregnant"
+  | "medication"
+  | "smoking"
+  | "drinking"
+  | "none"
+
 export type MyPageProfile = {
   name: string
+  nickname: string
   gender: Gender
   birthDate: string
   phone: string
   heightCm: string
   weightKg: string
-  favoriteExercise: FavoriteExercise
+  favoriteExercises: FavoriteExercise[]
   favoriteExerciseOther: string
   experience: ExerciseExperience
   weeklyGoal: WeeklyExerciseGoal
+  healthFlags: HealthFlag[]
   healthNote: string
+  /** 서버가 암호문을 복호화하지 못한 경우 true (읽기 전용) */
+  healthUnreadable: boolean
   updatedAt: string
 }
 
@@ -52,6 +65,16 @@ export const WEEKLY_GOAL_OPTIONS: { value: WeeklyExerciseGoal; label: string }[]
   { value: "5_plus", label: "주 5회 이상" },
 ]
 
+/** '해당 없음'은 배타 선택 — 다른 항목과 함께 고를 수 없다. */
+export const HEALTH_FLAG_OPTIONS: { value: HealthFlag; label: string }[] = [
+  { value: "diabetes", label: "당뇨" },
+  { value: "pregnant", label: "임신·임산부" },
+  { value: "medication", label: "상시 복용약" },
+  { value: "smoking", label: "흡연" },
+  { value: "drinking", label: "음주" },
+  { value: "none", label: "해당 없음" },
+]
+
 const experienceLabelByValue = Object.fromEntries(
   EXPERIENCE_OPTIONS.map((o) => [o.value, o.label]),
 ) as Record<ExerciseExperience, string>
@@ -67,6 +90,10 @@ const favoriteExerciseLabelByValue = Object.fromEntries(
 const genderLabelByValue = Object.fromEntries(
   GENDER_OPTIONS.map((o) => [o.value, o.label]),
 ) as Record<Gender, string>
+
+const healthFlagLabelByValue = Object.fromEntries(
+  HEALTH_FLAG_OPTIONS.map((o) => [o.value, o.label]),
+) as Record<HealthFlag, string>
 
 export function getGenderLabel(value: Gender): string {
   return genderLabelByValue[value] ?? value
@@ -88,9 +115,31 @@ export function getFavoriteExerciseLabel(
   return favoriteExerciseLabelByValue[value] ?? value
 }
 
+export function getFavoriteExercisesLabel(
+  values: FavoriteExercise[],
+  otherText?: string,
+): string {
+  return values.map((v) => getFavoriteExerciseLabel(v, otherText)).join(", ")
+}
+
+export function getHealthFlagLabel(value: HealthFlag): string {
+  return healthFlagLabelByValue[value] ?? value
+}
+
+/** '해당 없음'과 나머지 항목이 섞이지 않도록 정리한 선택 결과를 돌려준다. */
+export function toggleHealthFlag(
+  flags: HealthFlag[],
+  value: HealthFlag,
+): HealthFlag[] {
+  if (flags.includes(value)) return flags.filter((f) => f !== value)
+  if (value === "none") return ["none"]
+  return [...flags.filter((f) => f !== "none"), value]
+}
+
 type ApiMyPageProfile = {
   userId?: string
   name?: string | null
+  nickname?: string | null
   gender?: Gender | null
   genderLabel?: string | null
   birthDate?: string | null
@@ -98,10 +147,14 @@ type ApiMyPageProfile = {
   heightCm?: number | null
   weightKg?: number | null
   favoriteExercise?: FavoriteExercise | null
+  favoriteExercises?: FavoriteExercise[] | null
   favoriteExerciseOther?: string | null
   experience?: ExerciseExperience | null
   weeklyGoal?: WeeklyExerciseGoal | null
+  healthFlags?: HealthFlag[] | null
+  healthFlagLabels?: string[] | null
   healthNote?: string | null
+  healthUnreadable?: boolean
   message?: string
   error?: string
 }
@@ -116,30 +169,41 @@ export async function fetchMyPageProfileFromApi(
   if (!res.ok) {
     throw new Error(json.error ?? "프로필을 불러오지 못했습니다.")
   }
-  if (!json.name && !json.birthDate && !json.phone) {
+  // 연락처는 선택 입력이라 프로필 존재 판단에서 뺀다.
+  if (!json.name && !json.birthDate) {
     return null
   }
   const gender: Gender = json.gender === "female" ? "female" : "male"
+  // 복수선택 도입 전 데이터는 단일 필드만 있다.
+  const favoriteExercises =
+    json.favoriteExercises?.length
+      ? json.favoriteExercises
+      : json.favoriteExercise
+        ? [json.favoriteExercise]
+        : []
 
   return {
     name: json.name ?? "",
+    nickname: json.nickname ?? "",
     gender,
     birthDate: json.birthDate ?? "",
     phone: json.phone ?? "",
     heightCm: json.heightCm != null ? String(json.heightCm) : "",
     weightKg: json.weightKg != null ? String(json.weightKg) : "",
-    favoriteExercise: (json.favoriteExercise as FavoriteExercise) ?? "gym",
+    favoriteExercises,
     favoriteExerciseOther: json.favoriteExerciseOther ?? "",
     experience: (json.experience as ExerciseExperience) ?? "under_1",
     weeklyGoal: (json.weeklyGoal as WeeklyExerciseGoal) ?? "3_4",
+    healthFlags: json.healthFlags ?? [],
     healthNote: json.healthNote ?? "",
+    healthUnreadable: json.healthUnreadable ?? false,
     updatedAt: new Date().toISOString(),
   }
 }
 
 export async function saveMyPageProfileToApi(
   userId: string,
-  profile: Omit<MyPageProfile, "updatedAt">,
+  profile: Omit<MyPageProfile, "updatedAt" | "healthUnreadable">,
 ): Promise<string> {
   const res = await fetch("/api/mypage/profile", {
     method: "PUT",
@@ -147,15 +211,17 @@ export async function saveMyPageProfileToApi(
     body: JSON.stringify({
       userId,
       name: profile.name,
+      nickname: profile.nickname,
       gender: profile.gender,
       birthDate: profile.birthDate,
       phone: profile.phone,
       heightCm: Number(profile.heightCm),
       weightKg: Number(profile.weightKg),
-      favoriteExercise: profile.favoriteExercise,
+      favoriteExercises: profile.favoriteExercises,
       favoriteExerciseOther: profile.favoriteExerciseOther,
       experience: profile.experience,
       weeklyGoal: profile.weeklyGoal,
+      healthFlags: profile.healthFlags,
       healthNote: profile.healthNote,
     }),
   })

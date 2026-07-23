@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation"
 import { type ChangeEvent, type FormEvent, useEffect, useMemo, useState } from "react"
-import { Activity, Dumbbell, Heart, LogOut, Mars, Pencil, Save, Shield, UserRound, Venus, X } from "lucide-react"
+import { Activity, ChevronDown, ChevronUp, Dumbbell, Heart, LogOut, Mars, Pencil, Save, Shield, UserRound, Venus, X } from "lucide-react"
 
 import { MyPageOnboarding } from "@/components/mypage-onboarding"
 import { ScheduleAccessSettings } from "@/components/schedule-access-settings"
@@ -20,16 +20,20 @@ import {
   fetchMyPageProfileFromApi,
   formatBirthDate,
   getExperienceLabel,
-  getFavoriteExerciseLabel,
+  getFavoriteExercisesLabel,
   getGenderLabel,
+  getHealthFlagLabel,
   getWeeklyGoalLabel,
   isValidBirthDate,
   saveMyPageProfileToApi,
+  toggleHealthFlag,
   type ExerciseExperience,
   type FavoriteExercise,
   type Gender,
+  type HealthFlag,
   type WeeklyExerciseGoal,
   GENDER_OPTIONS,
+  HEALTH_FLAG_OPTIONS,
   WEEKLY_GOAL_OPTIONS,
 } from "@/lib/mypage-profile"
 
@@ -38,15 +42,17 @@ const inputClass =
 
 type ProfileFields = {
   name: string
+  nickname: string
   gender: Gender
   birthDate: string
   phone: string
   heightCm: string
   weightKg: string
-  favoriteExercise: FavoriteExercise
+  favoriteExercises: FavoriteExercise[]
   favoriteExerciseOther: string
   experience: ExerciseExperience
   weeklyGoal: WeeklyExerciseGoal
+  healthFlags: HealthFlag[]
   healthNote: string
 }
 
@@ -58,49 +64,46 @@ type MyPageState = ProfileFields & {
   submitting: boolean
   error: string | null
   savedMessage: string | null
-  name: string
-  birthDate: string
-  phone: string
-  heightCm: string
-  weightKg: string
-  favoriteExercise: FavoriteExercise
-  favoriteExerciseOther: string
-  experience: ExerciseExperience
-  weeklyGoal: WeeklyExerciseGoal
-  healthNote: string
+  /** 서버가 민감 필드를 복호화하지 못한 상태 (읽기 전용) */
+  healthUnreadable: boolean
 }
 
 function hasProfileData(fields: ProfileFields): boolean {
-  return Boolean(fields.name.trim() && fields.birthDate.trim() && fields.phone.trim())
+  // 연락처는 선택 입력이라 프로필 존재 판단에서 뺀다.
+  return Boolean(fields.name.trim() && fields.birthDate.trim())
 }
 
 function pickProfileFields(state: MyPageState): ProfileFields {
   return {
     name: state.name,
+    nickname: state.nickname,
     gender: state.gender,
     birthDate: state.birthDate,
     phone: state.phone,
     heightCm: state.heightCm,
     weightKg: state.weightKg,
-    favoriteExercise: state.favoriteExercise,
+    favoriteExercises: state.favoriteExercises,
     favoriteExerciseOther: state.favoriteExerciseOther,
     experience: state.experience,
     weeklyGoal: state.weeklyGoal,
+    healthFlags: state.healthFlags,
     healthNote: state.healthNote,
   }
 }
 
 const emptyProfileFields: ProfileFields = {
   name: "",
+  nickname: "",
   gender: "male",
   birthDate: "",
   phone: "",
   heightCm: "",
   weightKg: "",
-  favoriteExercise: "gym",
+  favoriteExercises: [],
   favoriteExerciseOther: "",
   experience: "under_1",
   weeklyGoal: "3_4",
+  healthFlags: [],
   healthNote: "",
 }
 
@@ -112,6 +115,7 @@ const initialState: MyPageState = {
   submitting: false,
   error: null,
   savedMessage: null,
+  healthUnreadable: false,
   ...emptyProfileFields,
 }
 
@@ -154,6 +158,56 @@ function RadioGroup<T extends string>({
                 value={opt.value}
                 checked={checked}
                 onChange={() => onChange(opt.value)}
+                className="size-4 accent-primary"
+              />
+              <span>{opt.label}</span>
+            </label>
+          )
+        })}
+      </div>
+    </fieldset>
+  )
+}
+
+function CheckboxGroup<T extends string>({
+  name,
+  legend,
+  options,
+  values,
+  onToggle,
+  disabled,
+}: {
+  name: string
+  legend: string
+  options: { value: T; label: string }[]
+  values: T[]
+  onToggle: (v: T) => void
+  disabled?: boolean
+}) {
+  return (
+    <fieldset className="space-y-3" disabled={disabled}>
+      <legend className="mb-1 block text-sm font-medium text-foreground">{legend}</legend>
+      <div className="grid gap-2 sm:grid-cols-2">
+        {options.map((opt) => {
+          const id = `${name}-${opt.value}`
+          const checked = values.includes(opt.value)
+          return (
+            <label
+              key={opt.value}
+              htmlFor={id}
+              className={`flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3 text-sm transition-colors ${
+                checked
+                  ? "border-primary/60 bg-primary/10 text-foreground"
+                  : "border-border bg-secondary/50 text-muted-foreground hover:border-primary/30 hover:text-foreground"
+              }`}
+            >
+              <input
+                type="checkbox"
+                id={id}
+                name={name}
+                value={opt.value}
+                checked={checked}
+                onChange={() => onToggle(opt.value)}
                 className="size-4 accent-primary"
               />
               <span>{opt.label}</span>
@@ -241,8 +295,8 @@ export function MyPageForm({ embedded = false }: { embedded?: boolean }) {
   const [role, setRole] = useState<string | null>(null)
   const [roleSwitching, setRoleSwitching] = useState(false)
   const [roleError, setRoleError] = useState<string | null>(null)
-  // 첫 가입자는 단계별 설문으로 받는다. 링크를 눌러 기존 한 장짜리 폼으로 빠질 수 있다.
-  const [skipWizard, setSkipWizard] = useState(false)
+  // 민감정보라 조회 화면에서는 기본으로 접어 둔다.
+  const [healthOpen, setHealthOpen] = useState(false)
   const coachView = isCoachOrAdmin(role)
 
   useEffect(() => {
@@ -302,20 +356,23 @@ export function MyPageForm({ embedded = false }: { embedded?: boolean }) {
         if (saved) {
           const fields: ProfileFields = {
             name: saved.name,
+            nickname: saved.nickname ?? "",
             gender: saved.gender,
             birthDate: saved.birthDate,
             phone: saved.phone,
             heightCm: saved.heightCm,
             weightKg: saved.weightKg,
-            favoriteExercise: saved.favoriteExercise,
+            favoriteExercises: saved.favoriteExercises ?? [],
             favoriteExerciseOther: saved.favoriteExerciseOther ?? "",
             experience: saved.experience,
             weeklyGoal: saved.weeklyGoal ?? "3_4",
+            healthFlags: saved.healthFlags ?? [],
             healthNote: saved.healthNote ?? "",
           }
           const profileExists = hasProfileData(fields)
           patch({
             ...fields,
+            healthUnreadable: saved.healthUnreadable,
             hasProfile: profileExists,
             editing: !profileExists,
           })
@@ -348,9 +405,10 @@ export function MyPageForm({ embedded = false }: { embedded?: boolean }) {
 
     const entries = Object.fromEntries(new FormData(e.currentTarget).entries())
     const birthDate = String(entries.birthDate ?? "").replace(/\D/g, "")
-    const favoriteExercise = String(entries.favoriteExercise ?? "gym") as FavoriteExercise
     const favoriteExerciseOther = String(entries.favoriteExerciseOther ?? "").trim()
     const gender = String(entries.gender ?? "") as Gender
+    // 복수 선택 항목은 FormData가 마지막 값만 남기므로 상태에서 읽는다.
+    const { favoriteExercises, healthFlags } = state
 
     if (gender !== "male" && gender !== "female") {
       patch({ error: "성별을 선택해 주세요." })
@@ -360,7 +418,11 @@ export function MyPageForm({ embedded = false }: { embedded?: boolean }) {
       patch({ error: "생년월일은 8자리(예: 20030401)로 입력해 주세요." })
       return
     }
-    if (favoriteExercise === "other" && !favoriteExerciseOther) {
+    if (!favoriteExercises.length) {
+      patch({ error: "자주 하는 운동을 하나 이상 선택해 주세요." })
+      return
+    }
+    if (favoriteExercises.includes("other") && !favoriteExerciseOther) {
       patch({ error: "기타 운동을 선택한 경우 운동 종목을 입력해 주세요." })
       return
     }
@@ -369,15 +431,17 @@ export function MyPageForm({ embedded = false }: { embedded?: boolean }) {
     try {
       const message = await saveMyPageProfileToApi(state.userId, {
         name: String(entries.name ?? "").trim(),
+        nickname: String(entries.nickname ?? "").trim(),
         gender,
         birthDate,
         phone: String(entries.phone ?? "").trim(),
         heightCm: String(entries.heightCm ?? "").trim(),
         weightKg: String(entries.weightKg ?? "").trim(),
-        favoriteExercise,
+        favoriteExercises,
         favoriteExerciseOther,
         experience: String(entries.experience ?? "under_1") as ExerciseExperience,
         weeklyGoal: String(entries.weeklyGoal ?? "3_4") as WeeklyExerciseGoal,
+        healthFlags,
         healthNote: String(entries.healthNote ?? "").trim(),
       })
       patch({ savedMessage: message, hasProfile: true, editing: false })
@@ -414,16 +478,19 @@ export function MyPageForm({ embedded = false }: { embedded?: boolean }) {
     error,
     savedMessage,
     name,
+    nickname,
     gender,
     birthDate,
     phone,
     heightCm,
     weightKg,
-    favoriteExercise,
+    favoriteExercises,
     favoriteExerciseOther,
     experience,
     weeklyGoal,
+    healthFlags,
     healthNote,
+    healthUnreadable,
   } = state
 
   if (!hydrated) {
@@ -431,12 +498,11 @@ export function MyPageForm({ embedded = false }: { embedded?: boolean }) {
   }
 
   // 프로필이 아직 없으면 설문 마법사만 보여준다 — 머리말·역할 카드는 첫 입력에 방해가 된다.
-  if (userId && !hasProfile && !skipWizard) {
+  if (userId && !hasProfile) {
     return (
       <MyPageOnboarding
         userId={userId}
         initial={pickProfileFields(state)}
-        onUseFullForm={() => setSkipWizard(true)}
         onComplete={(saved, message) => {
           patch({ ...saved, hasProfile: true, editing: false, error: null, savedMessage: message })
         }}
@@ -543,6 +609,7 @@ export function MyPageForm({ embedded = false }: { embedded?: boolean }) {
               <h3 className="text-sm font-medium text-muted-foreground">기본 정보</h3>
               <div className="grid gap-3 sm:grid-cols-2">
                 <ProfileRow label="이름" value={name} />
+                <ProfileRow label="닉네임" value={nickname} />
                 <div className="rounded-xl border border-border/70 bg-secondary/25 px-4 py-3">
                   <p className="text-xs font-medium text-muted-foreground">성별</p>
                   <p className="mt-1 flex items-center gap-2 text-sm font-medium text-foreground">
@@ -577,24 +644,51 @@ export function MyPageForm({ embedded = false }: { embedded?: boolean }) {
               <div className="grid gap-3 sm:grid-cols-2">
                 <ProfileRow
                   label="자주 하는 운동"
-                  value={getFavoriteExerciseLabel(favoriteExercise, favoriteExerciseOther)}
+                  value={getFavoriteExercisesLabel(favoriteExercises, favoriteExerciseOther)}
                 />
                 <ProfileRow label="운동 경력" value={getExperienceLabel(experience)} />
                 <ProfileRow label="주간 운동 목표" value={getWeeklyGoalLabel(weeklyGoal)} />
               </div>
             </section>
 
-            {healthNote.trim() ? (
-              <section className="space-y-3">
-                <h3 className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
-                  <Heart className="size-4 text-primary" aria-hidden />
-                  건강 메모
-                </h3>
-                <p className="whitespace-pre-wrap rounded-xl border border-border/70 bg-secondary/25 px-4 py-3 text-sm text-foreground">
-                  {healthNote}
-                </p>
-              </section>
-            ) : null}
+            <section className="space-y-3">
+              <button
+                type="button"
+                onClick={() => setHealthOpen((v) => !v)}
+                aria-expanded={healthOpen}
+                className="flex w-full items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              >
+                <Heart className="size-4 text-primary" aria-hidden />
+                건강 특이사항
+                {healthOpen ? (
+                  <ChevronUp className="ml-auto size-4" aria-hidden />
+                ) : (
+                  <ChevronDown className="ml-auto size-4" aria-hidden />
+                )}
+              </button>
+              {healthOpen ? (
+                <div className="space-y-3">
+                  <p className="text-xs text-muted-foreground">민감정보라 본인만 볼 수 있어요</p>
+                  {healthUnreadable ? (
+                    <p className="rounded-xl border border-border/70 bg-secondary/25 px-4 py-3 text-sm text-muted-foreground">
+                      읽을 수 없음 (암호화 키가 없거나 달라요)
+                    </p>
+                  ) : (
+                    <>
+                      <ProfileRow
+                        label="해당 항목"
+                        value={healthFlags.map(getHealthFlagLabel).join(", ")}
+                      />
+                      {healthNote.trim() ? (
+                        <p className="whitespace-pre-wrap rounded-xl border border-border/70 bg-secondary/25 px-4 py-3 text-sm text-foreground">
+                          {healthNote}
+                        </p>
+                      ) : null}
+                    </>
+                  )}
+                </div>
+              ) : null}
+            </section>
 
             {savedMessage ? <p className="text-sm text-primary">{savedMessage}</p> : null}
           </>
@@ -637,6 +731,22 @@ export function MyPageForm({ embedded = false }: { embedded?: boolean }) {
               />
             </div>
             <div className="sm:col-span-2">
+              <label htmlFor="mypage-nickname" className="mb-2 block text-sm font-medium text-foreground">
+                닉네임
+              </label>
+              <input
+                id="mypage-nickname"
+                name="nickname"
+                required
+                maxLength={20}
+                disabled={submitting}
+                className={inputClass}
+                placeholder="러닝하는곰"
+                value={nickname}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="sm:col-span-2">
               <GenderRadioGroup
                 value={gender}
                 onChange={(v) => patch({ gender: v })}
@@ -663,19 +773,19 @@ export function MyPageForm({ embedded = false }: { embedded?: boolean }) {
             </div>
             <div>
               <label htmlFor="mypage-phone" className="mb-2 block text-sm font-medium text-foreground">
-                전화번호
+                전화번호 (선택)
               </label>
               <input
                 id="mypage-phone"
                 name="phone"
                 type="tel"
-                required
                 disabled={submitting}
                 className={inputClass}
                 placeholder="010-1234-5678"
                 value={phone}
                 onChange={handleChange}
               />
+              <p className="mt-1 text-xs text-muted-foreground">입력하지 않아도 저장돼요</p>
             </div>
           </div>
         </section>
@@ -732,16 +842,22 @@ export function MyPageForm({ embedded = false }: { embedded?: boolean }) {
           ) : null}
         </section>
 
-        <RadioGroup
-          name="favoriteExercise"
-          legend="자주 하는 운동"
+        <CheckboxGroup
+          name="favoriteExercises"
+          legend="자주 하는 운동 (복수 선택)"
           options={FAVORITE_EXERCISE_OPTIONS}
-          value={favoriteExercise}
-          onChange={(v) => patch({ favoriteExercise: v })}
+          values={favoriteExercises}
+          onToggle={(v) =>
+            patch({
+              favoriteExercises: favoriteExercises.includes(v)
+                ? favoriteExercises.filter((x) => x !== v)
+                : [...favoriteExercises, v],
+            })
+          }
           disabled={submitting}
         />
 
-        {favoriteExercise === "other" ? (
+        {favoriteExercises.includes("other") ? (
           <div>
             <label htmlFor="mypage-exercise-other" className="mb-2 block text-sm font-medium text-foreground">
               기타 운동 종목
@@ -776,10 +892,26 @@ export function MyPageForm({ embedded = false }: { embedded?: boolean }) {
           disabled={submitting}
         />
 
+        <section className="space-y-3">
+          <CheckboxGroup
+            name="healthFlags"
+            legend="건강 특이사항"
+            options={HEALTH_FLAG_OPTIONS}
+            values={healthFlags}
+            onToggle={(v) => {
+              const next = toggleHealthFlag(healthFlags, v)
+              // '해당 없음'을 고르면 자유입력도 함께 비운다.
+              patch(next.includes("none") ? { healthFlags: next, healthNote: "" } : { healthFlags: next })
+            }}
+            disabled={submitting}
+          />
+          <p className="text-xs text-muted-foreground">민감정보라 본인만 볼 수 있어요</p>
+        </section>
+
         <section className="space-y-2">
           <h3 className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
             <Heart className="size-4 text-primary" aria-hidden />
-            건강 메모 (추가)
+            기타 (직접 입력)
           </h3>
           <p className="text-xs text-muted-foreground">부상 이력, 알레르기, 복용 약 등 AI·코치 참고용 (선택)</p>
           <textarea

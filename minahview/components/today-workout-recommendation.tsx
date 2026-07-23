@@ -10,7 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { getLoggedInUserId } from "@/lib/auth-session"
 import {
   fetchMyPageProfileFromApi,
-  getFavoriteExerciseLabel,
+  getFavoriteExercisesLabel,
   type MyPageProfile,
 } from "@/lib/mypage-profile"
 import {
@@ -164,8 +164,8 @@ export function TodayWorkoutRecommendation() {
             {profile ? (
               <>
                 <span className="font-medium text-foreground">{profile.name}</span>님 ·{" "}
-                {getFavoriteExerciseLabel(
-                  profile.favoriteExercise,
+                {getFavoriteExercisesLabel(
+                  profile.favoriteExercises,
                   profile.favoriteExerciseOther,
                 )}{" "}
                 기준
