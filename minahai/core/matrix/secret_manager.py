@@ -69,6 +69,10 @@ class Keymaker:
         self.gemini_model_name: str = (
             os.getenv("GEMINI_MODEL") or _DEFAULT_GEMINI_MODEL
         ).strip()
+        self.aws_access_key_id: str = (os.getenv("AWS_ACCESS_KEY_ID") or "").strip()
+        self.aws_secret_access_key: str = (
+            os.getenv("AWS_SECRET_ACCESS_KEY") or ""
+        ).strip()
         self._client: genai.Client | None
         if self.gemini_api_key:
             self._client = genai.Client(api_key=self.gemini_api_key)
@@ -154,6 +158,18 @@ class Keymaker:
                 f"'.env'에 {WEATHER_API_KEY_ENV}를 설정하세요."
             )
         return self.weather_api_key
+
+    @property
+    def has_aws_credentials(self) -> bool:
+        return bool(self.aws_access_key_id and self.aws_secret_access_key)
+
+    def get_aws_credentials(self) -> tuple[str, str]:
+        """S3 등 AWS 호출용 IAM Access Key. 없으면 ValueError."""
+        if not self.has_aws_credentials:
+            raise ValueError(
+                "'.env'에 AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY 를 설정하세요."
+            )
+        return self.aws_access_key_id, self.aws_secret_access_key
 
     @property
     def database_url(self) -> str | None:
